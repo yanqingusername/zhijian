@@ -1,0 +1,41 @@
+.categorytabs {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    .item,
+    .itemActive {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        color         : #999;
+        position      : relative;
+        cursor        : pointer;
+
+        img {
+            width : 0.36rem;
+            height: 0.36rem;
+        }
+
+        span {
+            font-size    : 0.18rem;
+            margin-top   : 0.15rem;
+            margin-bottom: 0.15rem;
+        }
+    }
+
+    .itemActive {
+        color : #db3c3a;
+        cursor: default;
+
+        .underline {
+            position  : absolute;
+            bottom    : 0;
+            margin    : 0 auto;
+            width     : 0.30rem;
+            height    : 3px;
+            background: rgba(219, 60, 58, 1);
+        }
+    }
+}

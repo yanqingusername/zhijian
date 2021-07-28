@@ -1,0 +1,131 @@
+.wap-pageContainer {
+  .mainContent {
+    width: 100%;
+
+    .tabs {
+      margin-top: 0.4rem;
+      width: 6.9rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .productContainer {
+      width: 6.9rem;
+      overflow: hidden;
+
+      .list {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+
+        .item {
+          width: 3.36rem;
+          margin: 0.2rem 0 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: rgba(255, 255, 255, 1);
+
+          img {
+            width: 3.36rem;
+            height: 3.36rem;
+          }
+
+          h3 {
+            width: 3rem;
+            margin-top: 0.24rem;
+            font-size: 0.28rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 600;
+          }
+
+          .price {
+            font-size: 0.28rem;
+            margin-top: 0.1rem;
+            color: #db3c3a;
+            font-weight: 600;
+          }
+
+          .button {
+            width: 3rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            color: #db3c3a;
+            text-align: center;
+            border: 1px solid #db3c3a;
+          }
+        }
+      }
+    }
+
+    .loadingMore {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .pageContainer {
+    .mainContent {
+      margin-top: 1.08rem;
+
+      .tabs {
+        margin-top: 0.4rem;
+        width: 6.9rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .productContainer {
+        width: 6.9rem;
+        overflow: hidden;
+
+        .list {
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          width: 100%;
+          margin-left: 0;
+          justify-content: space-between;
+
+          .item {
+            width: 3.36rem;
+            margin: 0.2rem 0 0;
+
+            img {
+              width: 3.36rem;
+              height: 3.36rem;
+            }
+
+            h3 {
+              width: 3rem;
+              margin-top: 0.24rem;
+              font-size: 0.28rem;
+            }
+
+            .price {
+              font-size: 0.28rem;
+              margin-top: 0.1rem;
+            }
+
+            .button {
+              width: 3rem;
+              height: 0.5rem;
+              line-height: 0.5rem;
+              margin-top: 0.2rem;
+              margin-bottom: 0.2rem;
+            }
+          }
+        }
+      }
+
+      .loadingMore {
+        margin: 0.2rem 0;
+      }
+    }
+  }
+}
