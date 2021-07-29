@@ -19,8 +19,8 @@ const Header = (props: HeaderProps) => {
                 <div className="left">
                     {
                         top === true
-                            ? <a href="/pc" className="logo"><img src={logos?.[1]} /></a>
-                            : <a href="/pc" className="logo"><img src={logos?.[0]} /></a>
+                            ? <a href="/pc" className="logo"><img src="/assets/icon-shop-logo-02.png" /></a>
+                            : <a href="/pc" className="logo"><img src="/assets/icon-shop-logo-01.png" /></a>
                     }
                     <nav className="navs">
                         {

@@ -60,7 +60,7 @@ const WapAboutUs = (props: WapAboutUsInitialProps) => {
                 <h1>ABOUT US</h1>
                 <h3>关于我们</h3>
             </div>
-            <div className="mainContent">
+            <div className="mainContentWap">
                 <div id="intro" className="aboutus-intro">
                     <h2>公司简介</h2>
                     <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p>

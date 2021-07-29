@@ -24,7 +24,7 @@ const Header = (props: HeaderProps) => {
                             back === true
                                 ?
                                 <a className="back" onClick={() => { history.goBack() }}><img src="/assets/icon-arrow-left.png" /></a>
-                                : <a href="/wap" className="logo"><img src={logos?.[0]} /></a>
+                                : <a href="/wap" className="logo"><img src="/assets/icon-shop-logo-01.png" /></a>
                         }
                     </div>
                     <div className="right">

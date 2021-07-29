@@ -82,7 +82,7 @@ const PCProductList = (props: PCProductListInitialProps) => {
                 <div className="productContainer">
                     <div className="list">
                         {
-                            newProducts.map((v) => {
+                            newProducts.length > 0 ? newProducts.map((v) => {
                                 return (
                                     <a href={`/product/detail/${v.id}`} className="item" key={v.id}>
                                         <img src={nbp.request.mediaUrl(v.pic)} />
@@ -91,7 +91,7 @@ const PCProductList = (props: PCProductListInitialProps) => {
                                         <span className="button">立即购买</span>
                                     </a>
                                 )
-                            })
+                            }) : <div className="emptyDiv"></div>
                         }
                     </div>
                 </div>
