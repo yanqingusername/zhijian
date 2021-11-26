@@ -49,7 +49,7 @@ const Footer = (props: FooterProps) => {
                             <img src={mpIcon} />
                             <span>指间礼物公众号</span>
                         </div>
-                        <div className="item">
+                        <div className="items">
                             <img src={miniIcon} />
                             <span>指间礼物小程序</span>
                         </div>
@@ -58,8 +58,6 @@ const Footer = (props: FooterProps) => {
             </div>
             <div className="bottom">
                 <div className="container">
-                    <span>ICP备案证书号：</span><a>京ICP备15002753号-9</a><span>|</span>
-                    <span>Copyright©2020 zhijianliwu.com 指间礼物. 版权所有</span>
                     <div className="links">
                         <span>友情链接：</span>
                         {
@@ -78,6 +76,8 @@ const Footer = (props: FooterProps) => {
                             })
                         }
                     </div>
+                    <span>ICP备案证书号：</span><a href='https://beian.miit.gov.cn/#/Integrated/index' target="_blank">京ICP备15002753号-9</a><span>|</span>
+                    <span>Copyright©2020 zhijianliwu.com 指间礼物. 版权所有</span>
                 </div>
             </div>
         </footer>
