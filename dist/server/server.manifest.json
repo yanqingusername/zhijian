@@ -1,0 +1,41 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/agent.js": "pages/agent.js",
+    "pages/cooperation.js": "pages/cooperation.js",
+    "pages/exstep.js": "pages/exstep.js",
+    "pages/funong_progress.js": "pages/funong_progress.js",
+    "pages/index.js": "pages/index.js",
+    "pages/join.js": "pages/join.js",
+    "pages/news.js": "pages/news.js",
+    "pages/progress_detail.js": "pages/progress_detail.js",
+    "pages/realEstate.js": "pages/realEstate.js",
+    "pages/recruit.js": "pages/recruit.js",
+    "pages/seek.js": "pages/seek.js",
+    "pages/seek_agent.js": "pages/seek_agent.js",
+    "pages/seek_agent2.js": "pages/seek_agent2.js",
+    "pages/set_up_shop.js": "pages/set_up_shop.js",
+    "pages/supply_commodity.js": "pages/supply_commodity.js",
+    "pages/we.js": "pages/we.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/agent.js": "pages/agent.js.map",
+    "pages/cooperation.js": "pages/cooperation.js.map",
+    "pages/exstep.js": "pages/exstep.js.map",
+    "pages/funong_progress.js": "pages/funong_progress.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/join.js": "pages/join.js.map",
+    "pages/news.js": "pages/news.js.map",
+    "pages/progress_detail.js": "pages/progress_detail.js.map",
+    "pages/realEstate.js": "pages/realEstate.js.map",
+    "pages/recruit.js": "pages/recruit.js.map",
+    "pages/seek.js": "pages/seek.js.map",
+    "pages/seek_agent.js": "pages/seek_agent.js.map",
+    "pages/seek_agent2.js": "pages/seek_agent2.js.map",
+    "pages/set_up_shop.js": "pages/set_up_shop.js.map",
+    "pages/supply_commodity.js": "pages/supply_commodity.js.map",
+    "pages/we.js": "pages/we.js.map",
+    "server.js": "server.js.map"
+  }
+}
