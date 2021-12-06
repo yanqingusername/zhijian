@@ -16,7 +16,6 @@ export default {
   head() {
     return {
       meta: [
-        {"name":"sogou_site_verification","content":"HkSy015RVh"}
       ],
       script: [
         {

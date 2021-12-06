@@ -12,30 +12,27 @@
       </ul> -->
       <div class="new-menu">
                             <h3>关于指间</h3>
-                            <a href="/pc/aboutus#intro">公司简介</a>
-                            <a href="/pc/aboutus#culture">企业文化</a>
-                            <a href="/pc/aboutus#business">公司业务</a>
-                            <a href="/pc/aboutus#partner">合作伙伴</a>
+                            <a href="/cooperation#intro">公司简介</a>
+                            <a href="/cooperation#culture">企业文化</a>
+                            <a href="/cooperation#business">公司业务</a>
+                            <a href="/cooperation#partner">合作伙伴</a>
                         </div>
                         <div class="new-menu">
                             <h3>指间商城</h3>
-                            <a href="/pc/product/list/11/1">自选卡册</a>
-                            <a href="/pc/product/list/12/1">储值卡</a>
-                            <a href="/pc/product/list/13/1">节日礼品</a>
-                            <a href="/pc/product/list/14/1">企业采购</a>
+                            <a v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
                         </div>
                         <div class="new-menu">
                             <h3>指间服务</h3>
-                            <a href="#">在线送礼</a>
-                            <a href="#">礼品采购</a>
-                            <a href="#">礼品兑换</a>
-                            <a href="#">礼品定制</a>
+                            <a href="/">在线送礼</a>
+                            <a href="/">礼品采购</a>
+                            <a href="/">礼品兑换</a>
+                            <a href="/">礼品定制</a>
                         </div>
                         <div class="new-menu">
                             <h3>联系我们</h3>
-                            <a href="#">公司采购</a>
-                            <a href="/pc/aboutus#contactus">供应商合作</a>
-                            <a href="/pc/aboutus#joinus">人才招聘</a>
+                            <a href="/">公司采购</a>
+                            <a href="/cooperation#contactus">供应商合作</a>
+                            <a href="/cooperation#joinus">人才招聘</a>
                         </div>
       <div class="code">
         <div class="code-module">
@@ -60,30 +57,27 @@
                     <div class="left">
                         <div class="menu">
                             <h3>关于指间</h3>
-                            <a href="/wap/aboutus#intro">公司简介</a>
-                            <a href="/wap/aboutus#culture">企业文化</a>
-                            <a href="/wap/aboutus#business">公司业务</a>
-                            <a href="/wap/aboutus#partner">合作伙伴</a>
+                            <a href="/cooperation#intro">公司简介</a>
+                            <a href="/cooperation#culture">企业文化</a>
+                            <a href="/cooperation#business">公司业务</a>
+                            <a href="/cooperation#partner">合作伙伴</a>
                         </div>
                         <div class="menu">
                             <h3>指间商城</h3>
-                            <a href="/wap/product/list/11/1">自选卡册</a>
-                            <a href="/wap/product/list/12/1">储值卡</a>
-                            <a href="/wap/product/list/13/1">节日礼品</a>
-                            <a href="/wap/product/list/14/1">企业采购</a>
+                            <a v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
                         </div>
                         <div class="menu">
                             <h3>指间服务</h3>
-                            <a href="#">在线送礼</a>
-                            <a href="#">礼品采购</a>
-                            <a href="#">礼品兑换</a>
-                            <a href="#">礼品定制</a>
+                            <a href="/">在线送礼</a>
+                            <a href="/">礼品采购</a>
+                            <a href="/">礼品兑换</a>
+                            <a href="/">礼品定制</a>
                         </div>
                         <div class="menu">
                             <h3>联系我们</h3>
-                            <a href="#">公司采购</a>
-                            <a href="/wap/aboutus#contactus">供应商合作</a>
-                            <a href="/wap/aboutus#joinus">人才招聘</a>
+                            <a href="/">公司采购</a>
+                            <a href="/cooperation#contactus">供应商合作</a>
+                            <a href="/cooperation#joinus">人才招聘</a>
                         </div>
                     </div>
                     <div class="right">
@@ -108,13 +102,14 @@
 </template>
 
 <script>
-import { companylists  } from "~/api/zhijianapi";
+import { companylists,shopColumn  } from "~/api/zhijianapi";
 export default {
   name: "vFooter",
   data() {
     return {
       rullist: [],
-      year: '2018'
+      year: '2018',
+      shopColumnList: []
     };
   },
 
@@ -137,7 +132,18 @@ export default {
           this.rullist = res.data.items;
         }
       });
-    }
+    },
+    getShopColumn(){
+      shopColumn({
+        "action":"shop",
+        "code":"column",
+        "is_dev":"1"
+      }).then(res => {
+        if (res.data.sta === 1) {
+            this.shopColumnList = res.data.items;
+        }
+      });
+    },
   },
   computed: {
     // 判断当前是否为移动端布局
@@ -147,6 +153,7 @@ export default {
   },
   created() {
     this.list();
+    this.getShopColumn();
   }
 };
 </script>

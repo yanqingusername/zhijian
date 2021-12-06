@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <div v-if="!mobileStatus" class="container-index">
-       <vHeader :isShowTop="isShowTop" :page="home"/>
+       <vHeader :isShowTop="isShowTop"/>
       <div class="banner">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -132,7 +132,7 @@
     </div>
 
     <div v-if="mobileStatus" class="wap-pageContainer">
-      <vHeader :isShowTop="isShowTop" :page="home"/>
+      <vHeader :isShowTop="isShowTop" />
      
       <div class="swiper-container">
         <div class="swiper-wrapper">

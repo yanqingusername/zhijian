@@ -19,8 +19,8 @@ export default {
           "指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。"
       },
       {
-        name: 'author',
-        content: '指间礼物|指间礼物|magicsli'
+        name: 'hhh',
+        content: '指间礼物|指间礼物'
       }, {
         name: "renderer",
         content:"webkit"

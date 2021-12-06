@@ -1,16 +1,17 @@
 <template>
   <div class="root">
     <div v-if="!mobileStatus" class="container-cooperation">
-      <vHeader :isShowTop="true" :page="home"/>
+      <vHeader :isShowTop="true"/>
       
-     <div class="focus" style="backgroundImage: url('https://scpic.chinaz.net/files/pic/pic9/202012/bpic22149.jpg')">
+     <div class="focus" :style="'backgroundImage: url('+ aboutBanner +')'">
                 <h1>ABOUT US</h1>
                 <h3>关于我们</h3>
             </div>
             <div class="mainContent">
                 <div id="intro" class="pc-intro">
                     <h2>公司简介</h2>
-                    <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p>
+                    <!-- <p>{{aboutIntroduce}}</p> -->
+                    <div class="content" v-html="aboutIntroduce">{{aboutIntroduce}}</div>
                     <div class="data">
                         <div><span>2013年度</span><span>金牌服务企业</span></div>
                         <div><span>13项</span><span>送礼解决方案</span></div>
@@ -110,19 +111,35 @@
                     <h2><img src="~/assets/images/PARTNER.png" /><span>合作伙伴</span></h2>
                     <div class="partner">
                         <!-- <PCPartnerSwiper data={partners} /> -->
+                        <div class="pc-partner-container">
+                            <div class='partner-prev'><i></i></div>
+                            <swiper
+                                class="partner-list"
+                                lazy
+                                :options="swiperOption"
+                            >
+                              <swiper-slide v-for="(i,index) in cooperativeList" :key="index">
+                                <div class="partner-item">
+                                  <a v-for="j in i" target="_blank"  :href="j.ico" :key="j.title"><img :src="j.ico"/></a>
+                                </div>
+                              </swiper-slide>
+                            </swiper>
+                            <div class='partner-next'><i></i></div>
+                        </div>
                     </div>
                 </div>
                 <div id="contactus" class="pc-block">
                     <h2><img src="~/assets/images/CONTACTUS.png" /><span>联系我们</span></h2>
                     <div class="contactus">
                         <div class="left">
-                            <h3>北京购实惠电子商务有限公司</h3>
-                            <p>
+                            <h3>{{contactUsCompany}}</h3>
+                            <div class="content" v-html="contactUsContent">{{contactUsContent}}</div>
+                            <!-- <p>
                                 总&nbsp;部&nbsp;地&nbsp;址&nbsp;：北京市丰台区新华国际中心C座221室<br />
                                 客&nbsp;服&nbsp;电&nbsp;话&nbsp;：18501957368<br />
                                 供应商合作：zhijianliwu@bjlipince.com<br />
                                 微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：zhijiangift
-                            </p>
+                            </p> -->
                         </div>
                         <div class="right">
                             <form>
@@ -135,10 +152,10 @@
                                     <input type="text" name="company" placeholder="公司" />
                                 </div>
                                 <div class="formControl">
-                                    <textarea name="remark" placeholder="留言"></textarea>
+                                    <textarea name="content" placeholder="留言"></textarea>
                                 </div>
                                 <div class="formControl">
-                                    <button>提交</button>
+                                    <button @click="commit">提交</button>
                                 </div>
                             </form>
                         </div>
@@ -147,11 +164,36 @@
                 <div id="joinus" class="pc-block">
                     <h2><img src="~/assets/images/JOINUS.png" /><span>加入我们</span></h2>
                     <div class="joinus">
-                        <p>我司正在热招的岗位具体职责与要求，有意者请详阅并发简历、相应的作品及个人阐述至：hanzibiao@bjlipince.com，邮件标题请注明“应聘职位”。</p>
+                        <!-- <p>{{joinUsIntroduce}}</p> -->
+                        <div class="content" v-html="joinUsIntroduce">{{joinUsIntroduce}}</div>
                         <div class="positions">
                             <!-- <PCPositions
                                 data={newPositions}
                                 onChange={handlePositionChange} /> -->
+
+                                <div class="show-list">
+          <div class="show-item" style="margin-bottom: 20px;" v-for="(item, index) in joinUsList" :key="index">
+            <div class="item-title" @click="showM['m'+ index] = !showM['m'+ index]">
+              <div>{{ item.title }}</div>
+                <div class="openBtn">
+                  {{ showM['m'+ index] ? '收起' : '展开' }}
+                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon1: icon2"/>
+                  <!-- <span
+                    :style="showM['m'+ index] && 'transform: rotateZ(180deg);'"
+                    class="triangle"
+                  ></span> -->
+                </div>
+            </div>
+            <div class="transition-box" :style="showM['m'+ index] ? handleHeight(index) : ''">
+              <div :ref="`transform_box${index}`" class="show-main">
+                <div class="duty">工作职责:</div>
+                <p v-for="(i) in item.ext_gzms" :key="i">{{ i }}</p>
+                <div class="jubNeed">职位要求:</div>
+                <p v-for="(j) in item.ext_rzzg" :key="j">{{ j }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
                         </div>
                     </div>
                 </div>
@@ -159,15 +201,16 @@
     </div>
 
     <div v-else class="wap-pageContainer">
-      <vHeader :isShowTop="true" :page="home"/>
-      <div class="aboutus-focus" style="backgroundImage: url('https://scpic.chinaz.net/files/pic/pic9/202012/bpic22149.jpg')">
+      <vHeader isShowTop="true"/>
+      <div class="aboutus-focus" :style="'backgroundImage: url('+ aboutBanner +')'">
                 <h1>ABOUT US</h1>
                 <h3>关于我们</h3>
             </div>
             <div class="mainContentWap">
                 <div id="intro" class="aboutus-intro">
                     <h2>公司简介</h2>
-                    <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p>
+                    <!-- <p>{{aboutIntroduce}}</p> -->
+                    <div class="content-m" v-html="aboutIntroduce">{{aboutIntroduce}}</div>
                     <div class="data">
                         <div><span>2013年度</span><span>金牌服务企业</span></div>
                         <div><span>13项</span><span>送礼解决方案</span></div>
@@ -267,19 +310,36 @@
                     <h2><img src="~/assets/images/PARTNER.png" /><span>合作伙伴</span></h2>
                     <div class="aboutus-partner">
                         <!-- <WapPartnerSwiper data={partners} /> -->
+                        <div class="wap-partner-container">
+                            <div class='partner-prev'><i></i></div>
+                            <swiper
+                                class="partner-list"
+                                lazy
+                                :options="swiperOptionwap"
+                            >
+                              <swiper-slide v-for="(i,index) in cooperativeList" :key="index">
+                                <div class="partner-item">
+                                  <a v-for="j in i" target="_blank"  :href="j.ico" :key="j.title"><img :src="j.ico"/></a>
+                                </div>
+                              </swiper-slide>
+                            </swiper>
+                            <div class='partner-next'><i></i></div>
+                        </div>
                     </div>
                 </div>
                 <div id="contactus" class="aboutus-block">
                     <h2><img src="~/assets/images/CONTACTUS.png" /><span>联系我们</span></h2>
                     <div class="contactus">
                         <div class="left">
-                            <h3>北京购实惠电子商务有限公司</h3>
+                            <!-- <h3>北京购实惠电子商务有限公司</h3>
                             <p>
                                 总&nbsp;部&nbsp;地&nbsp;址&nbsp;：北京市丰台区新华国际中心C座221室<br />
                                 客&nbsp;服&nbsp;电&nbsp;话&nbsp;：18501957368<br />
                                 供应商合作：zhijianliwu@bjlipince.com<br />
                                 微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：zhijiangift
-                            </p>
+                            </p> -->
+                            <h3>{{contactUsCompany}}</h3>
+                            <div class="content-m" v-html="contactUsContent">{{contactUsContent}}</div>
                         </div>
                         <div class="right">
                             <form>
@@ -292,10 +352,10 @@
                                     <input type="text" name="company" placeholder="公司" />
                                 </div>
                                 <div class="formControl">
-                                    <textarea name="remark" placeholder="留言"></textarea>
+                                    <textarea name="content" placeholder="留言"></textarea>
                                 </div>
                                 <div class="formControl">
-                                    <button>提交</button>
+                                    <button @click="commit">提交</button>
                                 </div>
                             </form>
                         </div>
@@ -304,11 +364,36 @@
                 <div id="joinus" class="aboutus-block">
                     <h2><img src="~/assets/images/JOINUS.png" /><span>加入我们</span></h2>
                     <div class="joinus">
-                        <p>我司正在热招的岗位具体职责与要求，有意者请详阅并发简历、相应的作品及个人阐述至：hanzibiao@bjlipince.com，邮件标题请注明“应聘职位”。</p>
+                        <!-- <p>{{joinUsIntroduce}}</p> -->
+                        <div class="content-m" v-html="joinUsIntroduce">{{joinUsIntroduce}}</div>
                         <div class="positions">
                             <!-- <WapPositions
                                 data={newPositions}
                                 onChange={handlePositionChange} /> -->
+
+                                <div class="show-list">
+          <div class="show-item" style="margin-bottom: 20px;" v-for="(item, index) in joinUsList" :key="index">
+            <div class="item-title" @click="showM['m'+ index] = !showM['m'+ index]">
+              <div>{{ item.title }}</div>
+                <div class="openBtn">
+                  {{ showM['m'+ index] ? '收起' : '展开' }}
+                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon1: icon2"/>
+                  <!-- <span
+                    :style="showM['m'+ index] && 'transform: rotateZ(180deg);'"
+                    class="triangle"
+                  ></span> -->
+                </div>
+            </div>
+            <div class="transition-box" :style="showM['m'+ index] ? handleHeight(index) : ''">
+              <div :ref="`transform_box${index}`" class="show-main">
+                <div class="duty">工作职责:</div>
+                <p v-for="(i) in item.ext_gzms" :key="i">{{ i }}</p>
+                <div class="jubNeed">职位要求:</div>
+                <p v-for="(j) in item.ext_rzzg" :key="j">{{ j }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
                         </div>
                     </div>
                 </div>
@@ -322,7 +407,7 @@
 <script>
 import vHeader from "/components/vHeader";
 import Swiper from "swiper";
-// import { getAjax, setForm } from "~/api/base";
+import { about } from "~/api/zhijianapi";
 import { transfromDom } from "~/utils/utils.js";
 export default {
    components:{
@@ -335,171 +420,174 @@ export default {
   },
   data() {
     return {
+      icon1:require('~/assets/images/icon-drop-down.png'),
+      icon2:require('~/assets/images/icon-drop-up.png'),
       showM: {
+        m0: false,
         m1: false,
         m2: false,
         m3: false,
         m4: false,
         m5: false,
         m6: false,
-        m7: false,
-        m8: false,
-        m9: false
+        m7: false
       },
-      province: [], // 省列表
-      province_code: "", // 省code
-      city: [], // 城市列表
-      city_code: "", // 城市code
-      area: [], // 地区列表
-      area_code: "", // 地区code
-      userName: "", // 用户名
-      phone: "", // 电话
-      firmName: "", //公司名称,
-      site: "", // 详细地址
+      swiperOption: {
+        loopedSlides: 18,
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.partner-next',
+          prevEl: '.partner-prev',
+        },
+      },
+      swiperOptionwap: {
+        loopedSlides: 16,
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.partner-next',
+          prevEl: '.partner-prev',
+        },
+      },
+      aboutBannerList:[],
+      aboutBanner:'',
+      aboutIntroduce:'',
+      joinUsIntroduce:'',
+      joinUsList:[],
+      cooperativeList: [],
+      contactUsCompany:'',
+      contactUsContent: '',
+
+      name: "", // 用户名
+      email: "", // 
+      phone: "", //
+      company: "", // 
+      content: "", // 
+
       picSrc1: require("~/assets/images/business-01.png"),
       picSrc2: require("~/assets/images/business-02.png"),
       picSrc3: require("~/assets/images/business-03.png"),
       picSrc4: require("~/assets/images/business-04.png"),
+
+      
     };
   },
   mounted() {
     if (this.mobileStatus) {
-      new Swiper("#swiper-why", {
-        updateOnWindowResize: true,
-        observer: true, //实时检测，动态更新
-        grabCursor: true,
-        observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        // slidesPerView: 4,
-        spaceBetween: 15,
-        loop: true,
-        lazyLoading: true,
-        slidesPerView: 1.25,
-        centeredSlides: true,
-        pagination: false
-      });
-      new Swiper("#swiper-help", {
-        autoplay: {
-          delay: 3000, // 设置轮播的时间
-          disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-        },
-        updateOnWindowResize: true,
-        observer: true, //实时检测，动态更新
-        grabCursor: true,
-        observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        // slidesPerView: 4,
-        spaceBetween: 15,
-        loop: true,
-        lazyLoading: true,
-        slidesPerView: 1.25,
-        centeredSlides: true
-      });
-      new Swiper("#swiper-help-al", {
-        autoplay: {
-          delay: 3000, // 设置轮播的时间
-          disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-        },
-        updateOnWindowResize: true,
-        observer: true, //实时检测，动态更新
-        grabCursor: true,
-        observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        // slidesPerView: 4,
-        spaceBetween: 15,
-        loop: true,
-        lazyLoading: true,
-        slidesPerView: 1.25,
-        centeredSlides: true
-      });
-
+     
       
     } else {
-      new Swiper("#swiper-co", {
-        autoplay: {
-          delay: 2000, // 设置轮播的时间
-          disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-        },
-        loop: false,
-        updateOnWindowResize: true,
-        observer: true, //实时检测，动态更新
-        grabCursor: true,
-        // observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-        // observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        slidesPerView: 4,
-        spaceBetween: 13,
-        lazyLoading: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-      });
+     
     }
     if (process.client) {
       transfromDom("baner_coo", "banner_coo_to");
     }
-    // this.getSite();
+    this.getAboutBanner();
+    this.getAboutIntroduce();
+    this.getAboutJoinUs();
+    this.getAboutCooperative();
+    this.getContactUs();
   },
   methods: {
     handleHeight(id) {
       /* 由于在vue中不推荐控制dom, 即使我们是在查看属性也是, 确保vue成功定位到dom  并且返回数据 */
       let element = this.$refs["transform_box" + id];
-      let height = element.clientHeight;
+      let height = element[0].clientHeight;
+      console.log(height)
       return `height: ${height}px; transition: height ${height * 0.0012}s`;
     },
+    handleHeightToM(id) {
 
-    /**
-     * 获取地区下级code
-     * 如 获取所有的省, 不传值,
-     * 获取所有的市, 传省code
-     */
-    getSite(type = 1) {
-      let code;
-      if (type == 1) {
-        code = 0;
-      } else if (type == 2) {
-        code = this.province_code;
-      } else {
-        code = this.city_code;
-      }
+      /* 由于在vue中不推荐控制dom, 即使我们是在查看属性也是, 确保vue成功定位到dom  并且返回数据 */
+      let element = this.$refs["transform_box_m" + id];
 
-      getAjax({
-        where: code
+      let height = element[0].clientHeight;
+
+      return `height: ${height}px; transition: height ${height * 0.0012}s`;
+    },
+    getAboutBanner() {
+      about({
+        "action":"about",
+        "code":"banner",
+        "is_dev":"1"
       }).then(res => {
-        if (res.data.code === 1) {
-          if (type == 1) {
-            this.province = res.data.data;
-          } else if (type == 2) {
-            this.city = res.data.data;
-          } else {
-            this.area = res.data.data;
-          }
+        if (res.data.sta === 1) {
+            this.aboutBannerList = res.data.items;
+            if(res.data.items && res.data.items.length > 0){
+              this.aboutBanner = res.data.items[0].source
+            }
+        }
+        this.$nextTick(() => {
+          this.loading = false;
+        });
+      });
+    },
+    getAboutIntroduce() {
+      about({
+        "action":"about",
+        "code":"introduce",
+        "is_dev":"1"
+      }).then(res => {
+        if (res.data.sta === 1) {
+            this.aboutIntroduce = res.data.items.content;
         }
       });
     },
-    handleChange(type) {
-      if (type == 1) {
-        this.city = [];
-        this.city_code = "";
-        this.area = [];
-        this.area_code = "";
-        this.getSite(2);
-      } else {
-        this.area = [];
-        this.area_code = "";
-        this.getSite(3);
-      }
+    getAboutJoinUs() {
+      about({
+        "action":"about",
+        "code":"join_us",
+        "is_dev":"1"
+      }).then(res => {
+        if (res.data.sta === 1) {
+            this.joinUsIntroduce = res.data.items.content;
+            this.joinUsList = res.data.items.position;
+        }
+      });
+    },
+    getAboutCooperative() {
+      about({
+        "action":"about",
+        "code":"cooperative",
+        "is_dev":"1"
+      }).then(res => {
+        if (res.data.sta === 1) {
+            this.cooperativeList = res.data.items;
+        }
+      });
+    },
+    getContactUs() {
+      about({
+        "action":"about",
+        "code":"contact_us",
+        "is_dev":"1"
+      }).then(res => {
+        if (res.data.sta === 1) {
+            this.contactUsCompany = res.data.items.company;
+            this.contactUsContent = res.data.items.content;
+            
+        }
+      });
     },
     commit() {
-      setForm({
-        type: 2,
-        user_name: this.userName || "",
+      about({
+        "action":"about",
+        "code":"add_contact_us",
+        "is_dev":"1",
+        name: this.name || "",
+        email: this.email || "",
         phone: this.phone || "",
-        company_name: this.firmName || "",
-        province_code: this.province_code || "",
-        city_code: this.city_code || "",
-        area_code: this.area_code || "",
-        address: this.site || ""
+        company: this.company || "",
+        content: this.content || ""
       }).then(res => {
         alert(res.data.msg || "请求失败");
       });
@@ -509,66 +597,28 @@ export default {
     // 判断当前是否为移动端布局
     mobileStatus() {
       return this.$store.state.isMobile;
+    },
+    updateTime() {
+      let time = new Date();
+
+      let month =
+        time.getMonth() + 1 < 10
+          ? "0" + (time.getMonth() + 1)
+          : time.getMonth() + 1;
+      let day = time.getDate() < 10 ? "0" + time.getDate() : time.getDate();
+
+      let str = time.getFullYear() + "." + month + "." + day;
+
+      return str;
     }
   },
   watch: {
     mobileStatus() {
       this.$nextTick(() => {
         if (this.mobileStatus) {
-          new Swiper("#swiper-why", {
-            updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
-            grabCursor: true,
-            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            // slidesPerView: 4,
-            spaceBetween: 15,
-            loop: true,
-            lazyLoading: true,
-            slidesPerView: 1.25,
-            centeredSlides: true
-          });
-          new Swiper("#swiper-help", {
-            updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
-            grabCursor: true,
-            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            // slidesPerView: 4,
-            spaceBetween: 15,
-            loop: true,
-            lazyLoading: true,
-            slidesPerView: 1.25,
-            centeredSlides: true
-          });
-          new Swiper("#swiper-help-al", {
-            updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
-            grabCursor: true,
-            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            // slidesPerView: 4,
-            spaceBetween: 15,
-            loop: true,
-            lazyLoading: true,
-            slidesPerView: 1.25,
-            centeredSlides: true
-          });
+         
         } else {
-          new Swiper("#swiper-co", {
-            updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
-            grabCursor: true,
-            // observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-            // observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            slidesPerView: 4,
-            spaceBetween: 13,
-            lazyLoading: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev"
-            }
-          });
+          
         }
       });
     }
@@ -576,251 +626,6 @@ export default {
 };
 </script>
 <style lang="scss" >
-.container-cooperation-m {
-  .banner {
-    width: 100%;
-    height: auto;
-  }
-  .show-list {
-    .show-item {
-      .item-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0;
-        // box-shadow: 0 1px 3px rgb(136, 132, 132);
-        border-bottom: 0.02rem solid #dcdcdc;
-        font-size: 0.36rem;
-        font-weight: bold;
-        color: rgba(11, 11, 11, 1);
-        margin: 0 0.3rem;
-        img {
-          width: 0.4rem;
-          height: 0.2rem;
-          transition: all 0.3s;
-        }
-        .rotate {
-          transform: rotateZ(180deg);
-        }
-      }
-      .transition-box {
-        overflow: hidden;
-        width: 100%;
-        height: 0;
-        transition: height 0.4s;
-      }
-    }
-    .what {
-      padding: 0.5rem 0.3rem 0.5rem;
-      font-size: 0.3rem;
-      font-weight: 500;
-      color: rgba(0, 0, 0, 1);
-      line-height: 0.46rem;
-      .info {
-        color: #000000;
-        font-weight: bold;
-      }
-      p {
-        margin-bottom: 0.3rem;
-      }
-      video {
-        width: 100%;
-        height: auto;
-        min-height: 1.94rem;
-      }
-      .laber {
-        font-size: 0.28rem;
-        margin-top: 0.1rem;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 1);
-        line-height: 0.26rem;
-        text-align: center;
-      }
-    }
-    .why {
-      padding: 0.4rem 0;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-   
-    .good {
-      padding: 0.6rem 0.3rem 0;
-      overflow: hidden;
-      background-color: #fafafa;
-      .good-item {
-        height: 4rem;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 0.02rem 0.08rem 0px rgba(183, 183, 183, 0.34);
-        border-radius: 0.2rem;
-        padding: 0 0.6rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0.54rem;
-        .good-item-title {
-          font-size: 0.36rem;
-          font-weight: bold;
-          color: rgba(0, 0, 0, 1);
-          line-height: 0.3rem;
-          position: relative;
-          margin-bottom: 0.4rem;
-          &::after {
-            position: absolute;
-            content: "";
-            width: 0.4rem;
-            height: 0.03rem;
-            background-color: #FF4925;
-            border-radius: 0.02rem;
-            bottom: -0.13rem;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-        .good-item-info {
-          font-size: 0.3rem;
-          font-weight: 500;
-          color: rgba(117, 117, 117, 1);
-          line-height: 0.5rem;
-        }
-      }
-    }
-    .condition {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-
-      padding: 0.2rem 0.3rem 0.4rem;
-      overflow: hidden;
-      .cond-item {
-        margin-top: 0.4rem;
-        flex: 33%;
-        text-align: center;
-
-        img {
-          height: 1rem;
-          width: auto;
-          margin-bottom: 0.3rem;
-        }
-        .cond-item-title {
-          font-size: 0.28rem;
-
-          font-weight: bold;
-          color: rgba(0, 0, 0, 1);
-          line-height: 0.3rem;
-          margin-bottom: 0.1rem;
-        }
-        .cond-item-info {
-          margin: 0 auto;
-          max-width: 2.7rem;
-          padding: 0 0.15rem;
-          font-size: 0.24rem;
-          font-weight: 500;
-          color: rgba(117, 117, 117, 1);
-          line-height: 0.36rem;
-        }
-      }
-    }
-    .flow {
-      padding: 0.7rem 0 0.5rem;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .please {
-      padding: 0.6rem 0.3rem;
-      .please-info {
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 0.01rem 0.18rem 0px rgba(156, 156, 156, 0.44);
-        border-radius: 0.1rem;
-        overflow: hidden;
-        padding: 0 0.3rem;
-        .laber-not {
-          margin-left: 1.9rem;
-        }
-        .input-item {
-          display: flex;
-          justify-content: space-between;
-          // height: 1rem;
-          padding-top: 0.2rem;
-          // border-bottom: 0.02rem solid #eee;
-          .laber {
-            width: 1.9rem;
-            position: relative;
-            padding-left: 0.35rem;
-            font-size: 0.3rem;
-            line-height: 0.6rem;
-            border-bottom: 0.02rem solid #eee;
-          }
-          .must::after {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0.15rem;
-            content: "*";
-            color: red;
-          }
-          input,
-          select {
-            flex: 1;
-            border: none;
-            border-bottom: 0.02rem solid #eee;;
-            outline: none;
-            line-height: 0.5rem;
-            font-size: 0.3rem;
-            padding-left: 0.2rem;
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            background-color: #fff;
-          }
-          .after-laber {
-            width: 0.9rem;
-            text-align: left;
-          }
-        }
-        .commit {
-          width: 100%;
-          height: 0.8rem;
-          text-align: center;
-          line-height: 0.8rem;
-          font-size: 0.3rem;
-          color: #fff;
-          background: linear-gradient(
-          180deg,
-          #FABE75,
-          #FD2E0A
-        );
-          margin: 0.4rem auto;
-          border: none;
-          border-radius: 0.4rem;
-          outline: none;
-        }
-        .please-code-info {
-          margin: 0 auto 0.4rem;
-          text-align: center;
-          img {
-            width: 2.17rem;
-            height: auto;
-            margin-bottom: 0.2rem;
-          }
-          div {
-            font-size: 0.24rem;
-            font-family: Microsoft YaHei;
-            font-weight: 400;
-            color: rgba(109, 109, 109, 1);
-            line-height: 0.36rem;
-          }
-        }
-      }
-    }
-  }
-}
 
 .swiper-button-next {
   font-weight: bold;
@@ -1637,6 +1442,88 @@ export default {
           margin-top: 50px;
         }
       }
+
+      .show-list {
+      .transition-box {
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: height 0.4s;
+      }
+      .item-title {
+        display: flex;
+        padding-left: 20px;
+        // line-height: 70px;
+        // border-top: 1px solid #bebebe;
+        // border-bottom: 1px solid #bebebe;
+        font-size: 14px;
+        color: #0f0f0f;
+        text-align: center;
+        // margin-top: -1px;
+        // width: 1055px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        align-items: center;
+        position: relative;
+        div {
+          flex: 1;
+          &:first-child {
+            text-align: left;
+          }
+        }
+        .openBtn {
+          // width: 130px;
+          height: 36px;
+          // margin-top: 15px;
+          margin-left: 10px;
+          // border: 1px solid #FF4925;
+          position:absolute;
+          right: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // border-radius: 21px;
+          font-size: 14px;
+          color: #6A6B6C;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+          cursor: pointer;
+          .triangle {
+            margin-top: 2px;
+            display: inline-block;
+            margin-left: 10px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid #FF4925;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            transition: all 0.6s;
+          }
+        }
+      }
+      .show-main {
+        padding: 20px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(58, 58, 58, 1);
+        line-height: 24px;
+        background: #FFFFFF;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        div {
+          margin-bottom: 4px;
+        }
+        p {
+          padding-left: 12px;
+        }
+        .jubNeed {
+          margin-top: 40px;
+        }
+      }
+    }
     }
   }
 // }
@@ -2019,6 +1906,252 @@ export default {
         .positions {
           margin-top: 0.5rem;
         }
+      }
+    }
+  }
+
+  .transition-box {
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: height 0.4s;
+      }
+      .item-title {
+        display: flex;
+        padding-left: 0.2rem;
+        // line-height: 70px;
+        // border-top: 1px solid #bebebe;
+        // border-bottom: 1px solid #bebebe;
+        font-size: 0.14rem;
+        color: #0f0f0f;
+        text-align: center;
+        // margin-top: -1px;
+        // width: 1055px;
+        height: 0.45rem;
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        align-items: center;
+        position: relative;
+        div {
+          flex: 1;
+          &:first-child {
+            text-align: left;
+          }
+        }
+        .openBtn {
+          // width: 130px;
+          height: 0.45rem;
+          // margin-top: 15px;
+          margin-left: 0.1rem;
+          // border: 1px solid #FF4925;
+          position:absolute;
+          right: 0.2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // border-radius: 21px;
+          font-size: 0.14rem;
+          color: #6A6B6C;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+          cursor: pointer;
+          .triangle {
+            margin-top: 2px;
+            display: inline-block;
+            margin-left: 10px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid #FF4925;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            transition: all 0.6s;
+          }
+        }
+      }
+      .show-main {
+        padding: 0.2rem 0.2rem;
+        font-size: 0.14rem;
+        font-weight: 400;
+        color: rgba(58, 58, 58, 1);
+        line-height: 0.24rem;
+        background: #FFFFFF;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        div {
+          margin-bottom: 0.04rem;
+        }
+        p {
+          padding-left: 0.12rem;
+        }
+        .jubNeed {
+          margin-top: 0.4rem;
+        }
+      }
+}
+
+
+
+.pc-partner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(250, 250, 250, 1);
+  padding: 20px 0;
+
+  .partner-prev,
+  .partner-next {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+    }
+
+    i::after {
+      font-family: swiper-icons;
+      font-size: 30px;
+      font-style: normal;
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-feature-settings: normal;
+      font-variant: normal;
+      font-variant: initial;
+      line-height: 1;
+    }
+  }
+
+  .partner-prev {
+    i::after {
+      content: 'prev';
+    }
+  }
+
+  .partner-next {
+    i::after {
+      content: 'next';
+    }
+  }
+
+  .partner-prev.swiper-button-disabled,
+  .partner-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  .partner-list {
+    width: 1140px;
+    height: 360px;
+
+    .partner-item {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        width: 182px;
+        height: 112px;
+        box-sizing: border-box;
+        border: 1px solid #eee;
+        margin: 4px;
+      }
+
+      img {
+        width: 182px;
+        height: 112px;
+      }
+    }
+  }
+}
+
+
+.wap-partner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(250, 250, 250, 1);
+  padding: 0.2rem 0;
+
+  .partner-prev,
+  .partner-next {
+    width: 0.3rem;
+    height: 0.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      width: 0.3rem;
+      height: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+    }
+
+    i::after {
+      font-family: swiper-icons;
+      font-size: 0.3rem;
+      font-style: normal;
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-feature-settings: normal;
+      font-variant: normal;
+      font-variant: initial;
+      line-height: 1;
+    }
+  }
+
+  .partner-prev {
+    i::after {
+      content: 'prev';
+    }
+  }
+
+  .partner-next {
+    i::after {
+      content: 'next';
+    }
+  }
+
+  .partner-prev.swiper-button-disabled,
+  .partner-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  .partner-list {
+    width: 6.9rem;
+    height: 4.3rem;
+
+    .partner-item {
+      display: flex;
+      flex-wrap: wrap;
+      width: 6.9rem;
+
+      a {
+        width: 1.66rem;
+        height: 1.02rem;
+        box-sizing: border-box;
+        border: 1px solid #eee;
+        margin: 0.03rem;
+      }
+
+      img {
+        width: 1.66rem;
+        height: 1.02rem;
       }
     }
   }

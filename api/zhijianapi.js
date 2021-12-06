@@ -15,4 +15,6 @@ export const strategyList = val => request("/api.php/index", val, "post");
 
 export const strategyInfo = val => request("/api.php/index", val, "post");
 
+export const about = val => request("/api.php/index", val, "post");
+
 

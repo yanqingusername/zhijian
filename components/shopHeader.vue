@@ -32,8 +32,7 @@ export default {
   name: "shopHeader",
   data() {
     return {
-     
-     
+     paramId: ''
     };
   },
   props: {
@@ -63,7 +62,7 @@ export default {
 
       }else{
         this.$router.push("/we?id=" + id);
-        this.properties.paramId = id;
+        this.paramId = id;
       }
       
     },

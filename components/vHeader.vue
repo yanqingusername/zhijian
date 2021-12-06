@@ -2,15 +2,15 @@
   <header :class="isShowTop ? 'headerTop' : 'header'">
     <div v-if="!mobileStatus" class="container">
       <div style="display:flex;">
-        <img class="logo" v-if="isShowTop" src="~/assets/images/icon-shop-logo-01.png" />
-        <img class="logo" v-else src="~/assets/images/icon-shop-logo-02.png" />
+        <a href="/" v-if="isShowTop" class="logo"><img class="logo" src="~/assets/images/icon-shop-logo-01.png" /></a>
+        <a href="/" v-else class="logo"> <img class="logo"  src="~/assets/images/icon-shop-logo-02.png" /></a>
         <ul class="menu">
           <li :class="active === 0 && 'active'" @click="pushUrl('/')">首页</li>
           <li :class="active === 1 && 'active'" @click="pushUrl('/we')">指间商城</li>
           <li :class="active === 2 && 'active'" @click="pushUrl('/news')">礼物攻略</li>
-          <li :class="active === 3 && 'active active-li1'" @click="pushUrl('/cooperation')">关于我们
+          <li :class="active === 3 && 'active'" @click="pushUrl('/cooperation')">关于我们
 
-          <!-- <ul class="active-li">
+          <!-- <ul class="active-li" style="background:#FFFFFF;">
             <li :class="active === 0 && 'active'" @click="pushUrl('/')">公司文化</li>
             <li :class="active === 1 && 'active'" @click="pushUrl('/we')">企业简介</li>
             <li :class="active === 2 && 'active'" @click="pushUrl('/news')">公司业务</li>
@@ -327,14 +327,14 @@ export default {
 }
 
 .header .container .menu .active-li1{
-  display: flex;
+  /* display: flex;
   position: relative;
   -moz-user-select: none;
   -o-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
   .header .container .menu .active-li li{
