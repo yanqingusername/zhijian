@@ -1979,13 +1979,13 @@ function shouldScrollToTop(route) {
 
 
 
-const _3b717640 = () => interopDefault(__webpack_require__.e(/* import() | pages/cooperation */ 1).then(__webpack_require__.bind(null, 128)));
+const _3b717640 = () => interopDefault(__webpack_require__.e(/* import() | pages/cooperation */ 1).then(__webpack_require__.bind(null, 130)));
 
-const _12fa9dde = () => interopDefault(__webpack_require__.e(/* import() | pages/news */ 3).then(__webpack_require__.bind(null, 129)));
+const _12fa9dde = () => interopDefault(__webpack_require__.e(/* import() | pages/news */ 3).then(__webpack_require__.bind(null, 131)));
 
-const _a2e6e5ce = () => interopDefault(__webpack_require__.e(/* import() | pages/we */ 4).then(__webpack_require__.bind(null, 127)));
+const _a2e6e5ce = () => interopDefault(__webpack_require__.e(/* import() | pages/we */ 4).then(__webpack_require__.bind(null, 129)));
 
-const _0ce55ed7 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 2).then(__webpack_require__.bind(null, 130)));
+const _0ce55ed7 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 2).then(__webpack_require__.bind(null, 132)));
 
 const emptyFn = () => {};
 

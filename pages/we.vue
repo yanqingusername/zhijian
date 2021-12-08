@@ -257,7 +257,7 @@
         <vHeader isShowTop="false" isBack="true" :paramId="paramId"/>
         <div class="wap-main">
             <div class="wap-main-swiper">
-              <div class="swiper-why">
+              <!-- <div class="swiper-why">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide" v-for="(i,index) in productInfoPics" :key="index">
                                   <div class="help-item">
@@ -268,12 +268,25 @@
                                 </div>
                               </div>
                             </div>
-                            
-                             <!-- 如果需要分页器 -->
                             <div class="swiper-pagination"></div>
-                           
+               -->
+                    <div class="swiper-father">
+                            <div class='wap-partner-prev'><i></i></div>
+                            <swiper
+                                class="partner-list"
+                                lazy
+                                :options="swiperWapOption"
+                            >
+                              <swiper-slide v-for="(i,index) in productInfoPics" :key="index">
+                                <img class="swiper-slide-img" style="height: 7.5rem;width: 7.5rem;" :src="i" />
+                              </swiper-slide>
+                            </swiper>
+                            <div style="position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;">
+                              <span v-for="(i,index) in productInfoPics" :key="index" :class="'wap-swiper-pagination-bullet ' + ( activeWapIndex == index &&  'wap-swiper-pagination-bullet-active')" ></span>
+                            </div>
+                            <div class='wap-partner-next'><i></i></div>
+                    </div>
               </div>
-
               <div class="wap-main-h1">{{productInfo.name}}</div>
 
               <div class="wap-main-price">
@@ -376,6 +389,10 @@ export default {
         //   prevEl: '.partner-prev',
         // },
       },
+      swiperWapOption: {
+        
+      },
+      activeWapIndex: 0,
       content: {
         "content": ""
       }, // 富文本内容
@@ -518,19 +535,47 @@ export default {
       let that = this;
 
       if (this.mobileStatus) {
-        
-          new Swiper(".swiper-container", {
-            updateOnWindowResize: true,
+
+        this.swiperWapOption={
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        slidesPerView: 1,
+        updateOnWindowResize: true,
             grabCursor: true,
             observer: true, // 修改swiper自己或子元素时，自动初始化swiper
             observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            spaceBetween: 15,
-            loop: true,
             lazyLoading: true,
-            slidesPerView: 1,
-            centeredSlides: true,
-            pagination: false
-          });
+            watchOverflow: true,
+                preventInteractionOnTransition: true,
+                // delay: 5000,
+                speed: 500,
+        navigation: {
+          nextEl: '.wap-partner-next',
+          prevEl: '.wap-partner-prev',
+        },
+        // initialSlide: that.activeIndex,
+        on:{
+           slideChangeTransitionEnd: function(){
+            that.activeWapIndex = this.realIndex;
+          },
+        }
+      }
+        
+          // new Swiper(".swiper-why", {
+          //   updateOnWindowResize: true,
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   spaceBetween: 15,
+          //   loop: true,
+          //   lazyLoading: true,
+          //   slidesPerView: 1,
+          //   centeredSlides: true,
+          //   pagination: false
+          // });
          
         
       } else{
@@ -673,19 +718,47 @@ this.swiperOptionrecommend={
       this.$nextTick(() => {
         if (this.mobileStatus) {
         
-          new Swiper(".swiper-why", {
-            updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
+          // new Swiper(".swiper-why", {
+          //   updateOnWindowResize: true,
+          //   observer: true, //实时检测，动态更新
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   spaceBetween: 15,
+          //   loop: true,
+          //   lazyLoading: true,
+          //   slidesPerView: 1,
+          //   centeredSlides: true,
+          //   pagination: false
+          // });
+
+          this.swiperWapOption={
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        slidesPerView: 1,
+        updateOnWindowResize: true,
             grabCursor: true,
             observer: true, // 修改swiper自己或子元素时，自动初始化swiper
             observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            spaceBetween: 15,
-            loop: true,
             lazyLoading: true,
-            slidesPerView: 1,
-            centeredSlides: true,
-            pagination: false
-          });
+            watchOverflow: true,
+                preventInteractionOnTransition: true,
+                // delay: 5000,
+                speed: 500,
+        navigation: {
+          nextEl: '.wap-partner-next',
+          prevEl: '.wap-partner-prev',
+        },
+        // initialSlide: that.activeIndex,
+        on:{
+           slideChangeTransitionEnd: function(){
+            that.activeWapIndex = this.realIndex;
+          },
+        }
+      }
          
         
       } else{
@@ -1677,7 +1750,7 @@ padding: 0rem 0.3rem;
     cursor: pointer;
     width: 49px;
     height: 6px;
-    background-color: rgb(199, 195, 195);
+    background-color: #EEEEEE;
     opacity: 0.7;
     border-radius: 3px;
     display: inline-block;
@@ -1690,7 +1763,7 @@ padding: 0rem 0.3rem;
   .swiper-pagination-bullet-active {
     opacity: 1;
     border: 3px solid #8e2829;
-    background-color: #EEEEEE;
+    background-color: #FFFFFF;
   }
 
   .wap-product-detail{
@@ -1726,6 +1799,62 @@ padding: 0rem 0.3rem;
               }
             }
           }
+
+          .swiper-father {
+        position: relative;
+        // padding:0 37px;
+        width: 100%;
+        box-sizing:border-box;
+        }
+
+         .swiper-father .wap-partner-next, .swiper-father .wap-partner-prev {
+        width: 0.5rem;
+         height: 0.5rem;
+        text-align: center;
+        display: block;
+        // margin-top: -54px;
+        }
+
+         .swiper-father .wap-partner-next:after,.swiper-father .wap-partner-prev:after {
+          content:''
+        }
+
+        .swiper-father .wap-partner-prev {
+          background: url("~/assets/images/icon_12_08_left.png") no-repeat center center;
+          left:0.12rem;
+          top: 50%;
+    position: absolute;
+    z-index: 88;
+        }
+        
+        .swiper-father .wap-partner-next{
+          background:  url("~/assets/images/icon_12_08_right.png") no-repeat center center;
+          right:0.12rem;
+          top: 50%;
+    position: absolute;
+    z-index: 88;
+        }
+
+        /*自定义分页器的样式，这个你自己想要什么样子自己写*/
+  .wap-swiper-pagination-bullet {
+    cursor: pointer;
+    width: 0.46rem;
+    height: 0.04rem;
+    background-color: #EEEEEE;
+    opacity: 0.7;
+    // border-radius: 3px;
+    display: inline-block;
+
+    /* box-shadow: 0 0 2px  #000; */
+    margin: 0 0.05rem;
+    outline: 0;
+  }
+  /*自定义分页器激活时的样式表现*/
+  .wap-swiper-pagination-bullet-active {
+    opacity: 1;
+    // border: 3px solid #8e2829;
+    background-color: #BBBBBB;
+  }
             // .swiper-button-prev{
             //   font-weight: bold;
             //   color: #FF4925;

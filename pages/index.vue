@@ -156,7 +156,7 @@
     <div v-if="mobileStatus" class="wap-pageContainer">
       <vHeader :isShowTop="isShowTop"/>
      
-      <div class="swiper-containers">
+      <!-- <div class="swiper-containers">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(i,index) in homeBannerWapList" :key="index">
             <div class="good-item" style="height: 7.5rem;width: 7.5rem;">
@@ -166,12 +166,22 @@
           
           
         </div> 
-        <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
-        <!-- 如果需要滚动条 -->
-        <!-- <div class="swiper-scrollbar"></div> -->
+      </div> -->
+      <div style="position:relative;">
+        <swiper
+              class="partner-list"
+              lazy
+              :key='homeBannerWapList.length'
+              :options="swiperWapBanner">
+                              <swiper-slide class="swiper-slide" v-for="(i,index) in homeBannerWapList" :key="index">
+                                <img :src="i.source" class="banner-item" style="height: 7.5rem;width: 7.5rem;"/>
+                              </swiper-slide>
+                            </swiper>
+                            <div style="position:absolute;bottom:0.1rem;width: 100%;display: flex;align-items: center;justify-content: center;height: 0.2rem;z-index: 77;">
+                              <span v-for="(i,index) in homeBannerWapList" :key="index" :class="'wap-swiper-pagination-customs ' + ( bannerWapIndex == index &&  'wap-swiper-pagination-customs-active')" ></span>
+                            </div>
       </div>
-     
      
      <div class="mainContentWap">
                 <div class="home-intro">
@@ -278,6 +288,10 @@ export default {
   },
   data() {
     return {
+      bannerWapIndex:0,
+      swiperWapBanner:{
+        
+      },
       bannerIndex:0,
       swiperOptionBanner:{
         
@@ -309,43 +323,43 @@ export default {
 
     let that = this;
     if (this.mobileStatus) {
-      new Swiper(".swiper-containers", {
-        updateOnWindowResize: true,
-        autoplay: {
-          delay: 3000, // 设置轮播的时间
-          disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-        },
-        loop: true, // 循环模式选项，true 循环播放
-        // observer: true, //实时检测，动态更新
-        grabCursor: true,
-        observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        lazyLoading: true,
-        delay: 5000,
-        pagination: false,
-        spaceBetween: 15,
-        slidesPerView: 1,
-        centeredSlides: true,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "custom",
-          autoplayDisableOnInteraction: false,
-          renderCustom: function(swiper, current, total) {
-            var paginationHtml = " ";
-            for (var i = 0; i < total; i++) {
-              // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-              if (i === current - 1) {
-                paginationHtml +=
-                  '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-              } else {
-                paginationHtml +=
-                  '<span class="swiper-pagination-customs"></span>';
-              }
-            }
-            return paginationHtml;
-          }
-        },
-      });
+      // new Swiper(".swiper-containers", {
+      //   updateOnWindowResize: true,
+      //   autoplay: {
+      //     delay: 3000, // 设置轮播的时间
+      //     disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+      //   },
+      //   loop: true, // 循环模式选项，true 循环播放
+      //   // observer: true, //实时检测，动态更新
+      //   grabCursor: true,
+      //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+      //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      //   lazyLoading: true,
+      //   delay: 5000,
+      //   pagination: false,
+      //   spaceBetween: 15,
+      //   slidesPerView: 1,
+      //   centeredSlides: true,
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     type: "custom",
+      //     autoplayDisableOnInteraction: false,
+      //     renderCustom: function(swiper, current, total) {
+      //       var paginationHtml = " ";
+      //       for (var i = 0; i < total; i++) {
+      //         // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+      //         if (i === current - 1) {
+      //           paginationHtml +=
+      //             '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+      //         } else {
+      //           paginationHtml +=
+      //             '<span class="swiper-pagination-customs"></span>';
+      //         }
+      //       }
+      //       return paginationHtml;
+      //     }
+      //   },
+      // });
     } else {
       // new Swiper(".swiper-container", {
       //   updateOnWindowResize: true,
@@ -414,6 +428,31 @@ export default {
     },
     getSw(){
       let that = this;
+
+      if(this.mobileStatus){
+        this.swiperWapBanner={
+          updateOnWindowResize: true,
+          autoplay: {
+            delay: 1000, // 设置轮播的时间
+            stopOnLastSlide: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          },
+          // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+          // observer: true, //实时检测，动态更新
+          grabCursor: true,
+          observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          watchOverflow: true,
+          preventInteractionOnTransition: true,
+          // delay: 5000,
+          slidesPerView: 1,
+          speed: 1500,
+          on:{
+            slideChangeTransitionEnd: function(){
+              that.bannerWapIndex = this.realIndex;
+            },
+          }
+        }
+      }else{
         this.swiperOptionBanner={
           updateOnWindowResize: true,
           autoplay: {
@@ -458,6 +497,7 @@ export default {
             },
           }
         }
+      }
       // new Swiper(".swiper-container", {
       //   updateOnWindowResize: true,
       //   // autoplay: {
@@ -530,43 +570,44 @@ export default {
       let that = this;
       this.$nextTick(() => {
         if (this.mobileStatus) {
-          new Swiper(".swiper-containers", {
-            updateOnWindowResize: true,
-            autoplay: {
-              delay: 3000, // 设置轮播的时间
-              disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-            },
-            loop: true, // 循环模式选项，true 循环播放
-            // observer: true, //实时检测，动态更新
-            grabCursor: true,
-            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            lazyLoading: true,
-            delay: 5000,
-            pagination: false,
-            spaceBetween: 15,
-            slidesPerView: 1,
-            centeredSlides: true,
-            pagination: {
-          el: ".swiper-pagination",
-          type: "custom",
-          autoplayDisableOnInteraction: false,
-          renderCustom: function(swiper, current, total) {
-            var paginationHtml = " ";
-            for (var i = 0; i < total; i++) {
-              // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-              if (i === current - 1) {
-                paginationHtml +=
-                  '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-              } else {
-                paginationHtml +=
-                  '<span class="swiper-pagination-customs"></span>';
-              }
-            }
-            return paginationHtml;
-          }
-        },
-          });
+          that.getSw();
+        //   new Swiper(".swiper-containers", {
+        //     updateOnWindowResize: true,
+        //     autoplay: {
+        //       delay: 3000, // 设置轮播的时间
+        //       disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+        //     },
+        //     loop: true, // 循环模式选项，true 循环播放
+        //     // observer: true, //实时检测，动态更新
+        //     grabCursor: true,
+        //     observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+        //     observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+        //     lazyLoading: true,
+        //     delay: 5000,
+        //     pagination: false,
+        //     spaceBetween: 15,
+        //     slidesPerView: 1,
+        //     centeredSlides: true,
+        //     pagination: {
+        //   el: ".swiper-pagination",
+        //   type: "custom",
+        //   autoplayDisableOnInteraction: false,
+        //   renderCustom: function(swiper, current, total) {
+        //     var paginationHtml = " ";
+        //     for (var i = 0; i < total; i++) {
+        //       // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+        //       if (i === current - 1) {
+        //         paginationHtml +=
+        //           '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+        //       } else {
+        //         paginationHtml +=
+        //           '<span class="swiper-pagination-customs"></span>';
+        //       }
+        //     }
+        //     return paginationHtml;
+        //   }
+        // },
+        //   });
         } else {
           that.getSw();
           
@@ -747,8 +788,7 @@ export default {
         line-height: 0.48rem;
       }
     }
-  }
-  
+  }  
 }
 
 /** 移动端渲染样式 end */
@@ -1496,6 +1536,27 @@ export default {
         }
       }
     }
+  }
+
+  /*自定义分页器的样式，这个你自己想要什么样子自己写*/
+  .wap-swiper-pagination-customs {
+    cursor: pointer;
+    width: 0.36rem;
+    height: 0.04rem;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 0.01rem;
+    display: inline-block;
+
+    /* box-shadow: 0 0 2px  #000; */
+    margin: 0 0.05rem;
+    outline: 0;
+  }
+  /*自定义分页器激活时的样式表现*/
+  .wap-swiper-pagination-customs-active {
+    opacity: 1;
+    border: 0.03rem solid #8e2829;
+    background-color: #FFFFFF;
   }
 }
 
