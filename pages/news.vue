@@ -79,7 +79,7 @@
 
     <div class="wap-product-detail" v-if="mobileStatus && showNews">
       <div class="wap-container-we-m" v-if="mobileStatus">
-        <vHeader isShowTop="true"/>
+        <vHeader isShowTop="true" isBack="true" :paramId="paramId"/>
         <div class="wap-main">
               <div class="wap-main-h1">{{strategysInfo.title}}</div>
 

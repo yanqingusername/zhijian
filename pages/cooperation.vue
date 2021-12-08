@@ -136,7 +136,7 @@
                             <div class="content" v-html="contactUsContent">{{contactUsContent}}</div>
                             <!-- <p>
                                 总&nbsp;部&nbsp;地&nbsp;址&nbsp;：北京市丰台区新华国际中心C座221室<br />
-                                客&nbsp;服&nbsp;电&nbsp;话&nbsp;：18501957368<br />
+                                客&nbsp;服&nbsp;电&nbsp;话&nbsp;：15712864358<br />
                                 供应商合作：zhijianliwu@bjlipince.com<br />
                                 微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：zhijiangift
                             </p> -->
@@ -334,7 +334,7 @@
                             <!-- <h3>北京购实惠电子商务有限公司</h3>
                             <p>
                                 总&nbsp;部&nbsp;地&nbsp;址&nbsp;：北京市丰台区新华国际中心C座221室<br />
-                                客&nbsp;服&nbsp;电&nbsp;话&nbsp;：18501957368<br />
+                                客&nbsp;服&nbsp;电&nbsp;话&nbsp;：15712864358<br />
                                 供应商合作：zhijianliwu@bjlipince.com<br />
                                 微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：zhijiangift
                             </p> -->
@@ -502,7 +502,6 @@ export default {
       /* 由于在vue中不推荐控制dom, 即使我们是在查看属性也是, 确保vue成功定位到dom  并且返回数据 */
       let element = this.$refs["transform_box" + id];
       let height = element[0].clientHeight;
-      console.log(height)
       return `height: ${height}px; transition: height ${height * 0.0012}s`;
     },
     handleHeightToM(id) {

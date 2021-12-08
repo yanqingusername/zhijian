@@ -1,67 +1,70 @@
 <template>
   <div class="root">
-    <div v-if="!mobileStatus && !showNews" class="container-we">
-      <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
-      <header class="shopheader">
-            <div class="container">
-                <div class="left">
-                    <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
-                    <nav class="navs">
-                        <div v-for="i in shopColumnList" :key="i.code">
-                          <div :class="paramId==i.code ? 'itemActive':'item'" @click="handleNewsInfo(i.code)">
-                                            <img :src="paramId==i.code ? i.select_icons:i.icons" />
-                                            <span>{{i.name}}</span>
-                                            <span v-if="paramId==i.code" class="underline"></span>
-                                        </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="right">
-                    <div class="button">
-                        <img src="~/assets/images/icon-xcx-01.svg" />
-                        <span>小程序</span>
-                    </div>
-                    <div class="drop">
-                        <img src="http://admin.zhijianliwu.com/static/images/xcx.png"/>
-                        <span>微信扫一扫体验</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-      <div class="banner"></div>
-      <div class="proposition">
-       <div class="mainContent top-to-head">
-                <div class="productContainer">
-                    <div class="list" v-if="productList.length > 0">
-                          <a v-for="v in productList" :key="v.id" :href="'/we?id='+ paramId + '&detail='+v.id" class="item" >
-                                        <img :src="v.pic" />
-                                        <h3>{{v.name}}</h3>
-                                        <div class="price_view">
-                                          <span class="price">￥{{v.price}}</span>
-                                          <img class="price-img" v-if="v.sign_pic" :src="v.sign_pic" />
-                                          <span class="price-text" v-if="v.marketPrice">￥{{v.marketPrice}}</span>
-                                        </div>
-                                        <div style="margin-top:12px;margin-bottom:12px;">
-                                        <span class="button">立即购买</span>
-                                        </div>
-                                    </a>
-                        
-                    </div>
-                    <div v-else class="emptyDiv"></div>
-                </div>
-                <!-- <div class="loadingMore">加载中<LoadingOutlined /></div> -->
-                <div style="height:40px;"></div>
-            </div>
+    <div class="pc-product-list" v-if="!mobileStatus && !showNews" >
+      <div class="container-we">
+        <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
+        <header class="shopheader">
+              <div class="container">
+                  <div class="left">
+                      <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
+                      <nav class="navs">
+                          <div v-for="i in shopColumnList" :key="i.code">
+                            <div :class="paramId==i.code ? 'itemActive':'item'" @click="handleNewsInfo(i.code)">
+                                              <img :src="paramId==i.code ? i.select_icons:i.icons" />
+                                              <span>{{i.name}}</span>
+                                              <span v-if="paramId==i.code" class="underline"></span>
+                                          </div>
+                          </div>
+                      </nav>
+                  </div>
+                  <div class="right">
+                      <div class="button">
+                          <img src="~/assets/images/icon-xcx-01.svg" />
+                          <span>小程序</span>
+                      </div>
+                      <div class="drop">
+                          <img src="http://admin.zhijianliwu.com/static/images/xcx.png"/>
+                          <span>微信扫一扫体验</span>
+                      </div>
+                  </div>
+              </div>
+          </header>
+        <div class="banner"></div>
+        <div class="proposition">
+        <div class="mainContent top-to-head">
+                  <div class="productContainer">
+                      <div class="list" v-if="productList.length > 0">
+                            <a v-for="v in productList" :key="v.id" :href="'/we?id='+ paramId + '&detail='+v.id" class="item" >
+                                          <img :src="v.pic" />
+                                          <h3>{{v.name}}</h3>
+                                          <div class="price_view">
+                                            <span class="price">￥{{v.price}}</span>
+                                            <img class="price-img" v-if="v.sign_pic" :src="v.sign_pic" />
+                                            <span class="price-text" v-if="v.marketPrice">￥{{v.marketPrice}}</span>
+                                          </div>
+                                          <div style="margin-top:12px;margin-bottom:12px;">
+                                          <span class="button">立即购买</span>
+                                          </div>
+                                      </a>
+                          
+                      </div>
+                      <div v-else class="emptyDiv"></div>
+                  </div>
+                  <!-- <div class="loadingMore">加载中<LoadingOutlined /></div> -->
+                  <div style="height:40px;"></div>
+              </div>
+        </div>
       </div>
       <SideBar />
     </div>
+
     <div v-if="mobileStatus && !showNews" class="container-we-m">
       <vHeader isShowTop="false"/>
       <div class="mainContent">
                 <div class="tabs">
                     <nav class="categorytabs">
                             <div :class="paramId == i.code ? 'itemActive':'item'" :key="i.code" v-for="i in shopColumnList" @click="handleChange(i.code)">
-                                <img :src="paramId==i.code ? i.select_icons:i.icons" />
+                                <img :src="paramId==i.code ? i.select_icons : i.icons" />
                                 <span>{{i.name}}</span>
                                 <span v-if="paramId==i.code" class="underline"></span>
                             </div>
@@ -134,20 +137,36 @@
                     <div class="container">
                         <div class="left">
                            <div class="swiper-father">
-                              <div class="swiper-container">
+                              <!-- <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide" v-for="(i,index) in productInfoPics" :key="index">
                                     <img class="swiper-slide-img" :src="i" />
                                   </div>
                                 </div>
-                                <!-- 如果需要分页器 -->
                                 <div class="swiper-pagination"></div>
-                                <!-- 如果需要滚动条 -->
                                 <div class="swiper-scrollbar"></div>
 
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
-                              </div>
+                              </div> -->
+                              <div class="pc-partner-container">
+                            <div class='partner-prev'><i></i></div>
+                            <swiper
+                                class="partner-list"
+                                lazy
+                                ref="mySwiper"
+                                :options="swiperOption"
+                            >
+                              <swiper-slide v-for="(i,index) in productInfoPics" :key="index">
+                                <img class="swiper-slide-img" :src="i" />
+                              </swiper-slide>
+                            </swiper>
+                            <div style="position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;">
+                              <span v-for="(i,index) in productInfoPics" :key="index" :class="'swiper-pagination-bullet ' + ( activeIndex == index &&  'swiper-pagination-bullet-active')" ></span>
+                            </div>
+                            <div class='partner-next'><i></i></div>
+                        </div>
+
                             </div>
                         </div>
                         <div class="right">
@@ -165,8 +184,8 @@
                                </div>
                             </div>
                             <div class="qrcontent">
-                                <img src="http://admin.zhijianliwu.com/static/images/xcx.png" />
-                                <span>长按保存二维码下单</span>
+                                <img :src="productInfo.goods_qcode" />
+                                <span>小程序扫码下单</span>
                             </div>
                         </div>
                     </div>
@@ -174,7 +193,7 @@
                 </div>
                 <div class="productinfo">
                   <div style="width: 1200px;margin-top:20px;align-items: flex-start;flex-wrap: wrap;">
-                          <img style="width:100px;height:100px;margin-right:10px;" v-for="(i,index) in productInfoPics" :key="index" :src="i"/>
+                          <img :class="activeIndex == index ? 'active-img':'default-img'" v-for="(i,index) in productInfoPics" :key="index" :src="i" @click="handlerClickImg(index)"/>
                       </div>
                 </div>
                 <div class="productinfo">
@@ -182,9 +201,9 @@
                 </div>
                 <div class="productinfo" style="height:214px;background:#FAFAFA;padding:20px;position:relative;" v-if="productInfo.recommendList.length > 0">
                   <div class="rela-swiper">
-                    <div class="swiper-co" style="width:1080px;">
+                    <!-- <div class="swiper-co" style="width:1080px;">
                               <div class="swiper-wrapper" style="width:1080px;">
-                                <div class="swiper-slide" v-for="(i,index) in productInfo.recommendList" :key="index" style="width: 208px;">
+                                <div class="swiper-slide" v-for="(i,index) in productInfo.recommendList" :key="index" style="width: 208px;margin-right:10px;">
                                   <div class="help-item">
                                     <div class="img-box" style="width: 208px;height: 172px;background: #FFFFFF;">
                                       <img :src="i.pic" style="width: 208px;height: 172px;background: #FFFFFF;"/>
@@ -194,7 +213,24 @@
                               </div>
                             </div>
                             <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-next"></div> -->
+
+                            <div class="pc-partner-container" style="width:1080px;">
+                            <div class='swiper-button-prev'><i></i></div>
+                            <swiper
+                                class="partner-list"
+                                lazy
+                                :options="swiperOptionrecommend"
+                            >
+                              <swiper-slide v-for="(i,index) in productInfo.recommendList" :key="index">
+                                <div class="img-box" style="width: 208px;height: 172px;background: #FFFFFF;" v-for="(j,index) in i" :key="index">
+                                      <img :src="j.pic" style="width: 208px;height: 172px;background: #FFFFFF;"/>
+                                    </div>
+                              </swiper-slide>
+                            </swiper>
+                            <div class='swiper-button-next'><i></i></div>
+                        </div>
+
                   </div>
                 </div>
                 <div class="productinfo" style="height:72px;background:#FAFAFA;padding:20px;border-top: 4px solid #FFFFFF;">
@@ -213,8 +249,8 @@
     </div>
 
     <div class="wap-product-detail" v-if="mobileStatus && showNews">
-      <div class="wap-container-we-m" v-if="mobileStatus">
-        <vHeader isShowTop="false" />
+      <div class="wap-container-we-m">
+        <vHeader isShowTop="false" isBack="true" :paramId="paramId"/>
         <div class="wap-main">
             <div class="wap-main-swiper">
               <div class="swiper-why">
@@ -248,8 +284,8 @@
                                </div>
                             </div>
                   <div class="wap-main-qrcontent">
-                                <img src="http://admin.zhijianliwu.com/static/images/xcx.png" />
-                                <span>长按保存二维码下单</span>
+                                <img :src="productInfo.goods_qcode" />
+                                <span>小程序扫码下单</span>
                             </div>
                        
 
@@ -272,7 +308,7 @@
                     <div class="wap-content">
                         <img src="~/assets/images/wap_tel_xm.png" />
                         <div class="wap-info">
-                            <h5>18501957368</h5>
+                            <h5>15712864358</h5>
                             <p>7*12小时贴心客服热线<br />周一至周日9:00-21:00</p>
                         </div>
                     </div>
@@ -312,6 +348,30 @@ export default {
   },
   data() {
     return {
+      swiperOptionrecommend: {
+        // loop: true,
+        // // autoplay: {
+        // //   stopOnLastSlide: false,
+        // //   delay: 1000
+        // // },
+        // slidesPerView: 5,
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+      },
+      swiperOption: {
+        // loop: true,
+        // // autoplay: {
+        // //   stopOnLastSlide: false,
+        // //   delay: 1000
+        // // },
+        // slidesPerView: 1,
+        // navigation: {
+        //   nextEl: '.partner-next',
+        //   prevEl: '.partner-prev',
+        // },
+      },
       content: {
         "content": ""
       }, // 富文本内容
@@ -338,11 +398,9 @@ export default {
     this.getShopColumn();
 
     // if (this.$route.query.id) this.paramId = this.$route.query.id;
-    // console.log(this.paramId)
 
     // if (this.$route.query.detail){
     //   this.detailId = this.$route.query.detail;
-    //   console.log(this.detailId)
     //   this.getProductInfo();
     // }else{
     //   this.page = 1;
@@ -360,6 +418,16 @@ export default {
     }
   },
   methods: {
+    handlerClickImg(index){
+      this.activeIndex = index;
+      // this.swiperOption={
+      //   initialSlide: index,
+      // }
+      this.$nextTick(function () {
+        this.$refs.mySwiper.$swiper.slideTo(index, 500, false)
+        // this.$refs.mySwiper.$swiper.realIndex = index
+      })
+    },
     handleNewsInfo(id) {
       if(this.paramId == id){
 
@@ -386,11 +454,9 @@ export default {
             if (this.$route.query.id) {
               this.paramId = this.$route.query.id;
             }
-            console.log(this.paramId)
 
             if (this.$route.query.detail){
               this.detailId = this.$route.query.detail;
-              console.log(this.detailId)
               this.getProductInfo();
             }else{
               this.page = 1;
@@ -410,7 +476,6 @@ export default {
         "is_dev":"1"
       }).then(res => {
         if (res.data.sta === 1) {
-            console.log(res.data)
             this.productInfo = res.data;
             this.productInfoPics = res.data.pics;
             this.skuIndex = res.data.skus[0].id;
@@ -447,9 +512,7 @@ export default {
     },
     setSwp(){
       let that = this;
-      
 
-      this.$nextTick(() => {
       if (this.mobileStatus) {
         
           new Swiper(".swiper-why", {
@@ -468,77 +531,80 @@ export default {
          
         
       } else{
-        new Swiper(".swiper-container", {
-                updateOnWindowResize: true,
-                // autoplay: {
-                //   delay: 4000, // 设置轮播的时间
-                //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-                // },
-                loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
-                grabCursor: true,
-                observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-                observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-                watchOverflow: true,
-                preventInteractionOnTransition: true,
-                // delay: 5000,
-                speed: 1500,
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                  el: ".swiper-pagination",
-                  type: "custom",
-                  autoplayDisableOnInteraction: false,
-                  renderCustom: function(swiper, current, total) {
-                    var paginationHtml = " ";
-                    for (var i = 0; i < total; i++) {
-                      // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-                      if (i === current - 1) {
-                        paginationHtml +=
-                          '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-                      } else {
-                        paginationHtml +=
-                          '<span class="swiper-pagination-customs"></span>';
-                      }
-                    }
-                    return paginationHtml;
-                  }
-                },
-                on:{
-                  slideChangeTransitionEnd: function(){
-                    console.log(this.realIndex)
-                    that.activeIndex = this.realIndex;
-                  },
-
-                }
-              });
-
-              new Swiper(".swiper-co", {
-            // autoplay: {
-            //   delay: 2000, // 设置轮播的时间
-            //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-            // },
-            loop: false,
-            updateOnWindowResize: true,
+        this.swiperOption={
+        // loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        slidesPerView: 1,
+        updateOnWindowResize: true,
             grabCursor: true,
             observer: true, // 修改swiper自己或子元素时，自动初始化swiper
             observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            slidesPerView: 5,
-            spaceBetween: 10,
             lazyLoading: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev"
-            },
             watchOverflow: true,
                 preventInteractionOnTransition: true,
                 // delay: 5000,
-                speed: 1500,
-          
-          });
+                speed: 500,
+        navigation: {
+          nextEl: '.partner-next',
+          prevEl: '.partner-prev',
+        },
+        // initialSlide: that.activeIndex,
+        on:{
+           slideChangeTransitionEnd: function(){
+            that.activeIndex = this.realIndex;
+          },
+        }
       }
-    });
+
+this.swiperOptionrecommend={
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        loopedSlides: 5,
+        slidesPerView: 1,
+        updateOnWindowResize: true,
+            grabCursor: true,
+            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+            lazyLoading: true,
+            watchOverflow: true,
+                preventInteractionOnTransition: true,
+                // delay: 5000,
+                speed: 500,
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            },
+      }
+          //     new Swiper(".swiper-co", {
+          //   // autoplay: {
+          //   //   delay: 2000, // 设置轮播的时间
+          //   //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          //   // },
+          //   loop: true,
+          //   updateOnWindowResize: true,
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   slidesPerView: 5,
+          //   spaceBetween: 10,
+          //   lazyLoading: true,
+          //   navigation: {
+          //     nextEl: ".swiper-button-next",
+          //     prevEl: ".swiper-button-prev"
+          //   },
+          //   watchOverflow: true,
+          //       preventInteractionOnTransition: true,
+          //       // delay: 5000,
+          //       speed: 1500,
+          
+          // });
+      }
     },
     onPageScroll() {
       if (this.loading || !this.mobileStatus) return;
@@ -570,7 +636,6 @@ export default {
     skuClick(item){
       this.skuIndex = item.id;
       this.productInfoPics = item.pics;
-      console.log(item)
     },
     clickContent(content, number){
       this.content.content = content;
@@ -594,7 +659,10 @@ export default {
     // 判断当前是否为移动端布局
     mobileStatus() {
       return this.$store.state.isMobile;
-    }
+    },
+    swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
   },
    watch: {
     mobileStatus() {
@@ -618,76 +686,81 @@ export default {
          
         
       } else{
-        new Swiper(".swiper-container", {
-                updateOnWindowResize: true,
-                // autoplay: {
-                //   delay: 4000, // 设置轮播的时间
-                //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-                // },
-                loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
-                grabCursor: true,
-                observer: true, // 修改swiper自己或子元素时，自动初始化swiper
-                observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-                watchOverflow: true,
-                preventInteractionOnTransition: true,
-                initialSlide: that.activeIndex,
-                // delay: 5000,
-                speed: 1500,
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                  el: ".swiper-pagination",
-                  type: "custom",
-                  autoplayDisableOnInteraction: false,
-                  renderCustom: function(swiper, current, total) {
-                    var paginationHtml = " ";
-                    for (var i = 0; i < total; i++) {
-                      // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-                      if (i === current - 1) {
-                        paginationHtml +=
-                          '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-                      } else {
-                        paginationHtml +=
-                          '<span class="swiper-pagination-customs"></span>';
-                      }
-                    }
-                    return paginationHtml;
-                  }
-                },
-                on:{
-                  slideChangeTransitionEnd: function(){
-                    console.log(this.realIndex)
-                    that.activeIndex = this.realIndex;
-                  },
-
-                }
-              });
-
-              new Swiper(".swiper-co", {
-            // autoplay: {
-            //   delay: 2000, // 设置轮播的时间
-            //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-            // },
-            loop: false,
-            updateOnWindowResize: true,
+        
+        this.swiperOption={
+        // loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+         slidesPerView: 1,
+        updateOnWindowResize: true,
             grabCursor: true,
             observer: true, // 修改swiper自己或子元素时，自动初始化swiper
             observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-            slidesPerView: 5,
-            spaceBetween: 10,
             lazyLoading: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev"
-            },
             watchOverflow: true,
                 preventInteractionOnTransition: true,
                 // delay: 5000,
-                speed: 1500,
+                speed: 500,
+        navigation: {
+          nextEl: '.partner-next',
+          prevEl: '.partner-prev',
+        },
+        // initialSlide: that.activeIndex,
+        on:{
+           slideChangeTransitionEnd: function(){
+            that.activeIndex = this.realIndex;
+          },
+        }
+      }
+
+      this.swiperOptionrecommend={
+        loop: true,
+        // autoplay: {
+        //   stopOnLastSlide: false,
+        //   delay: 1000
+        // },
+        loopedSlides: 5,
+        slidesPerView: 1,
+        updateOnWindowResize: true,
+            grabCursor: true,
+            observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+            lazyLoading: true,
+            watchOverflow: true,
+                preventInteractionOnTransition: true,
+                // delay: 5000,
+                speed: 500,
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            },
+      }
+
+          //     new Swiper(".swiper-co", {
+          //   // autoplay: {
+          //   //   delay: 2000, // 设置轮播的时间
+          //   //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          //   // },
+          //   loop: false,
+          //   updateOnWindowResize: true,
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   slidesPerView: 5,
+          //   spaceBetween: 10,
+          //   lazyLoading: true,
+          //   navigation: {
+          //     nextEl: ".swiper-button-next",
+          //     prevEl: ".swiper-button-prev"
+          //   },
+          //   watchOverflow: true,
+          //       preventInteractionOnTransition: true,
+          //       // delay: 5000,
+          //       speed: 1500,
           
-          });
+          // });
         }
       });
     }
@@ -695,7 +768,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container-we-m {
   .mainContent {
     width: 100%;
@@ -1307,6 +1380,37 @@ padding: 0rem 0.3rem;
         box-sizing:border-box;
         }
 
+         .swiper-father .partner-next, .swiper-father .partner-prev {
+        width: 30px;
+         height: 30px;
+        text-align: center;
+        display: block;
+        // margin-top: -54px;
+        }
+
+         .swiper-father .partner-next:after,.swiper-father .partner-prev:after {
+          content:''
+        }
+
+        .swiper-father .partner-prev {
+          background: url("~/assets/images/icon_12_04_left.png") no-repeat center center;
+          left:12px;
+          top: 46%;
+    position: absolute;
+    z-index: 88;
+        }
+        
+        .swiper-father .partner-next{
+          background:  url("~/assets/images/icon_12_04_right.png") no-repeat center center;
+          right:12px;
+          top: 46%;
+    position: absolute;
+    z-index: 88;
+        }
+
+
+
+
           .swiper-father .swiper-button-next,.swiper-father .swiper-button-prev {
         width: 30px;
          height: 30px;
@@ -1557,7 +1661,7 @@ padding: 0rem 0.3rem;
 
 
 /*包裹自定义分页器的div的位置等CSS样式*/
-  .swiper-pagination-custom {
+  .swiper-pagination-bullets {
     bottom: 5%;
     left: 0;
     width: 100%;
@@ -1566,7 +1670,7 @@ padding: 0rem 0.3rem;
     text-align: center;
   }
   /*自定义分页器的样式，这个你自己想要什么样子自己写*/
-  .swiper-pagination-customs {
+  .swiper-pagination-bullet {
     cursor: pointer;
     width: 49px;
     height: 6px;
@@ -1580,7 +1684,7 @@ padding: 0rem 0.3rem;
     outline: 0;
   }
   /*自定义分页器激活时的样式表现*/
-  .swiper-pagination-customs-active {
+  .swiper-pagination-bullet-active {
     opacity: 1;
     border: 3px solid #8e2829;
     background-color: #fff;
@@ -1747,15 +1851,29 @@ padding: 0rem 0.3rem;
           }
           .wap-main-content{
             width: 100%;
-                height: auto;
-            .wap-main-content-m{
-              width: 100%;
-                height: auto;
+            height: auto;
+            // .wap-main-content-m{
+            //   width: 100%;
+            //     height: auto;
+            // }
+            // .wap-main-content-m img {
+            //     width: 100%;
+            //     height: auto;
+            //   }
+            .wap-main-content-m {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              
+                img {
+                  width: 7.5rem;
+                }
             }
-            .wap-main-content-m img {
-                width: 100%;
-                height: auto;
-              }
+          }
+
+          img {
+            width: 100%;
+            height: auto;
           }
       }
     }
@@ -1991,6 +2109,21 @@ padding: 0rem 0.3rem;
       }
     }
   }
+}
+
+
+.active-img{
+  width:100px;
+  height:100px;
+  margin-right:10px;
+  border: 1px solid #EC1815;
+}
+
+.default-img{
+  width: 100px;
+  height: 100px;
+  margin-right:10px;
+  border: 1px solid #EEEEEE;
 }
 
 </style>

@@ -1,0 +1,17 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/cooperation.js": "pages/cooperation.js",
+    "pages/index.js": "pages/index.js",
+    "pages/news.js": "pages/news.js",
+    "pages/we.js": "pages/we.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/cooperation.js": "pages/cooperation.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/news.js": "pages/news.js.map",
+    "pages/we.js": "pages/we.js.map",
+    "server.js": "server.js.map"
+  }
+}

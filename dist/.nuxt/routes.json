@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cooperation",
+    "path": "/cooperation",
+    "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/cooperation.vue",
+    "chunkName": "pages/cooperation"
+  },
+  {
+    "name": "news",
+    "path": "/news",
+    "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/news.vue",
+    "chunkName": "pages/news"
+  },
+  {
+    "name": "we",
+    "path": "/we",
+    "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/we.vue",
+    "chunkName": "pages/we"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

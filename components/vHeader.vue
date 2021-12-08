@@ -1,9 +1,9 @@
 <template>
   <header :class="isShowTop ? 'headerTop' : 'header'">
-    <div v-if="!mobileStatus" class="container">
-      <div style="display:flex;">
-        <a href="/" v-if="isShowTop" class="logo"><img class="logo" src="~/assets/images/icon-shop-logo-01.png" /></a>
-        <a href="/" v-else class="logo"> <img class="logo"  src="~/assets/images/icon-shop-logo-02.png" /></a>
+    <div v-if="!mobileStatus" class="container" style="align-items: center;">
+      <div style="display:flex;align-items: center;">
+        <a href="/" v-if="isShowTop" class="logo" style="height:50px;width:160px;"><img class="logo" style="height:50px;width:160px;" src="~/assets/images/icon-shop-logo-01.png" /></a>
+        <a href="/" v-else class="logo" style="height:50px;width:160px;"> <img class="logo" style="height:50px;width:160px;" src="~/assets/images/icon-shop-logo-02.png" /></a>
         <ul class="menu">
           <li :class="active === 0 && 'active'" @click="pushUrl('/')">首页</li>
           <li :class="active === 1 && 'active'" @click="pushUrl('/we')">指间商城</li>
@@ -48,7 +48,8 @@
       </div>                      
     </div>
     <div v-if="mobileStatus" class="container-m">
-      <img class="logo" src="~/assets/images/icon-shop-logo-01.png" />
+      <img v-if="isBack" class="logo" style="height: 0.44rem;" @click="pushUrls('/we?id='+paramId); handleChangeMenu(true)" src="~/assets/images/icon-arrow-left.png" />
+      <img v-else class="logo" @click="pushUrl('/'); handleChangeMenu(true)" src="~/assets/images/icon-shop-logo-01.png" />
       <div class="menu">
         <img
           v-if="hideMenu"
@@ -156,7 +157,20 @@ export default {
       default() {
         return 'home';
       }
-    }
+    },
+    isBack: {
+      // 默认提示
+      type: Boolean,
+      default() {
+        return false;
+      }
+    },
+    paramId:{
+      type: String,
+      default() {
+        return '';
+      }
+    },
   },
   methods: {
     pushUrl(path = "/") {
@@ -166,7 +180,13 @@ export default {
       } else if (path == "/news") {
         path += "?timestamp=" + +new Date();
         this.$router.replace(path);
+        this.isBack = false;
       }
+    },
+    pushUrls(path = "/") {
+        // path += "?timestamp=" + +new Date();
+        // this.$router.push(path);
+        this.$router.go(-1);
     },
     /**
      * 开关移动端状态下的右侧菜单
@@ -212,6 +232,7 @@ export default {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
+  align-items: center;
 }
 .container-m .logo {
   height: 100%;

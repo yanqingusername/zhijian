@@ -160,9 +160,9 @@ export default {
 
 <style lang="scss" scoped>
 /** 移动端布局 start */
-.footer-m {
-  height: 3rem !important;
-}
+// .footer-m {
+//   height: 3rem !important;
+// }
 
 .foot-info-m {
   box-sizing: border-box;
@@ -397,7 +397,7 @@ export default {
 
 
           .container-m {
-  margin-top: 0.8rem;
+  // margin-top: 0.8rem;
   width: 100%;
   height: 100%;
   display: flex;

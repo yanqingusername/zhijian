@@ -7,7 +7,7 @@
                     <div class="content">
                         <img src="~/assets/images/hotline-p.png" />
                         <div class="info">
-                            <h5>18501957368</h5>
+                            <h5>15712864358</h5>
                             <p>7*12小时贴心客服热线<br />周一至周日9:00-21:00</p>
                         </div>
                     </div>

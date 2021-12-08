@@ -10,9 +10,9 @@
             </div>
           </div>
           <!-- 如果需要分页器 -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" style="bottom: 10px;width: 100%;"></div>
           <!-- 如果需要滚动条 -->
-          <div class="swiper-scrollbar"></div>
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
 
@@ -21,10 +21,10 @@
                     <h1>全套礼赠方案 多种送礼方式</h1>
                     <div class="home-intro-view-bg">
                       <div class="swiper-father">
-                        <div class="swiper-containers">
+                        <div class="swiper-containers" ref="indexSwiper">
                           <div class="swiper-wrapper">
-                            <div class="swiper-slide" v-for="(i,index) in imgList" :key="index">
-                              <img class="swiper-slide-img" src="~/assets/images/intro-01.png" />
+                            <div class="swiper-slide" v-for="(i,index) in homeImgList" :key="index">
+                              <a :href="'/we?id='+ i.id"><img  class="swiper-slide-img" :src="i.source" /></a>
                             </div>
                           </div>
                           <!-- Add Pagination -->
@@ -132,7 +132,7 @@
     </div>
 
     <div v-if="mobileStatus" class="wap-pageContainer">
-      <vHeader :isShowTop="isShowTop" />
+      <vHeader :isShowTop="isShowTop"/>
      
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -257,9 +257,9 @@ export default {
     return {
       clearIndex: 0, // 用于清除当前需要进行清除计时器的滑块index
       isShowTop: false, //是否滑动
-      imgList: ['1','2','3','4'],
       activeIndex: 0,
-      homeBannerList: []
+      homeBannerList: [],
+      homeImgList:[]
     };
   },
   mounted() {
@@ -362,6 +362,7 @@ export default {
       getHomeBanner({}).then(res => {
         if (res.data.sta == 1) {
           this.homeBannerList = res.data.items;
+          this.homeImgList = res.data.gd_img_list;
         }
       });
     },
@@ -373,7 +374,7 @@ export default {
         //   delay: 4000, // 设置轮播的时间
         //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
         // },
-        loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+        // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
         grabCursor: true,
         observer: true, // 修改swiper自己或子元素时，自动初始化swiper
         observeParents: true, // 修改swiper的父元素时，自动初始化swiper
@@ -388,7 +389,6 @@ export default {
         },
         on:{
            slideChangeTransitionEnd: function(){
-            console.log(this.realIndex)
             that.activeIndex = this.realIndex;
           },
 
@@ -398,13 +398,15 @@ export default {
     },
     handleClickDiv(number) {
       let that = this;
-      console.log(number)
       that.activeIndex= number;
-    console.log(that.activeIndex)
-       that.getSw();
+
+      console.log(this.$refs.indexSwiper.swiper)
+     
+      this.$nextTick(function () {
+        this.$refs.indexSwiper.swiper.slideTo(number, 500, false)
+      });
     },
     handleScroll() {
-      console.log(window.scrollY)
         if (window.scrollY > 0) {
             this.isShowTop = true;
         }
@@ -472,6 +474,8 @@ export default {
         },
           });
         } else {
+          that.getSw();
+          
           new Swiper(".swiper-container", {
             updateOnWindowResize: true,
             autoplay: {
@@ -674,7 +678,7 @@ export default {
   .banner-item {
     position: relative;
     width: 100%;
-    height: 31.25vw;
+    height: 561px;
     background-size: cover;
     overflow: hidden;
     -moz-user-select: none;

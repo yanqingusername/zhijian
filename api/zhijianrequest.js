@@ -7,7 +7,7 @@ import qs from "qs";
 const request = axios.create({
     crewithdentials: true, // 跨域请求时发送cookies
     timeout: 10000, // request timeout
-    baseURL: "http://admin.zhijianliwu.com" // 
+    baseURL: "https://admin.zhijianliwu.com" // 
 });
 
 /**
