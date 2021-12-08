@@ -48,7 +48,7 @@
       </div>                      
     </div>
     <div v-if="mobileStatus" class="container-m">
-      <img v-if="isBack" class="logo" style="height: 0.44rem;" @click="pushUrls('/we?id='+paramId); handleChangeMenu(true)" src="~/assets/images/icon-arrow-left.png" />
+      <img v-if="isBack" class="logo" style="height: 0.44rem;width: 0.44rem;" @click="pushUrls('/we?id='+paramId); handleChangeMenu(true)" src="~/assets/images/icon-arrow-left.png" />
       <img v-else class="logo" @click="pushUrl('/'); handleChangeMenu(true)" src="~/assets/images/icon-shop-logo-01.png" />
       <div class="menu">
         <img

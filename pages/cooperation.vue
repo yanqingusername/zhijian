@@ -87,8 +87,9 @@
                 </div>
                 <div id="advantage" class="pc-block">
                     <h2><img src="~/assets/images/ADVANTAGE.png" /><span>我们的优势</span></h2>
-                    <div class="advantage">
-                        <img src="~/assets/images/advantage-line.png" />
+                    <div class="advantage" style="height:443px;width:1200px;">
+                        <img style="height:443px;width:1200px;" src="~/assets/images/icon-advantage-img.png" />
+                        <!-- <img src="~/assets/images/advantage-line.png" />
                         <div class="advantage01">
                             <img class="icon" src="~/assets/images/icon-advantage-01.png" />
                             <span>专业化礼品垂直平台</span>
@@ -104,7 +105,7 @@
                         <div class="advantage04">
                             <img class="icon" src="~/assets/images/icon-advantage-04.png" />
                             <span>低于其他主流电商平台的价格</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div id="partner" class="pc-block">
@@ -152,7 +153,7 @@
                                     <input type="text" name="company" placeholder="公司" />
                                 </div>
                                 <div class="formControl">
-                                    <textarea name="content" placeholder="留言"></textarea>
+                                    <textarea name="content" style="height: 70px;padding-top: 10px;" placeholder="留言"></textarea>
                                 </div>
                                 <div class="formControl">
                                     <button @click="commit">提交</button>
@@ -177,7 +178,7 @@
               <div>{{ item.title }}</div>
                 <div class="openBtn">
                   {{ showM['m'+ index] ? '收起' : '展开' }}
-                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon1: icon2"/>
+                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon2: icon1"/>
                   <!-- <span
                     :style="showM['m'+ index] && 'transform: rotateZ(180deg);'"
                     class="triangle"
@@ -352,7 +353,7 @@
                                     <input type="text" name="company" placeholder="公司" />
                                 </div>
                                 <div class="formControl">
-                                    <textarea name="content" placeholder="留言"></textarea>
+                                    <textarea name="content" style="height: 0.7rem;padding-top: 0.1rem;" placeholder="留言"></textarea>
                                 </div>
                                 <div class="formControl">
                                     <button @click="commit">提交</button>
@@ -377,7 +378,7 @@
               <div>{{ item.title }}</div>
                 <div class="openBtn">
                   {{ showM['m'+ index] ? '收起' : '展开' }}
-                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon1: icon2"/>
+                  <img style="width:16px;height:16px;margin-left:10px;" :src="showM['m'+ index] ? icon2: icon1"/>
                   <!-- <span
                     :style="showM['m'+ index] && 'transform: rotateZ(180deg);'"
                     class="triangle"
@@ -1430,8 +1431,8 @@ export default {
         background: rgba(250, 250, 250, 1);
         margin-top: 60px;
         box-sizing: border-box;
-        padding: 70px;
-
+        padding: 70px 70px 30px 70px;
+        margin-bottom: 50px;
         > p {
           font-size: 15px;
           color: #666;
@@ -1895,7 +1896,8 @@ export default {
         box-sizing: border-box;
         width: 100%;
         margin-top: 0.6rem;
-        padding: 0.7rem 0.3rem;
+        padding: 0.7rem 0.3rem 0.4rem 0.3rem;
+        margin-bottom: 0.3rem;
 
         > p {
           font-size: 0.15rem;

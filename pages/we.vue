@@ -126,13 +126,17 @@
         </header>
         <div class="banner"></div>
         <div class="mainContent top-to-head">
-                    <div class="new-router nongsini">
+              <div class="productinfo">      
+                <div style="width: 1200px;">
+                  <div class="new-router nongsini">
                       <span class="shoushi" @click="$router.push('/')">指间商城</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
                       <span class="shoushi" @click="$router.push('/we?id='+paramId)">{{productInfo.modelname}}</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">{{productInfo.name}}</span>
                     </div>
+                  </div>
+                </div>
                 <div class="productinfo">
                     <div class="container">
                         <div class="left">
@@ -177,7 +181,7 @@
                                 <span v-if="productInfo.marketPrice">￥{{productInfo.marketPrice}}</span>
                             </div>
                             
-                            <div class="">
+                            <div class="" v-if="productInfo.skus.length > 0">
                                <h1>规格：</h1>
                                <div class="skuContent">
                                   <span :class="skuIndex == i.id ? 'span-active' : 'span-default'" @click="skuClick(i)" v-for="(i,index) in productInfo.skus" :key="index">{{i.name}}</span>
@@ -215,15 +219,15 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div> -->
 
-                            <div class="pc-partner-container" style="width:1080px;">
+                            <div class="pc-partner-container" style="width:1080px;height: 172px;">
                             <div class='swiper-button-prev'><i></i></div>
                             <swiper
                                 class="partner-list"
                                 lazy
                                 :options="swiperOptionrecommend"
                             >
-                              <swiper-slide v-for="(i,index) in productInfo.recommendList" :key="index">
-                                <div class="img-box" style="width: 208px;height: 172px;background: #FFFFFF;" v-for="(j,index) in i" :key="index">
+                              <swiper-slide v-for="(i,index) in productInfo.recommendList" :key="index" style="display: flex;">
+                                <div class="img-box" style="width: 208px;height: 172px;background: #FFFFFF;margin-right:10px;" v-for="(j,index) in i" :key="index">
                                       <img :src="j.pic" style="width: 208px;height: 172px;background: #FFFFFF;"/>
                                     </div>
                               </swiper-slide>
@@ -277,7 +281,7 @@
                                 <img class="wap-main-price2" v-if="productInfo.sign_pic" :src="productInfo.sign_pic" />
                                 <span class="wap-main-price3" v-if="productInfo.marketPrice">￥{{productInfo.marketPrice}}</span>
                             </div>
-                <div class="wap-main-sku">
+                <div class="wap-main-sku" v-if="productInfo.skus.length > 0">
                                <h1>规格：</h1>
                                <div class="wap-main-sku-content">
                                   <span :class="skuIndex == i.id ? 'span-active' : 'span-default'" @click="skuClick(i)" v-for="(i,index) in productInfo.skus" :key="index">{{i.name}}</span>
@@ -478,7 +482,7 @@ export default {
         if (res.data.sta === 1) {
             this.productInfo = res.data;
             this.productInfoPics = res.data.pics;
-            this.skuIndex = res.data.skus[0].id;
+            this.skuIndex = res.data && res.data.skus.length > 0 ? res.data.skus[0].id : '-1';
             this.showNews = true;
             this.content.content = res.data.htmlContent;
             this.text = res.data.htmlContent;
@@ -515,9 +519,8 @@ export default {
 
       if (this.mobileStatus) {
         
-          new Swiper(".swiper-why", {
+          new Swiper(".swiper-container", {
             updateOnWindowResize: true,
-            observer: true, //实时检测，动态更新
             grabCursor: true,
             observer: true, // 修改swiper自己或子元素时，自动初始化swiper
             observeParents: true, // 修改swiper的父元素时，自动初始化swiper
@@ -1322,7 +1325,7 @@ padding: 0rem 0.3rem;
       align-items: center;
       color: #333333;
       font-size: 16px;
-      justify-content: center;
+      // justify-content: center;
       span:hover {
         color: #FF4925;
       }
@@ -1687,7 +1690,7 @@ padding: 0rem 0.3rem;
   .swiper-pagination-bullet-active {
     opacity: 1;
     border: 3px solid #8e2829;
-    background-color: #fff;
+    background-color: #EEEEEE;
   }
 
   .wap-product-detail{
@@ -1884,6 +1887,7 @@ padding: 0rem 0.3rem;
   right: 0;
   display: flex;
   flex-direction: column;
+  z-index: 66;
 
   .wap-hotline,
   .wap-top {

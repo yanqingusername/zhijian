@@ -12,27 +12,27 @@
       </ul> -->
       <div class="new-menu">
                             <h3>关于指间</h3>
-                            <a href="/cooperation#intro">公司简介</a>
-                            <a href="/cooperation#culture">企业文化</a>
-                            <a href="/cooperation#business">公司业务</a>
-                            <a href="/cooperation#partner">合作伙伴</a>
+                            <a href="/cooperation#intro" style="text-decoration: none;">公司简介</a>
+                            <a href="/cooperation#culture" style="text-decoration: none;">企业文化</a>
+                            <a href="/cooperation#business" style="text-decoration: none;">公司业务</a>
+                            <a href="/cooperation#partner" style="text-decoration: none;">合作伙伴</a>
                         </div>
                         <div class="new-menu">
                             <h3>指间商城</h3>
-                            <a v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
+                            <a style="text-decoration: none;" v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
                         </div>
                         <div class="new-menu">
                             <h3>指间服务</h3>
-                            <a href="/">在线送礼</a>
-                            <a href="/">礼品采购</a>
-                            <a href="/">礼品兑换</a>
-                            <a href="/">礼品定制</a>
+                            <a href="/" style="text-decoration: none;">在线送礼</a>
+                            <a href="/" style="text-decoration: none;">礼品采购</a>
+                            <a href="/" style="text-decoration: none;">礼品兑换</a>
+                            <a href="/" style="text-decoration: none;">礼品定制</a>
                         </div>
                         <div class="new-menu">
                             <h3>联系我们</h3>
-                            <a href="/">公司采购</a>
-                            <a href="/cooperation#contactus">供应商合作</a>
-                            <a href="/cooperation#joinus">人才招聘</a>
+                            <a href="/" style="text-decoration: none;">公司采购</a>
+                            <a href="/cooperation#contactus" style="text-decoration: none;">供应商合作</a>
+                            <a href="/cooperation#joinus" style="text-decoration: none;">人才招聘</a>
                         </div>
       <div class="code">
         <div class="code-module">
@@ -57,27 +57,27 @@
                     <div class="left">
                         <div class="menu">
                             <h3>关于指间</h3>
-                            <a href="/cooperation#intro">公司简介</a>
-                            <a href="/cooperation#culture">企业文化</a>
-                            <a href="/cooperation#business">公司业务</a>
-                            <a href="/cooperation#partner">合作伙伴</a>
+                            <a href="/cooperation#intro" style="text-decoration: none;">公司简介</a>
+                            <a href="/cooperation#culture" style="text-decoration: none;">企业文化</a>
+                            <a href="/cooperation#business" style="text-decoration: none;">公司业务</a>
+                            <a href="/cooperation#partner" style="text-decoration: none;">合作伙伴</a>
                         </div>
                         <div class="menu">
                             <h3>指间商城</h3>
-                            <a v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
+                            <a style="text-decoration: none;" v-for="i in shopColumnList" :key="i.code" :href="'/we?id=' + i.code">{{i.name}}</a>
                         </div>
                         <div class="menu">
                             <h3>指间服务</h3>
-                            <a href="/">在线送礼</a>
-                            <a href="/">礼品采购</a>
-                            <a href="/">礼品兑换</a>
-                            <a href="/">礼品定制</a>
+                            <a href="/" style="text-decoration: none;">在线送礼</a>
+                            <a href="/" style="text-decoration: none;">礼品采购</a>
+                            <a href="/" style="text-decoration: none;">礼品兑换</a>
+                            <a href="/" style="text-decoration: none;">礼品定制</a>
                         </div>
                         <div class="menu">
                             <h3>联系我们</h3>
-                            <a href="/">公司采购</a>
-                            <a href="/cooperation#contactus">供应商合作</a>
-                            <a href="/cooperation#joinus">人才招聘</a>
+                            <a href="/" style="text-decoration: none;">公司采购</a>
+                            <a href="/cooperation#contactus" style="text-decoration: none;">供应商合作</a>
+                            <a href="/cooperation#joinus" style="text-decoration: none;">人才招聘</a>
                         </div>
                     </div>
                     <div class="right">

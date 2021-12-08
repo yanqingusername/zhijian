@@ -6,7 +6,7 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(84);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -27,7 +27,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".container-index-m{overflow:hidden;background-color:#fff}.container-index-m .banner{width:100%;height:auto}.container-index-m .title{text-align:center;margin:.6rem auto .4rem;height:.6rem}.container-index-m .title img{height:100%;width:auto}.container-index-m .swiper-wrapper{display:-webkit-box}.container-index-m .swiper-wrapper .good-item{height:5.9rem;position:relative;overflow:hidden}.container-index-m .swiper-wrapper .good-item img{position:absolute;top:0;left:0;width:100%;height:auto;z-index:-1}.container-index-m .swiper-wrapper .good-item .good-title{margin:25% auto 1.05rem;font-size:.36rem;text-align:center;font-weight:500;color:#fff}.container-index-m .swiper-wrapper .good-item .good-info{padding:0 .9rem;text-align:center;font-size:.3rem;font-weight:500;color:#000;line-height:.45rem}.container-index-m .info{padding:0 .32rem .15rem}.container-index-m .info video{width:100%;height:auto;margin-bottom:.6rem}.container-index-m .info h3{font-size:.36rem;color:#222;line-height:.36rem;margin-bottom:.35rem}.container-index-m .info h3 span{padding:0 .3rem}.container-index-m .info p{font-size:.27rem;color:#000;line-height:.48rem;text-align:left;font-weight:500;letter-spacing:.5px;text-indent:.29rem}.container-index-m .info p a{color:#34c21a;text-decoration:none}.container-index-m .push img{margin:.7rem auto .3rem;width:100%;height:auto}.container-index-m .cake{padding:0 .3rem}.container-index-m .cake .cake-item{margin-bottom:.4rem}.container-index-m .cake .cake-item>div{display:flex;align-items:center;font-size:.32rem;font-weight:700;color:#222;margin-bottom:.2rem}.container-index-m .cake .cake-item>div img{width:.34rem;margin-right:.08rem}.container-index-m .cake .cake-item p{font-size:.28rem;font-weight:500;color:#535353;line-height:.48rem}.container-index .swiperPag{display:flex;align-items:center;margin:0 auto;background-color:rgba(0,0,0,.8)}.container-index .swiper-pagination-custom{bottom:5%;left:0;width:100%;height:20px;text-align:center}.container-index .swiper-pagination-customs{cursor:pointer;width:49px;height:6px;background-color:#c7c3c3;opacity:.7;border-radius:3px;display:inline-block;margin:0 5px;outline:0}.container-index .swiper-pagination-customs-active{opacity:1;border:3px #8e2829;background-color:#fff}.container-index .banner-item{position:relative;width:100%;height:561px;background-size:cover;overflow:hidden;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.container-index .banner-item:after{content:\"\";display:block;width:100%;height:100%;position:relative;z-index:2}.container-index .banner-item .left{width:30vw;position:absolute;transform:translateX(200%);transition:all 1s;transition-delay:.4s;height:auto;left:24%;top:40%;opacity:0}.container-index .banner-item .right{position:absolute;transform:translateX(200%);transition:all 1.6s;transition-delay:.6s;width:40vw;height:auto;right:19%;bottom:0;opacity:0}.container-index .module{margin:0 auto;width:100%;max-width:1200px;padding-left:20px!important;padding-right:20px!important}.container-index .module img.title{height:60px;width:auto;margin:0 auto;display:block}.container-index .company{background-color:#fff;display:flex;flex-direction:column;align-items:center;padding:0 0 61px;overflow:hidden}.container-index .company .company-info{opacity:0;transform:translateY(60%);transition:all 1s;margin-top:58px;display:flex;justify-content:space-between;align-items:center}.container-index .company .company-info video{width:50%;height:auto}.container-index .company .company-info>div{flex:1;margin-right:0}.container-index .company .company-info>div h4{color:#222;font-size:28px;margin-bottom:15px;font-weight:500}.container-index .company .company-info>div h4 span{padding:0 10px}.container-index .company .company-info>div p{font-size:18px;margin-top:20px;line-height:36px;color:#000;font-weight:400}.container-index .company .company-info>div p a{color:#2eb828;text-decoration:underline}.container-index .company .company-info-to{opacity:1;transform:translateY(0)}.container-index .advantage{background-color:#fafafa;padding-top:80px}.container-index .advantage .advantage-info{width:100%;margin-top:75px;display:flex;flex-wrap:wrap;padding-bottom:20px}.container-index .advantage .advantage-info li{width:286px;height:220px;padding:25px 55px 34px;display:flex;flex-direction:column;align-items:center;text-align:center;transition-property:transform,background-color;transition-duration:.6s,0s;cursor:pointer}.container-index .advantage .advantage-info li:hover{padding:40px 55px;background-color:#fff;justify-content:space-around;transform:translateY(-10%)}.container-index .advantage .advantage-info li:hover img{display:none}.container-index .advantage .advantage-info li:hover div,.container-index .advantage .advantage-info li:hover p{margin:0;color:#333}.container-index .advantage .advantage-info li img{width:54px;height:54px;flex-shrink:0}.container-index .advantage .advantage-info li p{color:#222;font-size:18px;margin:25px auto 16px}.container-index .advantage .advantage-info li div{font-size:14px;font-weight:400;color:#666;line-height:26px}.container-index .adv_bonus{position:relative;margin:0 auto;height:40vw;background-color:#fff}.container-index .adv_bonus .left{position:absolute;left:18%;top:16%;z-index:2;width:40vw;opacity:0;transform:translateX(-60%);transition:all 1s}.container-index .adv_bonus .right{position:absolute;right:18%;top:15%;width:35vw;opacity:0;transform:translateX(60%);transition:all 1s}.container-index .adv_transfrom_to .left,.container-index .adv_transfrom_to .right{opacity:1;transform:translateX(0)}.container-index .adv_good{margin:0 -20px;display:flex;height:50vw;max-height:600px;background-color:#fff;flex-direction:column}.container-index .adv_good .adv_good_l{padding:53px 0 0 41px;height:190px;width:234px}.container-index .adv_good .adv_good_center{width:100%;padding:0 125px}.container-index .adv_good_to .adv_good_l img,.container-index .adv_good_to .adv_good_r div .adv_good_text,.container-index .adv_good_to .adv_good_r div .adv_good_title,.container-index .adv_good_to .adv_good_r div.green .adv_good_text,.container-index .adv_good_to .adv_good_r div.green .adv_good_title{opacity:1}.container-index .mainContent .home-intro-view{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro-view h1{margin-top:40px;font-size:40px;color:#333;margin-bottom:30px}.container-index .mainContent .home-intro-view .home-intro-view-bg{margin:0 auto;width:1200px;height:416px;background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");background-size:cover;display:flex;justify-content:center;align-items:center}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father{position:relative;width:100%;box-sizing:border-box}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-next,.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-prev{width:60px;height:60px;text-align:center;display:block}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-next:after,.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-prev:after{content:\"\"}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-prev{background:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 50%;left:60px}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .swiper-button-next{background:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50%;right:60px}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-container{width:526px;height:414px;margin:auto}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-slide{width:526px;height:414px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-slide .swiper-slide-img{width:526px;height:414px}.container-index .mainContent .home-intro-view .home-intro-view-div{margin-top:70px;width:1000px;height:56px;background:#f6f6f6;display:flex}.container-index .mainContent .home-intro-view .home-intro-view-div .active-div{width:250px;height:56px;background:#db3c3a;font-size:21px;color:#fff;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro-view .home-intro-view-div .default-div{width:250px;height:56px;background:#f6f6f6;font-size:21px;color:#333;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro h1{margin-top:30px;font-size:40px;color:#333}.container-index .mainContent .home-intro p{width:1060px;margin-top:20px;font-size:18px;color:#666}.container-index .mainContent .home-intro .items{display:flex;align-items:center;justify-content:space-between;width:1100px;margin-top:80px}.container-index .mainContent .home-intro .items .item{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro .items .item img{width:142px;height:142px}.container-index .mainContent .home-intro .items .item span{font-size:24px;color:#333;margin-top:26px}.container-index .mainContent .home-oper{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-oper h1{color:rgba(219,60,58,.2);font-size:50px;margin-top:80px}.container-index .mainContent .home-oper>span{color:#db3c3a;font-size:36px;margin-top:20px}.container-index .mainContent .home-oper .steps{display:flex;flex-direction:column;align-items:center;width:1200px}.container-index .mainContent .home-oper .steps .stepLeft,.container-index .mainContent .home-oper .steps .stepRight{width:100%;display:flex;align-items:center;justify-content:space-between;padding-top:80px}.container-index .mainContent .home-oper .steps .stepLeft .name,.container-index .mainContent .home-oper .steps .stepRight .name{display:flex;flex-direction:column}.container-index .mainContent .home-oper .steps .stepLeft .name h2,.container-index .mainContent .home-oper .steps .stepRight .name h2{font-size:92px;color:hsla(0,0%,40%,.2);display:flex;align-items:baseline}.container-index .mainContent .home-oper .steps .stepLeft .name h2 span:last-child,.container-index .mainContent .home-oper .steps .stepRight .name h2 span:last-child{font-size:36px;color:#333}.container-index .mainContent .home-oper .steps .stepLeft .name p,.container-index .mainContent .home-oper .steps .stepRight .name p{font-size:20px;color:#666;margin-top:20px}.container-index .mainContent .home-oper .steps .stepLeft .demo,.container-index .mainContent .home-oper .steps .stepRight .demo{display:flex;align-items:flex-end}.container-index .mainContent .home-oper .steps .stepLeft .demo img.show,.container-index .mainContent .home-oper .steps .stepRight .demo img.show{width:260px}.container-index .mainContent .home-oper .steps .stepLeft{background:#fafafa}.container-index .mainContent .home-oper .steps .stepLeft .name{margin-left:80px}.container-index .mainContent .home-oper .steps .stepLeft .name h2 span:first-child{margin-right:-60px}.container-index .mainContent .home-oper .steps .stepLeft .demo{margin-right:80px;flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepLeft .demo .person02,.container-index .mainContent .home-oper .steps .stepLeft .demo .person04{margin-right:30px}.container-index .mainContent .home-oper .steps .stepRight{flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepRight .name{margin-right:80px;align-items:flex-end}.container-index .mainContent .home-oper .steps .stepRight .name h2{flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepRight .name h2 span:first-child{margin-left:-60px}.container-index .mainContent .home-oper .steps .stepRight .demo{margin-left:80px}.container-index .mainContent .home-oper .steps .stepRight .demo .person01,.container-index .mainContent .home-oper .steps .stepRight .demo .person03{margin-left:30px}.wap-pageContainer .focusContent{width:100%;margin-top:1.08rem}.wap-pageContainer .mainContentWap{margin-top:0!important}.wap-pageContainer .mainContentWap .home-intro{display:flex;flex-direction:column;align-items:center;padding:0 .3rem}.wap-pageContainer .mainContentWap .home-intro h1{margin-top:.6rem;font-size:.4rem;color:#333}.wap-pageContainer .mainContentWap .home-intro p{width:100%;margin-top:.3rem;font-size:.18rem;color:#666}.wap-pageContainer .mainContentWap .home-intro .items{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:.3rem}.wap-pageContainer .mainContentWap .home-intro .items .item{display:flex;flex-direction:column;align-items:center}.wap-pageContainer .mainContentWap .home-intro .items .item img{width:1.2rem;height:1.2rem}.wap-pageContainer .mainContentWap .home-intro .items .item span{font-size:.24rem;color:#333;margin-top:.26rem}.wap-pageContainer .mainContentWap .home-oper{display:flex;flex-direction:column;align-items:center}.wap-pageContainer .mainContentWap .home-oper h1{color:rgba(219,60,58,.2);font-size:.5rem;margin-top:.8rem}.wap-pageContainer .mainContentWap .home-oper>span{color:#db3c3a;font-size:.36rem;margin-top:.2rem}.wap-pageContainer .mainContentWap .home-oper .steps{display:flex;flex-direction:column;align-items:center;width:100%}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight{width:100%;display:flex;align-items:flex-start;justify-content:space-between;padding:.6rem .3rem 0}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name{display:flex;flex-direction:column}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2{font-size:.92rem;color:hsla(0,0%,40%,.2);display:flex;align-items:baseline}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2 span:last-child,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2 span:last-child{color:#333;font-size:.36rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name p,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name p{color:#666;font-size:.24rem;margin-top:.2rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo{display:flex;align-items:flex-end;position:relative}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo img.show,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo img.show{width:3.36rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft{background:#fafafa}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name{margin-left:0}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2 span:first-child{margin-right:-.6rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo{margin-right:0;flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person02,.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person04{margin-right:.3rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person02{width:1.14rem;height:1.83rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person04{width:1.89rem;height:1.31rem;position:absolute;bottom:0;right:3.66rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight{flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name{margin-right:0;align-items:flex-end}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2{flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2 span:first-child{margin-left:-.6rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo{margin-left:0}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person01,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person03{margin-left:.3rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person01{width:1.34rem;height:1.65rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person03{width:1.15rem;height:1.77rem}@-webkit-keyframes left{0%{transform:translateX(200%);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes left{0%{transform:translateX(200%);opacity:0}to{transform:translateX(0);opacity:1}}@-webkit-keyframes right{0%{right:-20%;opacity:0}50%{right:0;opacity:0}to{right:19%;opacity:1}}@keyframes right{0%{right:-20%;opacity:0}50%{right:0;opacity:0}to{right:19%;opacity:1}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".container-index-m{overflow:hidden;background-color:#fff}.container-index-m .banner{width:100%;height:auto}.container-index-m .title{text-align:center;margin:.6rem auto .4rem;height:.6rem}.container-index-m .title img{height:100%;width:auto}.container-index-m .swiper-wrapper{display:-webkit-box}.container-index-m .swiper-wrapper .good-item{height:5.9rem;position:relative;overflow:hidden}.container-index-m .swiper-wrapper .good-item img{position:absolute;top:0;left:0;width:100%;height:auto;z-index:-1}.container-index-m .swiper-wrapper .good-item .good-title{margin:25% auto 1.05rem;font-size:.36rem;text-align:center;font-weight:500;color:#fff}.container-index-m .swiper-wrapper .good-item .good-info{padding:0 .9rem;text-align:center;font-size:.3rem;font-weight:500;color:#000;line-height:.45rem}.container-index-m .info{padding:0 .32rem .15rem}.container-index-m .info video{width:100%;height:auto;margin-bottom:.6rem}.container-index-m .info h3{font-size:.36rem;color:#222;line-height:.36rem;margin-bottom:.35rem}.container-index-m .info h3 span{padding:0 .3rem}.container-index-m .info p{font-size:.27rem;color:#000;line-height:.48rem;text-align:left;font-weight:500;letter-spacing:.5px;text-indent:.29rem}.container-index-m .info p a{color:#34c21a;text-decoration:none}.container-index-m .push img{margin:.7rem auto .3rem;width:100%;height:auto}.container-index-m .cake{padding:0 .3rem}.container-index-m .cake .cake-item{margin-bottom:.4rem}.container-index-m .cake .cake-item>div{display:flex;align-items:center;font-size:.32rem;font-weight:700;color:#222;margin-bottom:.2rem}.container-index-m .cake .cake-item>div img{width:.34rem;margin-right:.08rem}.container-index-m .cake .cake-item p{font-size:.28rem;font-weight:500;color:#535353;line-height:.48rem}.container-index .swiperPag{display:flex;align-items:center;margin:0 auto;background-color:rgba(0,0,0,.8)}.container-index .swiper-pagination-custom{bottom:5%;left:0;width:100%;height:20px;text-align:center}.container-index .swiper-pagination-customs{cursor:pointer;width:49px;height:6px;background-color:#c7c3c3;opacity:.7;border-radius:3px;display:inline-block;margin:0 5px;outline:0}.container-index .swiper-pagination-customs-active{opacity:1;border:3px #8e2829;background-color:#eee}.container-index .banner-item{position:relative;width:100%;height:561px;background-size:cover;overflow:hidden;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.container-index .banner-item:after{content:\"\";display:block;width:100%;height:100%;position:relative;z-index:2}.container-index .banner-item .left{width:30vw;position:absolute;transform:translateX(200%);transition:all 1s;transition-delay:.4s;height:auto;left:24%;top:40%;opacity:0}.container-index .banner-item .right{position:absolute;transform:translateX(200%);transition:all 1.6s;transition-delay:.6s;width:40vw;height:auto;right:19%;bottom:0;opacity:0}.container-index .module{margin:0 auto;width:100%;max-width:1200px;padding-left:20px!important;padding-right:20px!important}.container-index .module img.title{height:60px;width:auto;margin:0 auto;display:block}.container-index .company{background-color:#fff;display:flex;flex-direction:column;align-items:center;padding:0 0 61px;overflow:hidden}.container-index .company .company-info{opacity:0;transform:translateY(60%);transition:all 1s;margin-top:58px;display:flex;justify-content:space-between;align-items:center}.container-index .company .company-info video{width:50%;height:auto}.container-index .company .company-info>div{flex:1;margin-right:0}.container-index .company .company-info>div h4{color:#222;font-size:28px;margin-bottom:15px;font-weight:500}.container-index .company .company-info>div h4 span{padding:0 10px}.container-index .company .company-info>div p{font-size:18px;margin-top:20px;line-height:36px;color:#000;font-weight:400}.container-index .company .company-info>div p a{color:#2eb828;text-decoration:underline}.container-index .company .company-info-to{opacity:1;transform:translateY(0)}.container-index .advantage{background-color:#fafafa;padding-top:80px}.container-index .advantage .advantage-info{width:100%;margin-top:75px;display:flex;flex-wrap:wrap;padding-bottom:20px}.container-index .advantage .advantage-info li{width:286px;height:220px;padding:25px 55px 34px;display:flex;flex-direction:column;align-items:center;text-align:center;transition-property:transform,background-color;transition-duration:.6s,0s;cursor:pointer}.container-index .advantage .advantage-info li:hover{padding:40px 55px;background-color:#fff;justify-content:space-around;transform:translateY(-10%)}.container-index .advantage .advantage-info li:hover img{display:none}.container-index .advantage .advantage-info li:hover div,.container-index .advantage .advantage-info li:hover p{margin:0;color:#333}.container-index .advantage .advantage-info li img{width:54px;height:54px;flex-shrink:0}.container-index .advantage .advantage-info li p{color:#222;font-size:18px;margin:25px auto 16px}.container-index .advantage .advantage-info li div{font-size:14px;font-weight:400;color:#666;line-height:26px}.container-index .adv_bonus{position:relative;margin:0 auto;height:40vw;background-color:#fff}.container-index .adv_bonus .left{position:absolute;left:18%;top:16%;z-index:2;width:40vw;opacity:0;transform:translateX(-60%);transition:all 1s}.container-index .adv_bonus .right{position:absolute;right:18%;top:15%;width:35vw;opacity:0;transform:translateX(60%);transition:all 1s}.container-index .adv_transfrom_to .left,.container-index .adv_transfrom_to .right{opacity:1;transform:translateX(0)}.container-index .adv_good{margin:0 -20px;display:flex;height:50vw;max-height:600px;background-color:#fff;flex-direction:column}.container-index .adv_good .adv_good_l{padding:53px 0 0 41px;height:190px;width:234px}.container-index .adv_good .adv_good_center{width:100%;padding:0 125px}.container-index .adv_good_to .adv_good_l img,.container-index .adv_good_to .adv_good_r div .adv_good_text,.container-index .adv_good_to .adv_good_r div .adv_good_title,.container-index .adv_good_to .adv_good_r div.green .adv_good_text,.container-index .adv_good_to .adv_good_r div.green .adv_good_title{opacity:1}.container-index .mainContent .home-intro-view{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro-view h1{margin-top:40px;font-size:40px;color:#333;margin-bottom:30px}.container-index .mainContent .home-intro-view .home-intro-view-bg{margin:0 auto;width:1200px;height:416px;background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");background-size:cover;display:flex;justify-content:center;align-items:center}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father{position:relative;width:100%;box-sizing:border-box}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-next,.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-prev{width:60px;height:60px;text-align:center;display:block}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-next:after,.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-prev:after{content:\"\"}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-prev{background:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 50%;left:60px}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-father .partner-next{background:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50%;right:60px}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-con-list,.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-container{width:526px;height:414px;margin:auto}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-slide{width:526px;height:414px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro-view .home-intro-view-bg .swiper-slide .swiper-slide-img{width:526px;height:414px}.container-index .mainContent .home-intro-view .home-intro-view-div{margin-top:70px;width:1000px;height:56px;background:#f6f6f6;display:flex}.container-index .mainContent .home-intro-view .home-intro-view-div .active-div{width:250px;height:56px;background:#db3c3a;font-size:21px;color:#fff;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro-view .home-intro-view-div .default-div{width:250px;height:56px;background:#f6f6f6;font-size:21px;color:#333;display:flex;align-items:center;justify-content:center}.container-index .mainContent .home-intro{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro h1{margin-top:30px;font-size:40px;color:#333}.container-index .mainContent .home-intro p{width:1060px;margin-top:20px;font-size:18px;color:#666}.container-index .mainContent .home-intro .items{display:flex;align-items:center;justify-content:space-between;width:1100px;margin-top:80px}.container-index .mainContent .home-intro .items .item{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-intro .items .item img{width:142px;height:142px}.container-index .mainContent .home-intro .items .item span{font-size:24px;color:#333;margin-top:26px}.container-index .mainContent .home-oper{display:flex;flex-direction:column;align-items:center}.container-index .mainContent .home-oper h1{color:rgba(219,60,58,.2);font-size:50px;margin-top:80px}.container-index .mainContent .home-oper>span{color:#db3c3a;font-size:36px;margin-top:20px}.container-index .mainContent .home-oper .steps{display:flex;flex-direction:column;align-items:center;width:1200px}.container-index .mainContent .home-oper .steps .stepLeft,.container-index .mainContent .home-oper .steps .stepRight{width:100%;display:flex;align-items:center;justify-content:space-between;padding-top:80px}.container-index .mainContent .home-oper .steps .stepLeft .name,.container-index .mainContent .home-oper .steps .stepRight .name{display:flex;flex-direction:column}.container-index .mainContent .home-oper .steps .stepLeft .name h2,.container-index .mainContent .home-oper .steps .stepRight .name h2{font-size:92px;color:hsla(0,0%,40%,.2);display:flex;align-items:baseline}.container-index .mainContent .home-oper .steps .stepLeft .name h2 span:last-child,.container-index .mainContent .home-oper .steps .stepRight .name h2 span:last-child{font-size:36px;color:#333}.container-index .mainContent .home-oper .steps .stepLeft .name p,.container-index .mainContent .home-oper .steps .stepRight .name p{font-size:20px;color:#666;margin-top:20px}.container-index .mainContent .home-oper .steps .stepLeft .demo,.container-index .mainContent .home-oper .steps .stepRight .demo{display:flex;align-items:flex-end}.container-index .mainContent .home-oper .steps .stepLeft .demo img.show,.container-index .mainContent .home-oper .steps .stepRight .demo img.show{width:260px}.container-index .mainContent .home-oper .steps .stepLeft{background:#fafafa}.container-index .mainContent .home-oper .steps .stepLeft .name{margin-left:80px}.container-index .mainContent .home-oper .steps .stepLeft .name h2 span:first-child{margin-right:-60px}.container-index .mainContent .home-oper .steps .stepLeft .demo{margin-right:80px;flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepLeft .demo .person02,.container-index .mainContent .home-oper .steps .stepLeft .demo .person04{margin-right:30px}.container-index .mainContent .home-oper .steps .stepRight{flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepRight .name{margin-right:80px;align-items:flex-end}.container-index .mainContent .home-oper .steps .stepRight .name h2{flex-direction:row-reverse}.container-index .mainContent .home-oper .steps .stepRight .name h2 span:first-child{margin-left:-60px}.container-index .mainContent .home-oper .steps .stepRight .demo{margin-left:80px}.container-index .mainContent .home-oper .steps .stepRight .demo .person01,.container-index .mainContent .home-oper .steps .stepRight .demo .person03{margin-left:30px}.wap-pageContainer .focusContent{width:100%;margin-top:1.08rem}.wap-pageContainer .mainContentWap{margin-top:0!important}.wap-pageContainer .mainContentWap .home-intro{display:flex;flex-direction:column;align-items:center;padding:0 .3rem}.wap-pageContainer .mainContentWap .home-intro h1{margin-top:.6rem;font-size:.4rem;color:#333}.wap-pageContainer .mainContentWap .home-intro p{width:100%;margin-top:.3rem;font-size:.18rem;color:#666}.wap-pageContainer .mainContentWap .home-intro .items{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:.3rem}.wap-pageContainer .mainContentWap .home-intro .items .item{display:flex;flex-direction:column;align-items:center}.wap-pageContainer .mainContentWap .home-intro .items .item img{width:1.2rem;height:1.2rem}.wap-pageContainer .mainContentWap .home-intro .items .item span{font-size:.24rem;color:#333;margin-top:.26rem}.wap-pageContainer .mainContentWap .home-oper{display:flex;flex-direction:column;align-items:center}.wap-pageContainer .mainContentWap .home-oper h1{color:rgba(219,60,58,.2);font-size:.5rem;margin-top:.8rem}.wap-pageContainer .mainContentWap .home-oper>span{color:#db3c3a;font-size:.36rem;margin-top:.2rem}.wap-pageContainer .mainContentWap .home-oper .steps{display:flex;flex-direction:column;align-items:center;width:100%}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight{width:100%;display:flex;align-items:flex-start;justify-content:space-between;padding:.6rem .3rem 0}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name{display:flex;flex-direction:column}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2{font-size:.92rem;color:hsla(0,0%,40%,.2);display:flex;align-items:baseline}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2 span:last-child,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2 span:last-child{color:#333;font-size:.36rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name p,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name p{color:#666;font-size:.24rem;margin-top:.2rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo{display:flex;align-items:flex-end;position:relative}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo img.show,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo img.show{width:3.36rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft{background:#fafafa}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name{margin-left:0}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .name h2 span:first-child{margin-right:-.6rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo{margin-right:0;flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person02,.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person04{margin-right:.3rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person02{width:1.14rem;height:1.83rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepLeft .demo .person04{width:1.89rem;height:1.31rem;position:absolute;bottom:0;right:3.66rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight{flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name{margin-right:0;align-items:flex-end}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2{flex-direction:row-reverse}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .name h2 span:first-child{margin-left:-.6rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo{margin-left:0}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person01,.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person03{margin-left:.3rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person01{width:1.34rem;height:1.65rem}.wap-pageContainer .mainContentWap .home-oper .steps .stepRight .demo .person03{width:1.15rem;height:1.77rem}@-webkit-keyframes left{0%{transform:translateX(200%);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes left{0%{transform:translateX(200%);opacity:0}to{transform:translateX(0);opacity:1}}@-webkit-keyframes right{0%{right:-20%;opacity:0}50%{right:0;opacity:0}to{right:19%;opacity:1}}@keyframes right{0%{right:-20%;opacity:0}50%{right:0;opacity:0}to{right:19%;opacity:1}}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -62,12 +62,12 @@ module.exports = __webpack_require__.p + "img/icon_12_03_right.c9ee43e.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=48715a38&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[(!_vm.mobileStatus)?_vm._ssrNode("<div class=\"container-index\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"banner\"><div class=\"swiper-container\"><div class=\"swiper-wrapper\">"+(_vm._ssrList((_vm.homeBannerList),function(i,index){return ("<div class=\"swiper-slide\"><img"+(_vm._ssrAttr("src",i.source))+" class=\"banner-item\"></div>")}))+"</div> <div class=\"swiper-pagination\" style=\"bottom: 10px;width: 100%;\"></div></div></div> <div class=\"mainContent\"><div class=\"home-intro-view\"><h1>全套礼赠方案 多种送礼方式</h1> <div class=\"home-intro-view-bg\"><div class=\"swiper-father\"><div class=\"swiper-containers\"><div class=\"swiper-wrapper\">"+(_vm._ssrList((_vm.homeImgList),function(i,index){return ("<div class=\"swiper-slide\"><a"+(_vm._ssrAttr("href",'/we?id='+ i.id))+"><img"+(_vm._ssrAttr("src",i.source))+" class=\"swiper-slide-img\"></a></div>")}))+"</div> <div class=\"swiper-pagination\"></div></div> <div class=\"swiper-button-next\"></div> <div class=\"swiper-button-prev\"></div></div></div> <div class=\"home-intro-view-div\"><div"+(_vm._ssrClass(null,_vm.activeIndex == 0 ? 'active-div':'default-div'))+">自选卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 1 ? 'active-div':'default-div'))+">储值卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 2 ? 'active-div':'default-div'))+">电影卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 3 ? 'active-div':'default-div'))+">节日礼品</div></div></div> <div class=\"home-intro\"><h1>指间礼物产品介绍</h1> <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(73)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(74)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(75)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>文字、语音、视频祝福任意添加，生成礼物红包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(80)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(81)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(82)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(83)))+" class=\"person04\"></div></div></div></div></div> <div style=\"height:100px;\"></div>")],2):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus)?_vm._ssrNode("<div class=\"wap-pageContainer\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"swiper-container\"><div class=\"swiper-wrapper\">"+(_vm._ssrList((_vm.homeBannerList),function(i,index){return ("<div class=\"swiper-slide\"><div class=\"good-item\" style=\"height: 7.5rem;width: 7.5rem;\"><img"+(_vm._ssrAttr("src",i.source))+" style=\"height: 7.5rem;width: 7.5rem;\"></div></div>")}))+"</div> <div class=\"swiper-pagination\"></div></div> <div class=\"mainContentWap\"><div class=\"home-intro\"><h1>指间礼物产品介绍</h1> <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(73)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(74)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(75)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>文字、语音、视频祝福任意添加，生成礼物红包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(80)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(81)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(82)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(83)))+" class=\"person04\"></div></div></div></div></div>")],2):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=41cc238c&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[(!_vm.mobileStatus)?_vm._ssrNode("<div class=\"container-index\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"banner\" style=\"position:relative;\">","</div>",[_c('swiper',{key:_vm.homeBannerList.length,staticClass:"partner-list",attrs:{"lazy":"","options":_vm.swiperOptionBanner}},_vm._l((_vm.homeBannerList),function(i,index){return _c('swiper-slide',{key:index,staticClass:"swiper-slide"},[_c('img',{staticClass:"banner-item",attrs:{"src":i.source}})])}),1),_vm._ssrNode(" <div style=\"position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;\">"+(_vm._ssrList((_vm.homeBannerList),function(i,index){return ("<span"+(_vm._ssrClass(null,'swiper-pagination-customs ' + ( _vm.bannerIndex == index &&  'swiper-pagination-customs-active')))+"></span>")}))+"</div>")],2),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"mainContent\">","</div>",[_vm._ssrNode("<div class=\"home-intro-view\">","</div>",[_vm._ssrNode("<h1>全套礼赠方案 多种送礼方式</h1> "),_vm._ssrNode("<div class=\"home-intro-view-bg\">","</div>",[_vm._ssrNode("<div>","</div>",[_vm._ssrNode("<div class=\"swiper-father\" style=\"width: 1200px;display: flex;align-items: center;\">","</div>",[_vm._ssrNode("<div class=\"partner-prev\"><i></i></div> "),_c('swiper',{key:_vm.homeImgList.length,ref:"indexSwiper",staticClass:"swiper-con-list",staticStyle:{"width":"526px"},attrs:{"lazy":"","options":_vm.swiperOptionImg}},_vm._l((_vm.homeImgList),function(i,index){return _c('swiper-slide',{key:index},[_c('a',{attrs:{"href":'/we?id='+ i.id}},[_c('img',{staticClass:"swiper-slide-img",attrs:{"src":i.source}})])])}),1),_vm._ssrNode(" <div class=\"partner-next\"><i></i></div>")],2)])]),_vm._ssrNode(" <div class=\"home-intro-view-div\"><div"+(_vm._ssrClass(null,_vm.activeIndex == 0 ? 'active-div':'default-div'))+">自选卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 1 ? 'active-div':'default-div'))+">储值卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 2 ? 'active-div':'default-div'))+">电影卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 3 ? 'active-div':'default-div'))+">节日礼品</div></div>")],2),_vm._ssrNode(" <div class=\"home-intro\"><h1>指间礼物产品介绍</h1> <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(68)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(69)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(70)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(71)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(73)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>文字、语音、视频祝福任意添加，生成礼物红包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(74)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(75)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"person04\"></div></div></div></div>")],2),_vm._ssrNode(" <div style=\"height:100px;\"></div>")],2):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus)?_vm._ssrNode("<div class=\"wap-pageContainer\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"swiper-containers\"><div class=\"swiper-wrapper\">"+(_vm._ssrList((_vm.homeBannerWapList),function(i,index){return ("<div class=\"swiper-slide\"><div class=\"good-item\" style=\"height: 7.5rem;width: 7.5rem;\"><img"+(_vm._ssrAttr("src",i.source))+" style=\"height: 7.5rem;width: 7.5rem;\"></div></div>")}))+"</div> <div class=\"swiper-pagination\"></div></div> <div class=\"mainContentWap\"><div class=\"home-intro\"><h1>指间礼物产品介绍</h1> <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(68)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(69)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(70)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(71)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(73)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>文字、语音、视频祝福任意添加，生成礼物红包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(74)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(75)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"person04\"></div></div></div></div> <div style=\"height:0.5rem;\"></div></div>")],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=48715a38&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=41cc238c&
 
 // EXTERNAL MODULE: ./components/vHeader.vue + 4 modules
 var vHeader = __webpack_require__(10);
@@ -83,6 +83,29 @@ var utils = __webpack_require__(44);
 var zhijianapi = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -341,13 +364,27 @@ var zhijianapi = __webpack_require__(7);
 
   data() {
     return {
+      bannerIndex: 0,
+      swiperOptionBanner: {},
       clearIndex: 0,
       // 用于清除当前需要进行清除计时器的滑块index
       isShowTop: false,
       //是否滑动
       activeIndex: 0,
       homeBannerList: [],
-      homeImgList: []
+      homeBannerWapList: [],
+      homeImgList: [],
+      swiperOptionImg: {// loop: true,
+        // // autoplay: {
+        // //   stopOnLastSlide: false,
+        // //   delay: 1000
+        // // },
+        // slidesPerView: 1,
+        // navigation: {
+        //   nextEl: '.partner-next',
+        //   prevEl: '.partner-prev',
+        // },
+      }
     };
   },
 
@@ -357,7 +394,7 @@ var zhijianapi = __webpack_require__(7);
     let that = this;
 
     if (this.mobileStatus) {
-      new swiper_default.a(".swiper-container", {
+      new swiper_default.a(".swiper-containers", {
         updateOnWindowResize: true,
         autoplay: {
           delay: 3000,
@@ -399,13 +436,66 @@ var zhijianapi = __webpack_require__(7);
           }
         }
       });
-    } else {
-      new swiper_default.a(".swiper-container", {
+    } else {// new Swiper(".swiper-container", {
+      //   updateOnWindowResize: true,
+      //   autoplay: {
+      //     delay: 4000, // 设置轮播的时间
+      //     disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+      //   },
+      //   // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+      //   // observer: true, //实时检测，动态更新
+      //   grabCursor: true,
+      //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+      //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      //   watchOverflow: true,
+      //   preventInteractionOnTransition: true,
+      //   // delay: 5000,
+      //   speed: 1500,
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     type: "custom",
+      //     autoplayDisableOnInteraction: false,
+      //     renderCustom: function(swiper, current, total) {
+      //       var paginationHtml = " ";
+      //       for (var i = 0; i < total; i++) {
+      //         // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+      //         if (i === current - 1) {
+      //           paginationHtml +=
+      //             '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+      //         } else {
+      //           paginationHtml +=
+      //             '<span class="swiper-pagination-customs"></span>';
+      //         }
+      //       }
+      //       return paginationHtml;
+      //     }
+      //   },
+      // });
+    }
+
+    if (false) {}
+  },
+
+  methods: {
+    getList() {
+      Object(zhijianapi["c" /* getHomeBanner */])({}).then(res => {
+        if (res.data.sta == 1) {
+          this.homeBannerList = res.data.items;
+          this.homeImgList = res.data.gd_img_list;
+          this.homeBannerWapList = res.data.items_wap;
+          this.getSw();
+        }
+      });
+    },
+
+    getSw() {
+      let that = this;
+      this.swiperOptionBanner = {
         updateOnWindowResize: true,
         autoplay: {
-          delay: 4000,
+          delay: 1000,
           // 设置轮播的时间
-          disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          stopOnLastSlide: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
 
         },
         // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
@@ -418,80 +508,69 @@ var zhijianapi = __webpack_require__(7);
         watchOverflow: true,
         preventInteractionOnTransition: true,
         // delay: 5000,
+        slidesPerView: 1,
         speed: 1500,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "custom",
-          autoplayDisableOnInteraction: false,
-          renderCustom: function (swiper, current, total) {
-            var paginationHtml = " ";
-
-            for (var i = 0; i < total; i++) {
-              // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-              if (i === current - 1) {
-                paginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-              } else {
-                paginationHtml += '<span class="swiper-pagination-customs"></span>';
-              }
-            }
-
-            return paginationHtml;
+        on: {
+          slideChangeTransitionEnd: function () {
+            that.bannerIndex = this.realIndex;
           }
         }
-      });
-      this.getSw();
-    }
-
-    if (false) {}
-  },
-
-  methods: {
-    getList() {
-      Object(zhijianapi["c" /* getHomeBanner */])({}).then(res => {
-        if (res.data.sta == 1) {
-          this.homeBannerList = res.data.items;
-          this.homeImgList = res.data.gd_img_list;
-        }
-      });
-    },
-
-    getSw() {
-      let that = this;
-      new swiper_default.a(".swiper-containers", {
+      };
+      this.swiperOptionImg = {
+        slidesPerView: 1,
         updateOnWindowResize: true,
-        // autoplay: {
-        //   delay: 4000, // 设置轮播的时间
-        //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-        // },
-        // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
         grabCursor: true,
         observer: true,
         // 修改swiper自己或子元素时，自动初始化swiper
         observeParents: true,
         // 修改swiper的父元素时，自动初始化swiper
+        lazyLoading: true,
         watchOverflow: true,
         preventInteractionOnTransition: true,
-        initialSlide: that.activeIndex,
         // delay: 5000,
         speed: 1500,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '.partner-next',
+          prevEl: '.partner-prev'
         },
         on: {
           slideChangeTransitionEnd: function () {
             that.activeIndex = this.realIndex;
           }
         }
-      });
+      }; // new Swiper(".swiper-container", {
+      //   updateOnWindowResize: true,
+      //   // autoplay: {
+      //   //   delay: 4000, // 设置轮播的时间
+      //   //   disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+      //   // },
+      //   // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+      //   grabCursor: true,
+      //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+      //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      //   watchOverflow: true,
+      //   preventInteractionOnTransition: true,
+      //   initialSlide: that.activeIndex,
+      //   slidesPerView: 1,
+      //   // delay: 5000,
+      //   speed: 1500,
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      //   on:{
+      //      slideChangeTransitionEnd: function(){
+      //       that.activeIndex = this.realIndex;
+      //     },
+      //   }
+      // });
     },
 
     handleClickDiv(number) {
       let that = this;
       that.activeIndex = number;
-      console.log(this.$refs.indexSwiper.swiper);
       this.$nextTick(function () {
-        this.$refs.indexSwiper.swiper.slideTo(number, 500, false);
+        this.$refs.indexSwiper.$swiper.slideTo(number, 500, false);
       });
     },
 
@@ -503,11 +582,11 @@ var zhijianapi = __webpack_require__(7);
       }
     },
 
-    onPageScroll() {
-      this.$nextTick(() => {
-        this.adv_transfrom = Object(utils["a" /* transfromDom */])("adv_transfrom");
-        this.text_transfrom = Object(utils["a" /* transfromDom */])("text_transfrom");
-      }); // let pageHeight = document.documentElement.scrollHeight;
+    onPageScroll() {// this.$nextTick(() => {
+      //   this.adv_transfrom = transfromDom("adv_transfrom");
+      //   this.text_transfrom = transfromDom("text_transfrom");
+      // });
+      // let pageHeight = document.documentElement.scrollHeight;
     }
 
   },
@@ -518,6 +597,10 @@ var zhijianapi = __webpack_require__(7);
     // 判断当前是否为移动端布局
     mobileStatus() {
       return this.$store.state.isMobile;
+    },
+
+    swiper() {
+      return this.$refs.indexSwiper.$swiper;
     }
 
   },
@@ -527,7 +610,7 @@ var zhijianapi = __webpack_require__(7);
       let that = this;
       this.$nextTick(() => {
         if (this.mobileStatus) {
-          new swiper_default.a(".swiper-container", {
+          new swiper_default.a(".swiper-containers", {
             updateOnWindowResize: true,
             autoplay: {
               delay: 3000,
@@ -570,46 +653,62 @@ var zhijianapi = __webpack_require__(7);
             }
           });
         } else {
-          that.getSw();
-          new swiper_default.a(".swiper-container", {
-            updateOnWindowResize: true,
-            autoplay: {
-              delay: 4000,
-              // 设置轮播的时间
-              disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
-
-            },
-            // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
-            // observer: true, //实时检测，动态更新
-            grabCursor: true,
-            observer: true,
-            // 修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true,
-            // 修改swiper的父元素时，自动初始化swiper
-            watchOverflow: true,
-            preventInteractionOnTransition: true,
-            // delay: 5000,
-            speed: 1500,
-            pagination: {
-              el: ".swiper-pagination",
-              type: "custom",
-              autoplayDisableOnInteraction: false,
-              renderCustom: function (swiper, current, total) {
-                var paginationHtml = " ";
-
-                for (var i = 0; i < total; i++) {
-                  // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-                  if (i === current - 1) {
-                    paginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-                  } else {
-                    paginationHtml += '<span class="swiper-pagination-customs"></span>';
-                  }
-                }
-
-                return paginationHtml;
-              }
-            }
-          });
+          that.getSw(); // new Swiper(".swiper-container", {
+          //   updateOnWindowResize: true,
+          //   autoplay: {
+          //     delay: 4000, // 设置轮播的时间
+          //     disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          //   },
+          //   // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+          //   // observer: true, //实时检测，动态更新
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   watchOverflow: true,
+          //   preventInteractionOnTransition: true,
+          //   // delay: 5000,
+          //   speed: 1500,
+          //   pagination: {
+          //     el: ".swiper-pagination",
+          //     type: "custom",
+          //     autoplayDisableOnInteraction: false,
+          //     renderCustom: function(swiper, current, total) {
+          //       var paginationHtml = " ";
+          //       for (var i = 0; i < total; i++) {
+          //         // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+          //         if (i === current - 1) {
+          //           paginationHtml +=
+          //             '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+          //         } else {
+          //           paginationHtml +=
+          //             '<span class="swiper-pagination-customs"></span>';
+          //         }
+          //       }
+          //       return paginationHtml;
+          //     }
+          //   },
+          // });
+          //     this.swiperOptionBanner={
+          //   updateOnWindowResize: true,
+          //   autoplay: {
+          //     delay: 4000, // 设置轮播的时间
+          //     disableOnInteraction: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
+          //   },
+          //   // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
+          //   // observer: true, //实时检测，动态更新
+          //   grabCursor: true,
+          //   observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+          //   observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+          //   watchOverflow: true,
+          //   preventInteractionOnTransition: true,
+          //   // delay: 5000,
+          //   speed: 1500,
+          //   on:{
+          //      slideChangeTransitionEnd: function(){
+          //       that.bannerIndex = this.realIndex;
+          //     },
+          //   }
+          // }
         }
       });
     }
@@ -653,7 +752,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return transfromDom; });
+/* unused harmony export transfromDom */
 // 进行动画偏移的动画函数
 
 /**
@@ -11153,91 +11252,91 @@ module.exports = function (url, options) {
 
 /***/ }),
 
-/***/ 72:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/intro-01.325bb3f.png";
 
 /***/ }),
 
-/***/ 73:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/intro-04.092ff66.png";
 
 /***/ }),
 
-/***/ 74:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/intro-03.99ed309.png";
 
 /***/ }),
 
-/***/ 75:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/intro-02.be32353.png";
 
 /***/ }),
 
-/***/ 76:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-01.a93137c.png";
 
 /***/ }),
 
-/***/ 77:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-p-01.c6cf1e8.png";
 
 /***/ }),
 
-/***/ 78:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-02.56651d4.png";
 
 /***/ }),
 
-/***/ 79:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-p-02.8050a2a.png";
 
 /***/ }),
 
-/***/ 80:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-03.9d95460.png";
 
 /***/ }),
 
-/***/ 81:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-p-03.cd40d86.png";
 
 /***/ }),
 
-/***/ 82:
+/***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-04.6f715d6.png";
 
 /***/ }),
 
-/***/ 83:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/demo-p-04.dda433b.png";
 
 /***/ }),
 
-/***/ 84:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

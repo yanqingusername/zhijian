@@ -52,11 +52,15 @@
         <vHeader isShowTop="true"/>
         <div class="banner"></div>
         <div class="mainContent top-to-head">
-                    <div class="new-router nongsini">
+          <div class="productinfo">
+            <div style="width: 1200px;">
+                  <div class="new-router nongsini" >
                       <span class="shoushi" @click="$router.push('/news')">礼物攻略</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">攻略详情</span>
                     </div>
+                  </div>
+          </div>
                 
                 <div class="productinfo">
                   <div style="width: 1200px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;flex-direction: column;">
@@ -691,7 +695,7 @@ export default {
       align-items: center;
       color: #333333;
       font-size: 16px;
-      justify-content: center;
+      // justify-content: center;
       span:hover {
         color: #333333;
       }

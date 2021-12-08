@@ -3,24 +3,28 @@
     "name": "cooperation",
     "path": "/cooperation",
     "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/cooperation.vue",
-    "chunkName": "pages/cooperation"
+    "chunkName": "pages/cooperation",
+    "_name": "_3b717640"
   },
   {
     "name": "news",
     "path": "/news",
     "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/news.vue",
-    "chunkName": "pages/news"
+    "chunkName": "pages/news",
+    "_name": "_12fa9dde"
   },
   {
     "name": "we",
     "path": "/we",
     "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/we.vue",
-    "chunkName": "pages/we"
+    "chunkName": "pages/we",
+    "_name": "_a2e6e5ce"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/user/zhjian20210728/zhijianguangwang/zhijian/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0ce55ed7"
   }
 ]
