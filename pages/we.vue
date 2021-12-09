@@ -154,7 +154,7 @@
                                 <div class="swiper-button-next"></div>
                               </div> -->
                               <div class="pc-partner-container">
-                            <div class='partner-prev'><i></i></div>
+                            <div :class="'partner-prev ' + ( activeIndex == 0 &&  'partner-prev-opcation')"><i></i></div>
                             <swiper
                                 class="partner-list"
                                 lazy
@@ -168,7 +168,7 @@
                             <div style="position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;">
                               <span v-for="(i,index) in productInfoPics" :key="index" :class="'swiper-pagination-bullet ' + ( activeIndex == index &&  'swiper-pagination-bullet-active')" ></span>
                             </div>
-                            <div class='partner-next'><i></i></div>
+                            <div :class="'partner-next ' + ( activeIndex == productInfoPics.length &&  'partner-prev-opcation')"><i></i></div>
                         </div>
 
                             </div>
@@ -201,7 +201,7 @@
                       </div>
                 </div>
                 <div class="productinfo">
-                  <div style="width: 1200px;margin-top:30px;margin-bottom:30px;align-items: flex-start;flex-wrap: wrap;">相关推荐</div>
+                  <div style="width: 1200px;margin-top:30px;margin-bottom:30px;align-items: flex-start;flex-wrap: wrap;font-size: 24px;font-family: PingFang-SC-Bold, PingFang-SC;font-weight: bold;color: #666666;">相关推荐</div>
                 </div>
                 <div class="productinfo" style="height:214px;background:#FAFAFA;padding:20px;position:relative;" v-if="productInfo.recommendList.length > 0">
                   <div class="rela-swiper">
@@ -228,7 +228,7 @@
                             >
                               <swiper-slide v-for="(i,index) in productInfo.recommendList" :key="index" style="display: flex;">
                                 <div class="img-box" style="width: 208px;height: 172px;background: #FFFFFF;margin-right:10px;" v-for="(j,index) in i" :key="index">
-                                      <img :src="j.pic" style="width: 208px;height: 172px;background: #FFFFFF;"/>
+                                      <img :src="j.pic" style="width: 208px;height: 172px;background: #FFFFFF;" @click="handleNewsInfoDetail(j.id)"/>
                                     </div>
                               </swiper-slide>
                             </swiper>
@@ -271,7 +271,7 @@
                             <div class="swiper-pagination"></div>
                -->
                     <div class="swiper-father">
-                            <div class='wap-partner-prev'><i></i></div>
+                            <div :class="'wap-partner-prev ' + ( activeWapIndex == 0 &&  'wap-partner-prev-opcation')"><i></i></div>
                             <swiper
                                 class="partner-list"
                                 lazy
@@ -284,7 +284,7 @@
                             <div style="position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;">
                               <span v-for="(i,index) in productInfoPics" :key="index" :class="'wap-swiper-pagination-bullet ' + ( activeWapIndex == index &&  'wap-swiper-pagination-bullet-active')" ></span>
                             </div>
-                            <div class='wap-partner-next'><i></i></div>
+                            <div :class="'wap-partner-next ' + ( activeWapIndex == productInfoPics.length &&  'wap-partner-prev-opcation')"><i></i></div>
                     </div>
               </div>
               <div class="wap-main-h1">{{productInfo.name}}</div>
@@ -459,6 +459,17 @@ export default {
         this.page = 1;
         this.getProductList();
         this.showNews = false;
+      }
+      
+    },
+    handleNewsInfoDetail(id) {
+      if(this.detailId == id){
+
+      }else{
+        this.$router.replace("/we?id=" + this.paramId + '&detail='+id);
+        this.detailId = id;
+
+        this.getProductInfo();
       }
       
     },
@@ -1456,6 +1467,10 @@ padding: 0rem 0.3rem;
         box-sizing:border-box;
         }
 
+        .partner-prev-opcation{
+          opacity: 0.5;
+        }
+
          .swiper-father .partner-next, .swiper-father .partner-prev {
         width: 30px;
          height: 30px;
@@ -1469,7 +1484,7 @@ padding: 0rem 0.3rem;
         }
 
         .swiper-father .partner-prev {
-          background: url("~/assets/images/icon_12_04_left.png") no-repeat center center;
+          background: url("~/assets/images/icon_12_09_left.png") no-repeat center center;
           left:12px;
           top: 46%;
     position: absolute;
@@ -1477,7 +1492,7 @@ padding: 0rem 0.3rem;
         }
         
         .swiper-father .partner-next{
-          background:  url("~/assets/images/icon_12_04_right.png") no-repeat center center;
+          background:  url("~/assets/images/icon_12_09_right.png") no-repeat center center;
           right:12px;
           top: 46%;
     position: absolute;
@@ -1499,12 +1514,12 @@ padding: 0rem 0.3rem;
         }
 
         .swiper-father  .swiper-button-prev {
-          background: url("~/assets/images/icon_12_04_left.png") no-repeat center center;
+          background: url("~/assets/images/icon_12_09_left.png") no-repeat center center;
           left:12px;
         }
         
         .swiper-father .swiper-button-next {
-          background:  url("~/assets/images/icon_12_04_right.png") no-repeat center center;
+          background:  url("~/assets/images/icon_12_09_right.png") no-repeat center center;
           right:12px;
         }
 
@@ -1807,9 +1822,13 @@ padding: 0rem 0.3rem;
         box-sizing:border-box;
         }
 
+        .wap-partner-prev-opcation{
+          opacity: 0.5;
+        }
+
          .swiper-father .wap-partner-next, .swiper-father .wap-partner-prev {
-        width: 0.5rem;
-         height: 0.5rem;
+        width: 0.6rem;
+         height: 0.6rem;
         text-align: center;
         display: block;
         // margin-top: -54px;
@@ -1820,7 +1839,7 @@ padding: 0rem 0.3rem;
         }
 
         .swiper-father .wap-partner-prev {
-          background: url("~/assets/images/icon_12_08_left.png") no-repeat center center;
+          background: url("~/assets/images/icon_12_09_left.png") no-repeat center center;
           left:0.12rem;
           top: 50%;
     position: absolute;
@@ -1828,7 +1847,7 @@ padding: 0rem 0.3rem;
         }
         
         .swiper-father .wap-partner-next{
-          background:  url("~/assets/images/icon_12_08_right.png") no-repeat center center;
+          background:  url("~/assets/images/icon_12_09_right.png") no-repeat center center;
           right:0.12rem;
           top: 50%;
     position: absolute;
