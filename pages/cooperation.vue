@@ -1402,15 +1402,18 @@ export default {
                 font-size: 15px;
                 border: 0;
                 padding-left: 30px;
+                font-weight: 400;
               }
 
               input[type='text'] {
                 width: 200px;
                 line-height: 40px;
+                font-weight: 400;
               }
 
               textarea {
                 width: 100%;
+                font-weight: 400;
               }
 
               button {
@@ -1866,15 +1869,18 @@ export default {
                 border: 0;
                 font-size: 0.24rem;
                 padding-left: 0.3rem;
+                font-weight: 400;
               }
 
               input[type='text'] {
                 width: 3.45rem;
                 line-height: 0.6rem;
+                font-weight: 400;
               }
 
               textarea {
                 width: 100%;
+                font-weight: 400;
               }
 
               button {

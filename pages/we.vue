@@ -644,7 +644,7 @@ export default {
         },
         // initialSlide: that.activeIndex,
         on:{
-           slideChangeTransitionEnd: function(){
+           slideChangeTransitionStart: function(){
             that.activeWapIndex = this.realIndex;
           },
         }
@@ -687,7 +687,7 @@ export default {
         },
         // initialSlide: that.activeIndex,
         on:{
-           slideChangeTransitionEnd: function(){
+           slideChangeTransitionStart: function(){
             that.activeIndex = this.realIndex;
           },
         }
@@ -840,7 +840,7 @@ this.swiperOptionrecommend={
         },
         // initialSlide: that.activeIndex,
         on:{
-           slideChangeTransitionEnd: function(){
+           slideChangeTransitionStart: function(){
             that.activeWapIndex = this.realIndex;
           },
         }
@@ -871,7 +871,7 @@ this.swiperOptionrecommend={
         },
         // initialSlide: that.activeIndex,
         on:{
-           slideChangeTransitionEnd: function(){
+           slideChangeTransitionStart: function(){
             that.activeIndex = this.realIndex;
           },
         }

@@ -27,7 +27,7 @@
 
       <div class="mainContent">
                 <div class="home-intro-view">
-                    <h1>全套礼赠方案 多种送礼方式</h1>
+                    <h1 style="margin-top:80px;">全套礼赠方案 多种送礼方式</h1>
                     <div class="home-intro-view-bg">
                       <div>
                         <div class="swiper-father" style="width: 1200px;display: flex;align-items: center;">
@@ -68,8 +68,8 @@
                 </div>
 
                 <div class="home-intro">
-                    <h1>指间礼物产品介绍</h1>
-                    <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p>
+                    <h1 style="margin-top:200px;">指间礼物产品介绍</h1>
+                    <span style="font-size: 18px;color: #6A6B6C;margin-top:24px;">指间礼物小程序支持线上购买、微信送礼、定制祝福卡、拼手气礼包等多种送礼方式，为您提供全套礼赠方案。</span>
                     <div class="items">
                         <div class="item">
                             <img src="~/assets/images/intro-01.png" />
@@ -113,7 +113,7 @@
                                     <span>02</span>
                                     <span>送祝语</span>
                                 </h2>
-                                <p>文字、语音、视频祝福任意添加，生成礼物红包</p>
+                                <p>任意编辑文字、卡片祝福，生成礼包</p>
                             </div>
                             <div class="demo">
                                 <img class="show" src="~/assets/images/demo-02.png" />
@@ -186,7 +186,7 @@
      <div class="mainContentWap">
                 <div class="home-intro">
                     <h1>指间礼物产品介绍</h1>
-                    <p>指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。</p>
+                    <p>指间礼物小程序支持线上购买、微信送礼、定制祝福卡、拼手气礼包等多种送礼方式，为您提供全套礼赠方案。</p>
                     <div class="items">
                         <div class="item">
                           <img src="~/assets/images/intro-01.png" />
@@ -230,7 +230,7 @@
                                     <span>02</span>
                                     <span>送祝语</span>
                                 </h2>
-                                <p>文字、语音、视频祝福任意添加，生成礼物红包</p>
+                                <p>任意编辑文字、卡片祝福，生成礼包</p>
                             </div>
                             <div class="demo">
                                 <img class="show" src="~/assets/images/demo-02.png" />
@@ -447,7 +447,7 @@ export default {
           slidesPerView: 1,
           speed: 1500,
           on:{
-            slideChangeTransitionEnd: function(){
+            slideChangeTransitionStart: function(){
               that.bannerWapIndex = this.realIndex;
             },
           }
@@ -470,7 +470,7 @@ export default {
           slidesPerView: 1,
           speed: 1500,
           on:{
-            slideChangeTransitionEnd: function(){
+            slideChangeTransitionStart: function(){
               that.bannerIndex = this.realIndex;
             },
           }
@@ -492,7 +492,7 @@ export default {
             prevEl: '.partner-prev',
           },
           on:{
-            slideChangeTransitionEnd: function(){
+            slideChangeTransitionStart: function(){
               that.activeIndex = this.realIndex;
             },
           }
