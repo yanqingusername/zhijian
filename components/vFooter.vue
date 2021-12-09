@@ -23,14 +23,14 @@
                         </div>
                         <div class="new-menu">
                             <h3>指间服务</h3>
-                            <a href="/" style="text-decoration: none;">在线送礼</a>
-                            <a href="/" style="text-decoration: none;">礼品采购</a>
-                            <a href="/" style="text-decoration: none;">礼品兑换</a>
-                            <a href="/" style="text-decoration: none;">礼品定制</a>
+                            <a style="text-decoration: none;">在线送礼</a>
+                            <a style="text-decoration: none;">礼品采购</a>
+                            <a style="text-decoration: none;">礼品兑换</a>
+                            <a style="text-decoration: none;">礼品定制</a>
                         </div>
                         <div class="new-menu">
                             <h3>联系我们</h3>
-                            <a href="/" style="text-decoration: none;">公司采购</a>
+                            <a href="/cooperation" style="text-decoration: none;">公司采购</a>
                             <a href="/cooperation#contactus" style="text-decoration: none;">供应商合作</a>
                             <a href="/cooperation#joinus" style="text-decoration: none;">人才招聘</a>
                         </div>
@@ -68,14 +68,14 @@
                         </div>
                         <div class="menu">
                             <h3>指间服务</h3>
-                            <a href="/" style="text-decoration: none;">在线送礼</a>
-                            <a href="/" style="text-decoration: none;">礼品采购</a>
-                            <a href="/" style="text-decoration: none;">礼品兑换</a>
-                            <a href="/" style="text-decoration: none;">礼品定制</a>
+                            <a style="text-decoration: none;">在线送礼</a>
+                            <a style="text-decoration: none;">礼品采购</a>
+                            <a style="text-decoration: none;">礼品兑换</a>
+                            <a style="text-decoration: none;">礼品定制</a>
                         </div>
                         <div class="menu">
                             <h3>联系我们</h3>
-                            <a href="/" style="text-decoration: none;">公司采购</a>
+                            <a href="/cooperation" style="text-decoration: none;">公司采购</a>
                             <a href="/cooperation#contactus" style="text-decoration: none;">供应商合作</a>
                             <a href="/cooperation#joinus" style="text-decoration: none;">人才招聘</a>
                         </div>

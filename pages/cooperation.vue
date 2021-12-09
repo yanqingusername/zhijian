@@ -1086,7 +1086,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 55px;
+      padding-top: 90px;
       width: 100%;
 
       h2 {
@@ -1146,7 +1146,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 60px;
+      padding-top: 90px;
       // width: 1200px;
 
       h2 {
@@ -1562,7 +1562,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 0.6rem;
+      padding-top: 1.3rem;
 
       h2 {
         font-size: 0.4rem;
@@ -1622,7 +1622,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 0.8rem;
+      padding-top: 1.3rem;
       width: 100%;
 
       h2 {
