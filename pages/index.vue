@@ -433,7 +433,7 @@ export default {
         this.swiperWapBanner={
           updateOnWindowResize: true,
           autoplay: {
-            delay: 1000, // 设置轮播的时间
+            delay: 3000, // 设置轮播的时间
             stopOnLastSlide: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
           },
           // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
@@ -456,7 +456,7 @@ export default {
         this.swiperOptionBanner={
           updateOnWindowResize: true,
           autoplay: {
-            delay: 1000, // 设置轮播的时间
+            delay: 3000, // 设置轮播的时间
             stopOnLastSlide: false // 这一行是为了避免手动滑动轮播图后，自动轮播失效，默认为true
           },
           // loop: true, // 循环模式选项，true 循环播放 !!!! 注: 有动画效果, 请不要随意打开, 除非你要重新设置动画
