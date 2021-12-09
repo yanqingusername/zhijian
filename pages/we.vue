@@ -201,7 +201,7 @@
                       </div>
                 </div>
                 <div class="productinfo">
-                  <div style="width: 1200px;margin-top:30px;margin-bottom:30px;align-items: flex-start;flex-wrap: wrap;font-size: 24px;font-family: PingFang-SC-Bold, PingFang-SC;font-weight: bold;color: #666666;">相关推荐</div>
+                  <div style="width: 1200px;margin-top:30px;margin-bottom:30px;align-items: flex-start;flex-wrap: wrap;font-size: 20px;color: #666666;">相关推荐</div>
                 </div>
                 <div class="productinfo" style="height:214px;background:#FAFAFA;padding:20px;position:relative;" v-if="productInfo.recommendList.length > 0">
                   <div class="rela-swiper">
@@ -239,13 +239,17 @@
                 </div>
                 <div class="productinfo" style="height:72px;background:#FAFAFA;padding:20px;border-top: 4px solid #FFFFFF;">
                   <div style="width: 1200px;align-items: flex-start;flex-wrap: wrap;">
-                    <span :style="'font-size: 20px;color: ' + (contentIndex==1 ? '#EC1815':'#666666')+';margin-right:90px;'" @click="clickContent(productInfo.htmlContent,1)">商品介绍</span>
-                    <span :style="'font-size: 20px;color: ' + (contentIndex==2 ? '#EC1815':'#666666')+';margin-right:90px;'" @click="clickContent(productInfo.packageContent,2)">规格包装</span>
-                    <span :style="'font-size: 20px;color: ' + (contentIndex==3 ? '#EC1815':'#666666')+';'" @click="clickContent(productInfo.serviceContent,3)">售后保障</span>
+                    <span :style="'font-size: 20px;color: ' + (contentIndex==index ? '#EC1815':'#666666')+';margin-right:90px;'" @click="handleLeft(index)" v-for="(item,index) in navgatorList" :key="item">{{item}}</span>
+                    <!-- <span :style="'font-size: 20px;color: ' + (contentIndex==1 ? '#EC1815':'#666666')+';margin-right:90px;'" @click="clickContent(productInfo.htmlContent,1,'htmlcontent')">商品介绍</span>
+                    <span :style="'font-size: 20px;color: ' + (contentIndex==2 ? '#EC1815':'#666666')+';margin-right:90px;'" @click="clickContent(productInfo.packageContent,2,'packagecontent')">规格包装</span>
+                    <span :style="'font-size: 20px;color: ' + (contentIndex==3 ? '#EC1815':'#666666')+';'" @click="clickContent(productInfo.serviceContent,3,'serviceContent')">售后保障</span> -->
                   </div>
                 </div>
                 <div class="productinfo" style="text-align: center;">
-                  <div :class="'content ' + ( mobileStatus &&  'content-m')" v-html="text">{{content.content}}</div>
+                  <div :id="'id'+index" v-for="(item,index) in navgatorListContent" :key="item" :class="'content ' + ( mobileStatus &&  'content-m')" v-html="item"></div>
+                  <!-- <div id="htmlcontent" :class="'content ' + ( mobileStatus &&  'content-m')" v-html="text">{{content.content}}</div>
+                  <div id="packagecontent" :class="'content ' + ( mobileStatus &&  'content-m')" v-html="text1">{{productInfo.packageContent}}</div>
+                  <div id="servicecontent" :class="'content ' + ( mobileStatus &&  'content-m')" v-html="text2">{{productInfo.serviceContent}}</div> -->
                 </div>
             </div>
       </div>
@@ -307,13 +311,15 @@
                        
 
                 <div class="wap-main-productinfo">
-                    <span :class="contentIndex==1 ? 'info-active':'info-default'" @click="clickContent(productInfo.htmlContent,1)">商品介绍</span>
+                    <span :class="contentIndex==index ? 'info-active':'info-default'" @click="handleLeft(index)" v-for="(item,index) in navgatorList" :key="item">{{item}}</span>
+                    <!-- <span :class="contentIndex==1 ? 'info-active':'info-default'" @click="clickContent(productInfo.htmlContent,1)">商品介绍</span>
                     <span :class="contentIndex==2 ? 'info-active':'info-default'" @click="clickContent(productInfo.packageContent,2)">规格包装</span>
-                    <span :class="contentIndex==3 ? 'info-active':'info-default'" @click="clickContent(productInfo.serviceContent,3)">售后保障</span>
+                    <span :class="contentIndex==3 ? 'info-active':'info-default'" @click="clickContent(productInfo.serviceContent,3)">售后保障</span> -->
                  
                 </div>
                 <div class="wap-main-content">
-                  <div class="wap-main-content-m" v-html="text">{{content.content}}</div>
+                  <div :id="'id'+index" v-for="(item,index) in navgatorListContent" :key="item" class="wap-main-content-m" v-html="item"></div>
+                  <!-- <div class="wap-main-content-m" v-html="text">{{content.content}}</div> -->
                 </div>
         </div>
       </div>
@@ -365,6 +371,15 @@ export default {
   },
   data() {
     return {
+      navgatorList: [
+        '商品介绍',
+        '规格包装',
+        '售后保障'
+      ],
+      navgatorListContent: [
+        
+      ],
+      listBoxState: true,//点击导航栏时，暂时停止监听页面滚动
       swiperOptionrecommend: {
         // loop: true,
         // // autoplay: {
@@ -396,7 +411,9 @@ export default {
       content: {
         "content": ""
       }, // 富文本内容
-      text: "",
+      // text: "",
+      // text1: "",
+      // text2: "",
       
       showNews: false,
       paramId: "",
@@ -410,7 +427,7 @@ export default {
       productInfoPics: [],
       skuIndex: "",
       activeIndex: 0,
-      contentIndex: 1,
+      contentIndex: 0,
       shopColumnList: []
     };
   },
@@ -429,6 +446,16 @@ export default {
     //   this.showNews = false;
     // }
 
+    let timeId;
+    window.addEventListener('scroll', () => {
+      // 页面滚动停止100毫秒后才会执行下面的函数。
+      clearTimeout(timeId);
+      timeId = setTimeout(() => {
+        this.scrollToTop();
+        console.log('执行完了哦');
+      }, 100);
+    } , true);
+
     if (process.client) {
       window.onscroll = this.onPageScroll;
     }
@@ -439,6 +466,45 @@ export default {
     }
   },
   methods: {
+    // 点击导航菜单，页面滚动到指定位置
+    handleLeft(index) {
+      this.contentIndex = index;
+
+      this.$el.querySelector(`#id${index}`).scrollIntoView({
+        behavior: "smooth",  // 平滑过渡
+        block:    "start"  // 上边框与视窗顶部平齐。默认值
+      });
+      this.listBoxState=false;
+
+      let timeId;
+      clearTimeout(timeId);
+      timeId = setTimeout(() => {
+        this.listBoxState=true;
+      },200);
+    },
+    // 监听页面元素滚动，改变导航栏选中
+    scrollToTop() {
+      // 获取视窗高度
+      var domHight = document.body.offsetHeight;
+      // dom滚动位置
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      
+      if (this.listBoxState) {//作用是点击导航栏时，延迟这里执行。
+        this.navgatorListContent.map((v,i) => {
+          // 获取监听元素距离视窗顶部距离
+          var offsetTop = document.getElementById(`id${i}`).offsetTop;
+          // 获取监听元素本身高度
+          var scrollHeight = document.getElementById(`id${i}`).scrollHeight;
+
+          // 如果 dom滚动位置 >= 元素距离视窗距离 && dom滚动位置 <= 元素距离视窗距离+元素本身高度
+          // 则表示页面已经滚动到可视区了。
+          if (scrollTop >= offsetTop && scrollTop<=(offsetTop+scrollHeight)) {
+            // 导航栏背景色选中
+            this.contentIndex = i;
+          }
+        })
+      }
+    },
     handlerClickImg(index){
       this.activeIndex = index;
       // this.swiperOption={
@@ -513,8 +579,17 @@ export default {
             this.skuIndex = res.data && res.data.skus.length > 0 ? res.data.skus[0].id : '-1';
             this.showNews = true;
             this.content.content = res.data.htmlContent;
-            this.text = res.data.htmlContent;
+            let navgatorListContent = [];
+            navgatorListContent.push(res.data.htmlContent)
+            navgatorListContent.push(res.data.packageContent)
+            navgatorListContent.push(res.data.serviceContent)
 
+            this.navgatorListContent = navgatorListContent;
+
+            // this.text = res.data.htmlContent;
+            // this.text1 = res.data.packageContent;
+            // this.text2 = res.data.serviceContent;
+           
             this.setSwp();
         }
       });
@@ -1763,11 +1838,11 @@ padding: 0rem 0.3rem;
   /*自定义分页器的样式，这个你自己想要什么样子自己写*/
   .swiper-pagination-bullet {
     cursor: pointer;
-    width: 49px;
-    height: 6px;
+    width: 38px;
+    height: 4px;
     background-color: #EEEEEE;
     opacity: 0.7;
-    border-radius: 3px;
+    border-radius: 0px;
     display: inline-block;
 
     /* box-shadow: 0 0 2px  #000; */
@@ -1777,8 +1852,8 @@ padding: 0rem 0.3rem;
   /*自定义分页器激活时的样式表现*/
   .swiper-pagination-bullet-active {
     opacity: 1;
-    border: 3px solid #8e2829;
-    background-color: #FFFFFF;
+    // border: 3px solid #8e2829;
+    background-color: #BBBBBB;
   }
 
   .wap-product-detail{
