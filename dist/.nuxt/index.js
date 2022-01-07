@@ -81,7 +81,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"指间礼物","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"},{"name":"keywords","content":"礼品方案服务商、服务商务礼赠、职场福利、社交送礼"},{"name":"description ","content":"指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字、语音、视频等多种祝福送礼方式。"},{"name":"hhh","content":"指间礼物|指间礼物"},{"name":"renderer","content":"webkit"},{"http-equiv":"X-UA-Compatible","content":"IE=11"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"指间礼物","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"},{"name":"keywords","content":"礼品方案服务商、服务商务礼赠、职场福利、社交送礼"},{"name":"description ","content":"指间礼物是中国领先的场景礼品方案服务商，主要服务商务礼赠、职场福利、社交送礼等场景。指间礼物提供全套礼品方案，支持文字等多种祝福送礼方式。"},{"name":"hhh","content":"指间礼物|指间礼物"},{"name":"renderer","content":"webkit"},{"http-equiv":"X-UA-Compatible","content":"IE=11"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     store,
     router,
