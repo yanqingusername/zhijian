@@ -64,7 +64,7 @@
                 
                 <div class="productinfo">
                   <div style="width: 1200px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-                      <div style="width:690px;display: flex;justify-content: center;flex-direction: column;">
+                      <div style="width:720px;display: flex;justify-content: center;flex-direction: column;">
                         <h1 style="padding:60px 0px 20px 0px;text-align: center;">{{strategysInfo.title}}</h1>
                         <div style="text-align: end;padding-bottom:10px;padding-bottom: 12px;border-bottom: 1px solid #EEEEEE;">
                           <span style="font-size: 14px;color: #333333;">by {{strategysInfo.source}}</span>
@@ -72,7 +72,7 @@
                           <span style="font-size: 14px;color: #999999;">{{strategysInfo.visits}}</span>
                         </div>
                       </div>
-                      <div style="width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
+                      <div style="width:720px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
                         <div class="pc-content" v-html="text">{{content.content}}</div>
                       </div>
                   </div>
@@ -987,7 +987,7 @@ export default {
     flex-direction: column;
             }
             .wap-main-content-m img {
-                width: 72rem;
+                width: 7.2rem;
                 height: auto;
               }
           }
