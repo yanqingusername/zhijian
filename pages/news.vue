@@ -72,7 +72,7 @@
                           <span style="font-size: 14px;color: #999999;">{{strategysInfo.visits}}</span>
                         </div>
                       </div>
-                      <div style="width:1200px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
+                      <div style="width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
                         <div class="pc-content" v-html="text">{{content.content}}</div>
                       </div>
                   </div>
@@ -83,7 +83,7 @@
 
     <div class="wap-product-detail" v-if="mobileStatus && showNews">
       <div class="wap-container-we-m" v-if="mobileStatus">
-        <vHeader :isShowTop="isShowTop" isBack="true" :paramId="paramId"/>
+        <vHeader :isShowTop="isShowTop" :isBack="isBack" :paramId="paramId"/>
         <div class="wap-main">
               <div class="wap-main-h1">{{strategysInfo.title}}</div>
 
@@ -129,7 +129,8 @@ export default {
       limit: 20,
       strategysInfo: "",
       paramId: "",
-      isShowTop:true
+      isShowTop:true,
+      isBack: true
     };
   },
   mounted() {
@@ -980,9 +981,13 @@ export default {
             .wap-main-content-m{
               width: 100%;
                 height: auto;
+                    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
             }
             .wap-main-content-m img {
-                width: 100%;
+                width: 360px;
                 height: auto;
               }
           }
