@@ -60,7 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(46);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(45);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(109);
 var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(110);
 var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(111);
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(46);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(45);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(119);
 var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(47);
 var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(120);
@@ -317,13 +317,13 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var SideBar = (component.exports);
 // EXTERNAL MODULE: ./node_modules/swiper/js/swiper.js
-var swiper = __webpack_require__(45);
+var swiper = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./api/zhijianapi.js + 1 modules
 var zhijianapi = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./utils/utils.js
-var utils = __webpack_require__(44);
+var utils = __webpack_require__(46);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./components/paging.vue?vue&type=template&id=d9a85f28&scoped=true&
 var pagingvue_type_template_id_d9a85f28_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[_vm._ssrNode("<div"+(_vm._ssrClass(null,_vm.pageSize === 1 && 'disalbe'))+" data-v-d9a85f28>上一页</div> <div"+(_vm._ssrStyle(null,null, { display: (_vm.before) ? '' : 'none' }))+" data-v-d9a85f28>1</div> <div class=\"omit\""+(_vm._ssrStyle(null,null, { display: (_vm.before && _vm.pageList[0] - 1 != 1) ? '' : 'none' }))+" data-v-d9a85f28>…</div> "+(_vm._ssrList((_vm.pageList),function(item,index){return ("<div"+(_vm._ssrClass(null,_vm.pageSize == item && 'active'))+" data-v-d9a85f28>"+_vm._ssrEscape(_vm._s(item))+"</div>")}))+" <div class=\"omit\""+(_vm._ssrStyle(null,null, { display: (_vm.after  && _vm.pageList[_vm.pageList.length - 1] + 1 != _vm.pageNum) ? '' : 'none' }))+" data-v-d9a85f28>…</div> <div"+(_vm._ssrStyle(null,null, { display: (_vm.after) ? '' : 'none' }))+" data-v-d9a85f28>"+_vm._ssrEscape(_vm._s(_vm.pageNum))+"</div> <div"+(_vm._ssrClass(null,_vm.pageSize === _vm.pageNum && 'disalbe'))+" data-v-d9a85f28>下一页</div>")])}
@@ -1453,61 +1453,6 @@ var we_component = Object(componentNormalizer["a" /* default */])(
 /***/ }),
 
 /***/ 44:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export transfromDom */
-// 进行动画偏移的动画函数
-
-/**
- * 操作dom的动画方法, 请不要大量使用, 影响性能
- * @param {String} elementId 需要监听的元素id
- * @param {String} className 当屏幕滚动到此区域时进行添加的类名
- * 
- * @returns {function} 返回一个注销函数事件
- */
-const transfromDom = (elementId = '', className = '') => {
-  // window.onscroll = this.onPageScroll;
-  let throttleKey = false;
-
-  let handleFunction = () => {
-    // if (throttleKey) {
-    //     return;
-    // }
-    // throttleKey = true;
-    // setTimeout(() => {
-    //     throttleKey = false;
-    //     clearTimeout(throttleKey);
-    // }, 50);
-    let element = document.getElementById(elementId); // 当前检测不到此元素时, 立即清除添加的监听事件 
-
-    if (!element) {
-      document.removeEventListener('scroll', handleFunction);
-      return;
-    }
-
-    let offsetTop = element.offsetTop;
-    let clientHeight = element.clientHeight;
-    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let pageHeight = document.documentElement.clientHeight; // 当这个元素有至少1/4显示在屏幕中时, 进行事件的触发, 为它添加类
-
-    if (scrollTop + pageHeight - (offsetTop + clientHeight / 4) >= 0 && scrollTop - (clientHeight / 4 * 3 + offsetTop) <= 0) {
-      element.className += ' ' + className;
-      document.removeEventListener('scroll', handleFunction);
-    }
-  }; // 初始化运行
-
-
-  handleFunction();
-  document.addEventListener('scroll', handleFunction);
-  return () => {
-    document.removeEventListener('scroll', handleFunction);
-  };
-};
-
-/***/ }),
-
-/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -11915,7 +11860,7 @@ const transfromDom = (elementId = '', className = '') => {
 
 /***/ }),
 
-/***/ 46:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11952,6 +11897,61 @@ module.exports = function (url, options) {
   }
 
   return url;
+};
+
+/***/ }),
+
+/***/ 46:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export transfromDom */
+// 进行动画偏移的动画函数
+
+/**
+ * 操作dom的动画方法, 请不要大量使用, 影响性能
+ * @param {String} elementId 需要监听的元素id
+ * @param {String} className 当屏幕滚动到此区域时进行添加的类名
+ * 
+ * @returns {function} 返回一个注销函数事件
+ */
+const transfromDom = (elementId = '', className = '') => {
+  // window.onscroll = this.onPageScroll;
+  let throttleKey = false;
+
+  let handleFunction = () => {
+    // if (throttleKey) {
+    //     return;
+    // }
+    // throttleKey = true;
+    // setTimeout(() => {
+    //     throttleKey = false;
+    //     clearTimeout(throttleKey);
+    // }, 50);
+    let element = document.getElementById(elementId); // 当前检测不到此元素时, 立即清除添加的监听事件 
+
+    if (!element) {
+      document.removeEventListener('scroll', handleFunction);
+      return;
+    }
+
+    let offsetTop = element.offsetTop;
+    let clientHeight = element.clientHeight;
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let pageHeight = document.documentElement.clientHeight; // 当这个元素有至少1/4显示在屏幕中时, 进行事件的触发, 为它添加类
+
+    if (scrollTop + pageHeight - (offsetTop + clientHeight / 4) >= 0 && scrollTop - (clientHeight / 4 * 3 + offsetTop) <= 0) {
+      element.className += ' ' + className;
+      document.removeEventListener('scroll', handleFunction);
+    }
+  }; // 初始化运行
+
+
+  handleFunction();
+  document.addEventListener('scroll', handleFunction);
+  return () => {
+    document.removeEventListener('scroll', handleFunction);
+  };
 };
 
 /***/ }),

@@ -72,7 +72,7 @@
                           <span style="font-size: 14px;color: #999999;">{{strategysInfo.visits}}</span>
                         </div>
                       </div>
-                      <div style="width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
+                      <div style="width:1200px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
                         <div class="pc-content" v-html="text">{{content.content}}</div>
                       </div>
                   </div>
@@ -109,7 +109,6 @@
 
 import vHeader from "/components/vHeader";
 import { strategyList,strategyInfo } from "~/api/zhijianapi";
-import { transfromDom } from "~/utils/utils.js";
 export default {
   components:{
         vHeader,

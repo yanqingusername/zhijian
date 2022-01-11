@@ -22,21 +22,18 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/news.vue?vue&type=template&id=0099fa95&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[(!_vm.mobileStatus && !_vm.showNews)?_vm._ssrNode("<div class=\"container-we\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"banner\"></div> <div class=\"proposition\"><div class=\"mainContent top-to-head\"><div class=\"productinfo\" style=\"width: 1200px;padding-top:30px;\"><div style=\"font-size: 24px;font-weight: bold;color: #333333;text-align: left;\">最新、最热好礼推荐，小编带你种草</div></div> <div class=\"productContainer\">"+((_vm.strategysList.length > 0)?("<div class=\"list\">"+(_vm._ssrList((_vm.strategysList),function(v){return ("<a"+(_vm._ssrAttr("href",'/news?id='+v.id))+" class=\"item\" style=\"width:280px;height:400px;\"><img"+(_vm._ssrAttr("src",v.ico))+" style=\"width: 252px;height: 294px;margin-top:15px;\"> <h3>"+_vm._ssrEscape(_vm._s(v.title))+"</h3></a>")}))+"</div>"):("<div class=\"emptyDiv\"></div>"))+"</div> "+((_vm.strategysList.length > 0)?("<div style=\"margin-top:50px;padding-bottom:50px;display: flex;align-items: center;justify-content: center;\"><div style=\"width: 260px;height: 52px;border: 1px solid #EB1615;font-size: 24px;color: #EB1615;display: flex;align-items: center;justify-content: center;\">更多</div></div>"):"<!---->")+"</div></div>")],2):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus && !_vm.showNews)?_vm._ssrNode("<div class=\"container-we-m\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"proposition\"><div class=\"productinfo\">最新、最热好礼推荐，小编带你种草</div> <div class=\"productContainer\" style=\"min-height:8rem;\">"+((_vm.strategysList.length> 0)?("<div class=\"list\">"+(_vm._ssrList((_vm.strategysList),function(v){return ("<a"+(_vm._ssrAttr("href",'/news?id='+v.id))+" class=\"item\"><img"+(_vm._ssrAttr("src",v.ico))+"> <h1>"+_vm._ssrEscape(_vm._s(v.title))+"</h1></a>")}))+"</div>"):("<div class=\"emptyDiv\"></div>"))+"</div> "+((_vm.strategysList.length > 0)?("<div class=\"button-view\"><div class=\"button-info\">更多</div></div>"):"<!---->")+"</div> <div style=\"height:0.4rem;background:#FAFAFA;\"></div>")],2):_vm._e(),_vm._ssrNode(" "),(!_vm.mobileStatus && _vm.showNews)?_vm._ssrNode("<div class=\"pc-product-detail\">","</div>",[_vm._ssrNode("<div class=\"container-we\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"banner\"></div> <div class=\"mainContent top-to-head\"><div class=\"productinfo\"><div style=\"width: 1200px;\"><div class=\"new-router nongsini\"><span class=\"shoushi\">礼物攻略</span> <img"+(_vm._ssrAttr("src",__webpack_require__(47)))+" alt=\"arrow|箭头\"> <span class=\"shoushi man-title-small\">攻略详情</span></div></div></div> <div class=\"productinfo\"><div style=\"width: 1200px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;flex-direction: column;\"><div style=\"width:690px;display: flex;justify-content: center;flex-direction: column;\"><h1 style=\"padding:60px 0px 20px 0px;text-align: center;\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.title))+"</h1> <div style=\"text-align: end;padding-bottom:10px;padding-bottom: 12px;border-bottom: 1px solid #EEEEEE;\"><span style=\"font-size: 14px;color: #333333;\">"+_vm._ssrEscape("by "+_vm._s(_vm.strategysInfo.source))+"</span> <img"+(_vm._ssrAttr("src",__webpack_require__(62)))+" alt=\"arrow|箭头\" style=\"width:20px;height:20px;margin-left:34px;margin-right:4px;\"> <span style=\"font-size: 14px;color: #999999;\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.visits))+"</span></div></div> <div style=\"width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;\"><div class=\"pc-content\">"+(_vm._s(_vm.text))+"</div></div></div></div></div>")],2)]):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus && _vm.showNews)?_vm._ssrNode("<div class=\"wap-product-detail\">","</div>",[(_vm.mobileStatus)?_vm._ssrNode("<div class=\"wap-container-we-m\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop,"isBack":"true","paramId":_vm.paramId}}),_vm._ssrNode(" <div class=\"wap-main\"><div class=\"wap-main-h1\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.title))+"</div> <div class=\"wap-main-price\"><span class=\"wap-main-price1\">"+_vm._ssrEscape("by "+_vm._s(_vm.strategysInfo.source))+"</span> <img"+(_vm._ssrAttr("src",__webpack_require__(62)))+" class=\"wap-main-price2\"> <span class=\"wap-main-price3\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.visits))+"</span></div> <div class=\"wap-main-content\"><div class=\"wap-main-content-m\">"+(_vm._s(_vm.text))+"</div></div></div>")],2):_vm._e()]):_vm._e()],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/news.vue?vue&type=template&id=b21fd5e0&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[(!_vm.mobileStatus && !_vm.showNews)?_vm._ssrNode("<div class=\"container-we\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"banner\"></div> <div class=\"proposition\"><div class=\"mainContent top-to-head\"><div class=\"productinfo\" style=\"width: 1200px;padding-top:30px;\"><div style=\"font-size: 24px;font-weight: bold;color: #333333;text-align: left;\">最新、最热好礼推荐，小编带你种草</div></div> <div class=\"productContainer\">"+((_vm.strategysList.length > 0)?("<div class=\"list\">"+(_vm._ssrList((_vm.strategysList),function(v){return ("<a"+(_vm._ssrAttr("href",'/news?id='+v.id))+" class=\"item\" style=\"width:280px;height:400px;\"><img"+(_vm._ssrAttr("src",v.ico))+" style=\"width: 252px;height: 294px;margin-top:15px;\"> <h3>"+_vm._ssrEscape(_vm._s(v.title))+"</h3></a>")}))+"</div>"):("<div class=\"emptyDiv\"></div>"))+"</div> "+((_vm.strategysList.length > 0)?("<div style=\"margin-top:50px;padding-bottom:50px;display: flex;align-items: center;justify-content: center;\"><div style=\"width: 260px;height: 52px;border: 1px solid #EB1615;font-size: 24px;color: #EB1615;display: flex;align-items: center;justify-content: center;\">更多</div></div>"):"<!---->")+"</div></div>")],2):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus && !_vm.showNews)?_vm._ssrNode("<div class=\"container-we-m\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"proposition\"><div class=\"productinfo\">最新、最热好礼推荐，小编带你种草</div> <div class=\"productContainer\" style=\"min-height:8rem;\">"+((_vm.strategysList.length> 0)?("<div class=\"list\">"+(_vm._ssrList((_vm.strategysList),function(v){return ("<a"+(_vm._ssrAttr("href",'/news?id='+v.id))+" class=\"item\"><img"+(_vm._ssrAttr("src",v.ico))+"> <h1>"+_vm._ssrEscape(_vm._s(v.title))+"</h1></a>")}))+"</div>"):("<div class=\"emptyDiv\"></div>"))+"</div> "+((_vm.strategysList.length > 0)?("<div class=\"button-view\"><div class=\"button-info\">更多</div></div>"):"<!---->")+"</div> <div style=\"height:0.4rem;background:#FAFAFA;\"></div>")],2):_vm._e(),_vm._ssrNode(" "),(!_vm.mobileStatus && _vm.showNews)?_vm._ssrNode("<div class=\"pc-product-detail\">","</div>",[_vm._ssrNode("<div class=\"container-we\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" <div class=\"banner\"></div> <div class=\"mainContent top-to-head\"><div class=\"productinfo\"><div style=\"width: 1200px;\"><div class=\"new-router nongsini\"><span class=\"shoushi\">礼物攻略</span> <img"+(_vm._ssrAttr("src",__webpack_require__(47)))+" alt=\"arrow|箭头\"> <span class=\"shoushi man-title-small\">攻略详情</span></div></div></div> <div class=\"productinfo\"><div style=\"width: 1200px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;flex-direction: column;\"><div style=\"width:690px;display: flex;justify-content: center;flex-direction: column;\"><h1 style=\"padding:60px 0px 20px 0px;text-align: center;\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.title))+"</h1> <div style=\"text-align: end;padding-bottom:10px;padding-bottom: 12px;border-bottom: 1px solid #EEEEEE;\"><span style=\"font-size: 14px;color: #333333;\">"+_vm._ssrEscape("by "+_vm._s(_vm.strategysInfo.source))+"</span> <img"+(_vm._ssrAttr("src",__webpack_require__(62)))+" alt=\"arrow|箭头\" style=\"width:20px;height:20px;margin-left:34px;margin-right:4px;\"> <span style=\"font-size: 14px;color: #999999;\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.visits))+"</span></div></div> <div style=\"width:1200px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;\"><div class=\"pc-content\">"+(_vm._s(_vm.text))+"</div></div></div></div></div>")],2)]):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus && _vm.showNews)?_vm._ssrNode("<div class=\"wap-product-detail\">","</div>",[(_vm.mobileStatus)?_vm._ssrNode("<div class=\"wap-container-we-m\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop,"isBack":"true","paramId":_vm.paramId}}),_vm._ssrNode(" <div class=\"wap-main\"><div class=\"wap-main-h1\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.title))+"</div> <div class=\"wap-main-price\"><span class=\"wap-main-price1\">"+_vm._ssrEscape("by "+_vm._s(_vm.strategysInfo.source))+"</span> <img"+(_vm._ssrAttr("src",__webpack_require__(62)))+" class=\"wap-main-price2\"> <span class=\"wap-main-price3\">"+_vm._ssrEscape(_vm._s(_vm.strategysInfo.visits))+"</span></div> <div class=\"wap-main-content\"><div class=\"wap-main-content-m\">"+(_vm._s(_vm.text))+"</div></div></div>")],2):_vm._e()]):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/news.vue?vue&type=template&id=0099fa95&
+// CONCATENATED MODULE: ./pages/news.vue?vue&type=template&id=b21fd5e0&
 
 // EXTERNAL MODULE: ./components/vHeader.vue + 4 modules
 var vHeader = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./api/zhijianapi.js + 1 modules
 var zhijianapi = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./utils/utils.js
-var utils = __webpack_require__(44);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/news.vue?vue&type=script&lang=js&
 //
@@ -146,7 +143,6 @@ var utils = __webpack_require__(44);
 //
 //
 //
-
 
 
 /* harmony default export */ var newsvue_type_script_lang_js_ = ({
@@ -282,61 +278,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var news = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ 44:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export transfromDom */
-// 进行动画偏移的动画函数
-
-/**
- * 操作dom的动画方法, 请不要大量使用, 影响性能
- * @param {String} elementId 需要监听的元素id
- * @param {String} className 当屏幕滚动到此区域时进行添加的类名
- * 
- * @returns {function} 返回一个注销函数事件
- */
-const transfromDom = (elementId = '', className = '') => {
-  // window.onscroll = this.onPageScroll;
-  let throttleKey = false;
-
-  let handleFunction = () => {
-    // if (throttleKey) {
-    //     return;
-    // }
-    // throttleKey = true;
-    // setTimeout(() => {
-    //     throttleKey = false;
-    //     clearTimeout(throttleKey);
-    // }, 50);
-    let element = document.getElementById(elementId); // 当前检测不到此元素时, 立即清除添加的监听事件 
-
-    if (!element) {
-      document.removeEventListener('scroll', handleFunction);
-      return;
-    }
-
-    let offsetTop = element.offsetTop;
-    let clientHeight = element.clientHeight;
-    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let pageHeight = document.documentElement.clientHeight; // 当这个元素有至少1/4显示在屏幕中时, 进行事件的触发, 为它添加类
-
-    if (scrollTop + pageHeight - (offsetTop + clientHeight / 4) >= 0 && scrollTop - (clientHeight / 4 * 3 + offsetTop) <= 0) {
-      element.className += ' ' + className;
-      document.removeEventListener('scroll', handleFunction);
-    }
-  }; // 初始化运行
-
-
-  handleFunction();
-  document.addEventListener('scroll', handleFunction);
-  return () => {
-    document.removeEventListener('scroll', handleFunction);
-  };
-};
 
 /***/ }),
 

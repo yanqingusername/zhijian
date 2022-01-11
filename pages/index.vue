@@ -275,7 +275,6 @@
 <script>
 import vHeader from "/components/vHeader";
 import Swiper from "swiper";
-import { transfromDom } from "~/utils/utils.js";
 import { getHomeBanner  } from "~/api/zhijianapi";
 export default {
   components:{

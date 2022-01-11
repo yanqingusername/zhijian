@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(46);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(45);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(124);
 var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(125);
 var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(126);
@@ -62,21 +62,18 @@ module.exports = __webpack_require__.p + "img/icon_12_03_right.c9ee43e.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=7868e796&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=9522f9f6&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[(!_vm.mobileStatus)?_vm._ssrNode("<div class=\"container-index\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"banner\" style=\"position:relative;\">","</div>",[_c('swiper',{key:_vm.homeBannerList.length,staticClass:"partner-list",attrs:{"lazy":"","options":_vm.swiperOptionBanner}},_vm._l((_vm.homeBannerList),function(i,index){return _c('swiper-slide',{key:index,staticClass:"swiper-slide"},[_c('img',{staticClass:"banner-item",attrs:{"src":i.source}})])}),1),_vm._ssrNode(" <div style=\"position:absolute;bottom:10px;width: 100%;display: flex;align-items: center;justify-content: center;height: 20px;z-index: 4;\">"+(_vm._ssrList((_vm.homeBannerList),function(i,index){return ("<span"+(_vm._ssrClass(null,'swiper-pagination-customs ' + ( _vm.bannerIndex == index &&  'swiper-pagination-customs-active')))+"></span>")}))+"</div>")],2),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"mainContent\">","</div>",[_vm._ssrNode("<div class=\"home-intro-view\">","</div>",[_vm._ssrNode("<h1 style=\"margin-top:80px;\">全套礼赠方案 多种送礼方式</h1> "),_vm._ssrNode("<div class=\"home-intro-view-bg\">","</div>",[_vm._ssrNode("<div>","</div>",[_vm._ssrNode("<div class=\"swiper-father\" style=\"width: 1200px;display: flex;align-items: center;\">","</div>",[_vm._ssrNode("<div class=\"partner-prev\"><i></i></div> "),_c('swiper',{key:_vm.homeImgList.length,ref:"indexSwiper",staticClass:"swiper-con-list",staticStyle:{"width":"526px"},attrs:{"lazy":"","options":_vm.swiperOptionImg}},_vm._l((_vm.homeImgList),function(i,index){return _c('swiper-slide',{key:index},[_c('a',{attrs:{"href":'/we?id='+ i.id}},[_c('img',{staticClass:"swiper-slide-img",attrs:{"src":i.source}})])])}),1),_vm._ssrNode(" <div class=\"partner-next\"><i></i></div>")],2)])]),_vm._ssrNode(" <div class=\"home-intro-view-div\"><div"+(_vm._ssrClass(null,_vm.activeIndex == 0 ? 'active-div':'default-div'))+">自选卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 1 ? 'active-div':'default-div'))+">储值卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 2 ? 'active-div':'default-div'))+">电影卡</div> <div"+(_vm._ssrClass(null,_vm.activeIndex == 3 ? 'active-div':'default-div'))+">节日礼品</div></div>")],2),_vm._ssrNode(" <div class=\"home-intro\"><h1 style=\"margin-top:200px;\">指间礼物产品介绍</h1> <span style=\"font-size: 18px;color: #6A6B6C;margin-top:24px;\">指间礼物小程序支持线上购买、微信送礼、定制祝福卡、拼手气礼包等多种送礼方式，为您提供全套礼赠方案。</span> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(69)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(70)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(71)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(73)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(74)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>任意编辑文字、卡片祝福，生成礼包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(75)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(80)))+" class=\"person04\"></div></div></div></div>")],2),_vm._ssrNode(" <div style=\"height:100px;\"></div>")],2):_vm._e(),_vm._ssrNode(" "),(_vm.mobileStatus)?_vm._ssrNode("<div class=\"wap-pageContainer\">","</div>",[_c('vHeader',{attrs:{"isShowTop":_vm.isShowTop}}),_vm._ssrNode(" "),_vm._ssrNode("<div style=\"position:relative;\">","</div>",[_c('swiper',{key:_vm.homeBannerWapList.length,staticClass:"partner-list",attrs:{"lazy":"","options":_vm.swiperWapBanner}},_vm._l((_vm.homeBannerWapList),function(i,index){return _c('swiper-slide',{key:index,staticClass:"swiper-slide"},[_c('img',{staticClass:"banner-item",staticStyle:{"height":"7.5rem","width":"7.5rem"},attrs:{"src":i.source}})])}),1),_vm._ssrNode(" <div style=\"position:absolute;bottom:0.1rem;width: 100%;display: flex;align-items: center;justify-content: center;height: 0.2rem;z-index: 77;\">"+(_vm._ssrList((_vm.homeBannerWapList),function(i,index){return ("<span"+(_vm._ssrClass(null,'wap-swiper-pagination-customs ' + ( _vm.bannerWapIndex == index &&  'wap-swiper-pagination-customs-active')))+"></span>")}))+"</div>")],2),_vm._ssrNode(" <div class=\"mainContentWap\"><div class=\"home-intro\"><h1>指间礼物产品介绍</h1> <p>指间礼物小程序支持线上购买、微信送礼、定制祝福卡、拼手气礼包等多种送礼方式，为您提供全套礼赠方案。</p> <div class=\"items\"><div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(69)))+"> <span>人群选礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(70)))+"> <span>场景送礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(71)))+"> <span>风格挑礼</span></div> <div class=\"item\"><img"+(_vm._ssrAttr("src",__webpack_require__(72)))+"> <span>类别筛礼</span></div></div></div> <div class=\"home-oper\"><h1>OPERATION GUIDE</h1> <span>操作指南</span> <span>|</span> <div class=\"steps\"><div class=\"stepRight\"><div class=\"name\"><h2><span>01</span> <span>挑礼物</span></h2> <p>礼物商城挑选心仪礼物送给TA(们)</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(73)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(74)))+" class=\"person01\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>02</span> <span>送祝语</span></h2> <p>任意编辑文字、卡片祝福，生成礼包</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(75)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(76)))+" class=\"person02\"></div></div> <div class=\"stepRight\"><div class=\"name\"><h2><span>03</span> <span>微信发送</span></h2> <p>发送给好友或微信群，惊喜一键到达</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(77)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(78)))+" class=\"person03\"></div></div> <div class=\"stepLeft\"><div class=\"name\"><h2><span>04</span> <span>查收礼物</span></h2> <p>点开礼物红包查收礼物，填写收货地址，快递到家</p></div> <div class=\"demo\"><img"+(_vm._ssrAttr("src",__webpack_require__(79)))+" class=\"show\"> <img"+(_vm._ssrAttr("src",__webpack_require__(80)))+" class=\"person04\"></div></div></div></div> <div style=\"height:0.5rem;\"></div></div>")],2):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=7868e796&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=9522f9f6&
 
 // EXTERNAL MODULE: ./components/vHeader.vue + 4 modules
 var vHeader = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/swiper/js/swiper.js
-var swiper = __webpack_require__(45);
-
-// EXTERNAL MODULE: ./utils/utils.js
-var utils = __webpack_require__(44);
+var swiper = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./api/zhijianapi.js + 1 modules
 var zhijianapi = __webpack_require__(7);
@@ -356,7 +353,6 @@ var zhijianapi = __webpack_require__(7);
 //
 //
 //
-
 
 
 
@@ -780,61 +776,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 /***/ }),
 
 /***/ 44:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export transfromDom */
-// 进行动画偏移的动画函数
-
-/**
- * 操作dom的动画方法, 请不要大量使用, 影响性能
- * @param {String} elementId 需要监听的元素id
- * @param {String} className 当屏幕滚动到此区域时进行添加的类名
- * 
- * @returns {function} 返回一个注销函数事件
- */
-const transfromDom = (elementId = '', className = '') => {
-  // window.onscroll = this.onPageScroll;
-  let throttleKey = false;
-
-  let handleFunction = () => {
-    // if (throttleKey) {
-    //     return;
-    // }
-    // throttleKey = true;
-    // setTimeout(() => {
-    //     throttleKey = false;
-    //     clearTimeout(throttleKey);
-    // }, 50);
-    let element = document.getElementById(elementId); // 当前检测不到此元素时, 立即清除添加的监听事件 
-
-    if (!element) {
-      document.removeEventListener('scroll', handleFunction);
-      return;
-    }
-
-    let offsetTop = element.offsetTop;
-    let clientHeight = element.clientHeight;
-    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let pageHeight = document.documentElement.clientHeight; // 当这个元素有至少1/4显示在屏幕中时, 进行事件的触发, 为它添加类
-
-    if (scrollTop + pageHeight - (offsetTop + clientHeight / 4) >= 0 && scrollTop - (clientHeight / 4 * 3 + offsetTop) <= 0) {
-      element.className += ' ' + className;
-      document.removeEventListener('scroll', handleFunction);
-    }
-  }; // 初始化运行
-
-
-  handleFunction();
-  document.addEventListener('scroll', handleFunction);
-  return () => {
-    document.removeEventListener('scroll', handleFunction);
-  };
-};
-
-/***/ }),
-
-/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -11242,7 +11183,7 @@ const transfromDom = (elementId = '', className = '') => {
 
 /***/ }),
 
-/***/ 46:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
