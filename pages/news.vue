@@ -987,7 +987,7 @@ export default {
     flex-direction: column;
             }
             .wap-main-content-m img {
-                width: 360px;
+                width: 72rem;
                 height: auto;
               }
           }
