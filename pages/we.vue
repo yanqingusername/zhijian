@@ -59,7 +59,7 @@
     </div>
 
     <div v-if="mobileStatus && !showNews" class="container-we-m">
-      <vHeader isShowTop="false"/>
+      <vHeader :isShowTop="isShowTop"/>
       <div class="mainContent">
                 <div class="tabs">
                     <nav class="categorytabs">
@@ -129,9 +129,9 @@
               <div class="productinfo">      
                 <div style="width: 1200px;">
                   <div class="new-router nongsini">
-                      <span class="shoushi" @click="$router.go(-1)">指间商城</span>
+                      <span class="shoushi" @click="$router.go(-1)" style="cursor: pointer;">指间商城</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
-                      <span class="shoushi" @click="$router.go(-1)">{{productInfo.modelname}}</span>
+                      <span class="shoushi" @click="$router.go(-1)" style="cursor: pointer;">{{productInfo.modelname}}</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">{{productInfo.name}}</span>
                     </div>
@@ -258,7 +258,7 @@
 
     <div class="wap-product-detail" v-if="mobileStatus && showNews">
       <div class="wap-container-we-m">
-        <vHeader isShowTop="false" isBack="true" :paramId="paramId"/>
+        <vHeader :isShowTop="isShowTop" isBack="true" :paramId="paramId"/>
         <div class="wap-main">
             <div class="wap-main-swiper">
               <!-- <div class="swiper-why">
@@ -371,6 +371,7 @@ export default {
   },
   data() {
     return {
+      isShowTop: false,
       navgatorList: [
         '商品介绍',
         '规格包装',
@@ -425,7 +426,7 @@ export default {
       detailId: "",
       productInfo: "",
       productInfoPics: [],
-      skuIndex: "",
+      skuIndex: "-1",
       activeIndex: 0,
       contentIndex: 0,
       shopColumnList: []
@@ -576,7 +577,7 @@ export default {
         if (res.data.sta === 1) {
             this.productInfo = res.data;
             this.productInfoPics = res.data.pics;
-            this.skuIndex = res.data && res.data.skus.length > 0 ? res.data.skus[0].id : '-1';
+            // this.skuIndex = res.data && res.data.skus.length > 0 ? res.data.skus[0].id : '-1';
             this.showNews = true;
             this.content.content = res.data.htmlContent;
             let navgatorListContent = [];
@@ -768,8 +769,13 @@ this.swiperOptionrecommend={
               document.body.scrollTop = document.documentElement.scrollTop = 0;
     },
     skuClick(item){
-      this.skuIndex = item.id;
-      this.productInfoPics = item.pics;
+      if(this.skuIndex == item.id){
+          this.skuIndex = "-1";
+          this.productInfoPics = this.productInfo.pics;
+      }else{
+        this.skuIndex = item.id;
+        this.productInfoPics = item.pics;
+      }
     },
     clickContent(content, number){
       this.content.content = content;

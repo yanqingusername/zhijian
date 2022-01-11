@@ -55,7 +55,7 @@
           <div class="productinfo">
             <div style="width: 1200px;">
                   <div class="new-router nongsini" >
-                      <span class="shoushi" @click="$router.go(-1)">礼物攻略</span>
+                      <span class="shoushi" @click="$router.go(-1)" style="cursor: pointer;">礼物攻略</span>
                       <img src="~/assets/images/icon_12_09_right.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">攻略详情</span>
                     </div>
