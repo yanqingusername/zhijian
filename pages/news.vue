@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <div v-if="!mobileStatus && !showNews" class="container-we">
-      <vHeader isShowTop="true"/>
+      <vHeader :isShowTop="isShowTop"/>
       <div class="banner"></div>
       <div class="proposition">
        <div class="mainContent top-to-head">
@@ -26,7 +26,7 @@
     </div>
     
     <div v-if="mobileStatus && !showNews" class="container-we-m">
-      <vHeader isShowTop="true"/>
+      <vHeader :isShowTop="isShowTop"/>
       <div class="proposition">
           
           <div class="productinfo">最新、最热好礼推荐，小编带你种草</div>
@@ -49,14 +49,14 @@
     <!-- -->
     <div class="pc-product-detail" v-if="!mobileStatus && showNews">
       <div class="container-we">
-        <vHeader isShowTop="true"/>
+        <vHeader :isShowTop="isShowTop"/>
         <div class="banner"></div>
         <div class="mainContent top-to-head">
           <div class="productinfo">
             <div style="width: 1200px;">
                   <div class="new-router nongsini" >
-                      <span class="shoushi" @click="$router.push('/news')">礼物攻略</span>
-                      <img src="~/assets/images/arr.png" alt="arrow|箭头" />
+                      <span class="shoushi" @click="$router.go(-1)">礼物攻略</span>
+                      <img src="~/assets/images/icon_12_09_right.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">攻略详情</span>
                     </div>
                   </div>
@@ -66,14 +66,14 @@
                   <div style="width: 1200px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;flex-direction: column;">
                       <div style="width:690px;display: flex;justify-content: center;flex-direction: column;">
                         <h1 style="padding:60px 0px 20px 0px;text-align: center;">{{strategysInfo.title}}</h1>
-                        <div style="text-align: end;padding-bottom:10px;">
+                        <div style="text-align: end;padding-bottom:10px;padding-bottom: 12px;border-bottom: 1px solid #EEEEEE;">
                           <span style="font-size: 14px;color: #333333;">by {{strategysInfo.source}}</span>
                           <img style="width:20px;height:20px;margin-left:34px;margin-right:4px;" src="~/assets/images/icon-view.png" alt="arrow|箭头" />
                           <span style="font-size: 14px;color: #999999;">{{strategysInfo.visits}}</span>
                         </div>
                       </div>
-                      <div style="width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-                        <div :class="'content ' + ( mobileStatus &&  'content-m')" v-html="text">{{content.content}}</div>
+                      <div style="width:690px;display: flex;align-items: center;justify-content: center;flex-direction: column;margin-top:20px;">
+                        <div class="pc-content" v-html="text">{{content.content}}</div>
                       </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
 
     <div class="wap-product-detail" v-if="mobileStatus && showNews">
       <div class="wap-container-we-m" v-if="mobileStatus">
-        <vHeader isShowTop="true" isBack="true" :paramId="paramId"/>
+        <vHeader :isShowTop="isShowTop" isBack="true" :paramId="paramId"/>
         <div class="wap-main">
               <div class="wap-main-h1">{{strategysInfo.title}}</div>
 
@@ -130,6 +130,7 @@ export default {
       limit: 20,
       strategysInfo: "",
       paramId: "",
+      isShowTop:true
     };
   },
   mounted() {
@@ -592,14 +593,14 @@ export default {
         align-items: flex-start;
         flex-wrap: wrap;
         width: 1240px;
-        margin-left: -25px;
+        margin-left: -5px;
 
         .item {
           border-radius: 3px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 40px 25px 0;
+          margin: 40px 10px 0;
           background: rgba(255, 255, 255, 1);
           text-decoration: none;
 
@@ -682,6 +683,15 @@ export default {
 
 
 .pc-product-detail{
+  .pc-content{
+              width: 100%;
+                height: auto;
+            }
+            .pc-content img {
+                width: 100%;
+                height: auto;
+              }
+
   .mainContent {
     width: 100%;
 
@@ -700,13 +710,13 @@ export default {
         color: #333333;
       }
       img {
-        transform: rotateZ(90deg);
-        width: 12px;
-        height: 6px;
+        // transform: rotateZ(90deg);
+        width: 15px;
+        height: 15px;
         margin: 0 10px;
       }
       .man-title-small {
-        margin-left: 5px;
+        margin-left: 0px;
         display: inline-block;
         max-width: 60%;
         flex: 1;

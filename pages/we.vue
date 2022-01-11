@@ -129,9 +129,9 @@
               <div class="productinfo">      
                 <div style="width: 1200px;">
                   <div class="new-router nongsini">
-                      <span class="shoushi" @click="$router.push('/')">指间商城</span>
+                      <span class="shoushi" @click="$router.go(-1)">指间商城</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
-                      <span class="shoushi" @click="$router.push('/we?id='+paramId)">{{productInfo.modelname}}</span>
+                      <span class="shoushi" @click="$router.go(-1)">{{productInfo.modelname}}</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
                       <span class="shoushi man-title-small">{{productInfo.name}}</span>
                     </div>
