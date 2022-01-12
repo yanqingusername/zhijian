@@ -833,7 +833,7 @@ export default {
   .banner-item {
     position: relative;
     width: 100%;
-    height: 561px;
+    // height: 561px;
     background-size: cover;
     overflow: hidden;
     -moz-user-select: none;
