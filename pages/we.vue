@@ -3,7 +3,8 @@
     <div class="pc-product-list" v-if="!mobileStatus && !showNews" >
       <div class="container-we">
         <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
-        <header class="shopheader">
+        <vHeader :isShowTop="isShowTopPC"/>
+        <!-- <header class="shopheader">
               <div class="container">
                   <div class="left">
                       <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
@@ -28,9 +29,16 @@
                       </div>
                   </div>
               </div>
-          </header>
+          </header> -->
         <div class="banner"></div>
         <div class="proposition">
+          <div style="height:22px;"></div>
+          <div class="shop-column-view">
+              <div v-for="i in shopColumnList" :key="i.code" :class="paramId==i.code ? 'itemActive':'item'" @click="handleNewsInfo(i.code)">
+                <span>{{i.name}}</span>
+              </div>
+          </div>
+        
         <div class="mainContent top-to-head">
                   <div class="productContainer">
                       <div class="list" v-if="productList.length > 0">
@@ -98,7 +106,8 @@
     <div class="pc-product-detail" v-if="!mobileStatus && showNews">
       <div class="container-we">
         <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
-        <header class="shopheader">
+        <vHeader :isShowTop="isShowTopPC"/>
+        <!-- <header class="shopheader">
             <div class="container">
                 <div class="left">
                     <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
@@ -123,11 +132,18 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header> -->
         <div class="banner"></div>
         <div class="mainContent top-to-head">
               <div class="productinfo">      
                 <div style="width: 1200px;">
+                  <div style="height:22px;"></div>
+                  <div class="shop-column-view">
+                      <div v-for="i in shopColumnList" :key="i.code" :class="paramId==i.code ? 'itemActive1':'item'" @click="handleNewsInfo(i.code)">
+                        <span>{{i.name}}</span>
+                      </div>
+                  </div>
+
                   <div class="new-router nongsini">
                       <span class="shoushi" @click="$router.go(-1)" style="cursor: pointer;">指间商城</span>
                       <img src="~/assets/images/arr.png" alt="arrow|箭头" />
@@ -372,6 +388,7 @@ export default {
   data() {
     return {
       isShowTop: false,
+      isShowTopPC: true,
       navgatorList: [
         '商品介绍',
         '规格包装',
@@ -2357,6 +2374,69 @@ padding: 0rem 0.3rem;
   height: 100px;
   margin-right:10px;
   border: 1px solid #EEEEEE;
+}
+
+.shop-column-view{
+  display: flex;
+  width: 1200px;
+  height: 52px;
+  background: #F0F0F0;
+  // justify-content: space-between;
+
+  .item{
+          // height: 80px;
+          width: 240px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #333333;
+          position: relative;
+          // margin-right: 80px;
+          cursor: pointer;
+border-bottom: 1px solid #DB3C3A;
+          
+        }
+        .itemActive {
+          // height: 80px;
+          width: 240px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #DB3C3A;
+          position: relative;
+          // margin-right: 80px;
+          cursor: pointer;
+          border-left: 1px solid #DB3C3A;
+          border-right: 1px solid #DB3C3A;
+          border-top: 1px solid #DB3C3A;
+          border-bottom: 1px solid #FAFAFA;
+          background: #FAFAFA;
+          
+        }
+        span {
+            font-size: 18px;
+          }
+
+          .itemActive1 {
+          // height: 80px;
+          width: 240px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #DB3C3A;
+          position: relative;
+          // margin-right: 80px;
+          cursor: pointer;
+          border-left: 1px solid #DB3C3A;
+          border-right: 1px solid #DB3C3A;
+          border-top: 1px solid #DB3C3A;
+          border-bottom: 1px solid white;
+          background: white;
+          
+        }
 }
 
 </style>
