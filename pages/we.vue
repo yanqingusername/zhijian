@@ -1428,12 +1428,13 @@ padding: 0rem 0.3rem;
           h3 {
             width: 260px;
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
             margin-top: 15px;
             font-size: 20px;
             font-weight: 600;
             color: #333333;
+            padding: 0px 10px;
           }
 
           .price_view{

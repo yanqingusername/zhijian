@@ -13,7 +13,7 @@
                     <div class="list" v-if="strategysList.length > 0">
                           <a v-for="v in strategysList" :key="v.id" :href="'/news?id='+v.id" class="item" style="width:280px;height:400px;">
                             <img style="width: 252px;height: 294px;margin-top:15px;" :src="v.ico" />
-                            <h3>{{v.title}}</h3>
+                            <h3 class="h3-view">{{v.title}}</h3>
                           </a>
                     </div>
                     <div v-else class="emptyDiv"></div>
@@ -609,7 +609,7 @@ export default {
             height: 260px;
           }
 
-          h3 {
+          .h3-view {
             overflow: hidden;
             // white-space: nowrap;
             // text-overflow: ellipsis;
