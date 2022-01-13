@@ -1435,6 +1435,7 @@ padding: 0rem 0.3rem;
             font-weight: 600;
             color: #333333;
             padding: 0px 10px;
+            height: 56px;
           }
 
           .price_view{
