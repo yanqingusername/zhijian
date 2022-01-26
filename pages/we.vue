@@ -3,8 +3,8 @@
     <div class="pc-product-list" v-if="!mobileStatus && !showNews" >
       <div class="container-we">
         <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
-        <vHeader :isShowTop="isShowTopPC"/>
-        <!-- <header class="shopheader">
+        <!-- <vHeader :isShowTop="isShowTopPC"/> -->
+        <header class="shopheader">
               <div class="container">
                   <div class="left">
                       <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
@@ -29,15 +29,15 @@
                       </div>
                   </div>
               </div>
-          </header> -->
+          </header>
         <div class="banner"></div>
         <div class="proposition">
-          <div style="height:22px;"></div>
+          <!-- <div style="height:22px;"></div>
           <div class="shop-column-view">
               <div v-for="i in shopColumnList" :key="i.code" :class="paramId==i.code ? 'itemActive':'item'" @click="handleNewsInfo(i.code)">
                 <span>{{i.name}}</span>
               </div>
-          </div>
+          </div> -->
         
         <div class="mainContent top-to-head">
                   <div class="productContainer">
@@ -106,8 +106,8 @@
     <div class="pc-product-detail" v-if="!mobileStatus && showNews">
       <div class="container-we">
         <!-- <shopHeader :paramId="paramId" :shopColumnList="shopColumnList"/> -->
-        <vHeader :isShowTop="isShowTopPC"/>
-        <!-- <header class="shopheader">
+        <!-- <vHeader :isShowTop="isShowTopPC"/> -->
+        <header class="shopheader">
             <div class="container">
                 <div class="left">
                     <a href="/" class="logo"><img src="~/assets/images/icon-shop-logo-01.png" /></a>
@@ -132,17 +132,17 @@
                     </div>
                 </div>
             </div>
-        </header> -->
+        </header>
         <div class="banner"></div>
         <div class="mainContent top-to-head">
               <div class="productinfo">      
                 <div style="width: 1200px;">
-                  <div style="height:22px;"></div>
+                  <!-- <div style="height:22px;"></div>
                   <div class="shop-column-view">
                       <div v-for="i in shopColumnList" :key="i.code" :class="paramId==i.code ? 'itemActive1':'item'" @click="handleNewsInfo(i.code)">
                         <span>{{i.name}}</span>
                       </div>
-                  </div>
+                  </div> -->
 
                   <div class="new-router nongsini">
                       <span class="shoushi" @click="$router.go(-1)" style="cursor: pointer;">指间商城</span>
